@@ -1,14 +1,23 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import vercelLogo from "../public/vercel.svg";
+import vercelLogo from "public/vercel.svg";
 
 const Home: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
-        <title>Create Next App</title>
+        <title>TechIsHiring - A space where great jobs and great devs can find each other!</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:url" content="https://www.techishiring.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="TechIsHiring.com" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          property="og:description"
+          content="TechIsHiring - A space where great jobs and great devs can find each other!"
+        />
+        <meta property="og:image" content="/techishiring-social-card.png" />
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
