@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import vercelLogo from "public/vercel.svg";
+import vercelLogo from "../public/vercel.svg";
 
 const Home: NextPage = () => {
   return (
