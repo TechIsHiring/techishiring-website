@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import vercelLogo from "../public/vercel.svg";
 
 const Home: NextPage = () => {
   return (
@@ -76,7 +77,7 @@ const Home: NextPage = () => {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          <Image src={vercelLogo} alt="Vercel Logo" width={72} height={16} />
         </a>
       </footer>
     </div>
