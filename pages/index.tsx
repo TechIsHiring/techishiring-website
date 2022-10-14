@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:url" content="https://www.techishiring.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="TechIsHiring.com" />
+        <meta property="og:title" content="TechIsHiring - A space where great jobs and great devs can find each other!" />
         <meta name="twitter:card" content="summary" />
         <meta
           property="og:description"
