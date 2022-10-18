@@ -1,3 +1,4 @@
+import DefaultLayout from "components/organisms/layouts/default-layout";
 import Home from "../../../pages";
 
 const storyConfig = {
@@ -6,4 +7,6 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const HomeStory = () => <Home />;
+export const HomeStory = () => <DefaultLayout>
+                                <Home />
+                               </DefaultLayout>;

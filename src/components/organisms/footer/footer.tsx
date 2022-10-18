@@ -1,5 +1,5 @@
 import Image from "next/image";
-import vercelLogo from "../../../public/vercel.svg";
+import vercelLogo from "../../../../public/vercel.svg";
 
 const Footer = () => {
   return (
