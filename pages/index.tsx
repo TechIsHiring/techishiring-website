@@ -1,15 +1,17 @@
-import AppHead from 'atoms/head';
 import WithPageLayout from 'interfaces/with-page-layouts';
-import DefaultLayout from 'organisms/layouts/default-layout';
-import NextDefaultBody from 'organisms/NextDefaultBody/next-default-body';
+import NextDefaultBody from 'components/organisms/NextDefaultBody/next-default-body';
+import AppHead from 'components/atoms/head';
+import DefaultLayout from 'components/organisms/layouts/default-layout';
 
 const Home: WithPageLayout = () => {
   return (
-    <DefaultLayout>
+    <>
       <AppHead />
       <NextDefaultBody />
-    </DefaultLayout>
+    </>
   )
 }
+
+Home.PageLayout = DefaultLayout;
 
 export default Home

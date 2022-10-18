@@ -1,5 +1,4 @@
-import Footer from 'organisms/footer/footer';
-import React from 'react';
+import Footer from 'components/organisms/footer/footer';
 
 const DefaultLayout = ({children}: {children: React.ReactNode}) => {
   return (
