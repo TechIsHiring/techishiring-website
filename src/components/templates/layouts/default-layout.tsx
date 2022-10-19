@@ -1,4 +1,4 @@
-import DefaultAppHead from 'components/atoms/default-app-head';
+import DefaultAppHead from 'components/atoms/default-app-head/default-app-head';
 import Footer from 'components/organisms/footer/footer';
 
 const DefaultLayout = ({children}: {children: React.ReactNode}) => {
