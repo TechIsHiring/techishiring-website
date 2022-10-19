@@ -1,7 +1,7 @@
 import Logo from "../../components/atoms/logo/logo";
 
 const storyConfig = {
-  title: "Logo"
+  title: "Design System/Atoms/Logo"
 };
 
 export default storyConfig;
