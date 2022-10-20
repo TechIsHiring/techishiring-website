@@ -1,9 +1,9 @@
 import Logo from "components/atoms/logo/logo";
 import MainNav from "components/molecules/main-nav/main-nav";
-import useNav from "lib/hooks/use-nav";
+import useMainNav from "lib/hooks/use-nav";
 
 const Header = () => {
-  const navList = useNav();
+  const navList = useMainNav();
 
   return (
     <header className="flex min-h-20 w-full justify-between items-end border-b px-4 py-2">

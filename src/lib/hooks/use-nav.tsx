@@ -1,4 +1,4 @@
-const useNav = () => {
+const useMainNav = () => {
   
   const navList: NavLink[] = [
     {
@@ -26,4 +26,4 @@ const useNav = () => {
   return navList; 
 };
 
-export default useNav;
+export default useMainNav;

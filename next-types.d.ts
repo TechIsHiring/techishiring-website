@@ -1,6 +1,9 @@
-interface NavLink {
+interface Link {
   url: string;
-  text: string;
   activeLink?: boolean;
   externalLink? : boolean;
 }
+
+interface NavLink extends Link {
+  text: string;
+};

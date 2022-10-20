@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import Link from "components/atoms/link/link";
 
 interface IconProps {
   Icon: IconType;
@@ -11,9 +12,9 @@ const Icon = ({ Icon, iconAlt, url, size = 24 }: IconProps) => {
   return (
     <>
       { url &&
-        <a href={url} target="_blank">
+        <Link url={url} externalLink >
           <Icon size={size} title={iconAlt} />
-        </a>
+        </Link>
       }
       { !url && <Icon size={size} title={iconAlt} /> }
     </>
