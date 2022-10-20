@@ -3,7 +3,9 @@ import TechIsHiringLogo from "../../../images/techishiring-logo.png";
 
 const Logo = () => {
   return (
-    <Image className="rounded-lg" src={TechIsHiringLogo} alt="TechIsHiring logo" />
+    <a href={process.env.NEXT_PUBLIC_URL}>
+      <Image className="rounded-lg" src={TechIsHiringLogo} alt="TechIsHiring logo" />
+    </a>
   );
 };
 
