@@ -1,18 +1,13 @@
-import Image from "next/image";
-import vercelLogo from "../../../../public/vercel.svg";
+import Icon from "components/atoms/icon/icon";
+import { SiTwitter, SiLinkedin, SiPatreon, SiRevue } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="flex h-24 w-full items-center justify-center border-t">
-      <a
-        className="flex items-center justify-center gap-2"
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by{' '}
-        <Image src={vercelLogo} alt="Vercel Logo" width={72} height={16} />
-      </a>
+    <footer className="flex h-24 gap-4 w-full items-center justify-center border-t">
+      <Icon Icon={SiTwitter} iconAlt="TechIsHiring Twitter" url="https://www.twitter.com/techishiring" />
+      <Icon Icon={SiLinkedin} iconAlt="TechIsHiring LinkedIn" url="https://www.linkedin.com/company/techishiring" />
+      <Icon Icon={SiPatreon} iconAlt="TechIsHiring Patreon" url="https://www.patreon.com/techishiring" />
+      <Icon Icon={SiRevue} iconAlt="TechIsHiring Revue" size={48} url="https://www.getrevue.co/profile/techishiring" />
     </footer>
   );
 };
