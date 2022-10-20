@@ -10,7 +10,7 @@ const navList: NavLink[] = [
     text: "test",
     externalLink: true
   }
-]
+];
 
 export default storyConfig;
 
