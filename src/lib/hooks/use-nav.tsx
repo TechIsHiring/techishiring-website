@@ -2,24 +2,16 @@ const useMainNav = () => {
   
   const navList: NavLink[] = [
     {
-      url: "https://www.google.com",
-      text: "test",
-      externalLink: true
+      url: "/",
+      text: "Home"
     },
     {
-      url: "https://www.google.com",
-      text: "test",
-      externalLink: true
+      url: "/newsletter",
+      text: "Newsletter"
     },
     {
-      url: "https://www.google.com",
-      text: "test",
-      externalLink: true
-    },
-    {
-      url: "https://www.google.com",
-      text: "test",
-      externalLink: true
+      url: "/about",
+      text: "About"
     }
   ];
   
