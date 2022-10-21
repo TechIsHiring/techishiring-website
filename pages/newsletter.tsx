@@ -1,19 +1,19 @@
 import WithPageLayout from 'interfaces/with-page-layouts';
+import NextDefaultBody from 'components/organisms/next-default-body/next-default-body';
 import DefaultLayout from 'components/templates/layouts/default-layout';
-import TwitterFeed from 'components/organisms/twitter-feed/twitter-feed';
 import Head from 'next/head';
 
 const Home: WithPageLayout = () => {
   return (
     <>
       <Head>
-        <title>TechIsHiring - A space where great jobs and great devs can find each other!</title>
+        <title>TechIsHiring - Newsletter</title>
         <meta
           property="og:description"
-          content="TechIsHiring - A space where great jobs and great devs can find each other!"
+          content="TechIsHiring - Newsletter"
         />
       </Head>
-      <TwitterFeed />
+      <NextDefaultBody />
     </>
   )
 }
