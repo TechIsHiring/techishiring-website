@@ -7,7 +7,9 @@ const DefaultLayout = ({children}: {children: React.ReactNode}) => {
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <DefaultAppHead />
       <Header />
-      {children}
+      <main className="flex w-full min-h-[calc(100vh-190px)] flex-1 flex-col items-center justify-center px-20 py-10 text-center">
+        {children}
+      </main>
       <Footer />
     </div>
   )
