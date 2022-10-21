@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "components/atoms/link/link";
 import TechIsHiringLogo from "../../../images/techishiring-logo.png";
 
 const Logo = () => {
   return (
-    <a href={process.env.NEXT_PUBLIC_URL}>
+    <Link url="/">
       <Image className="rounded-lg" src={TechIsHiringLogo} alt="TechIsHiring logo" />
-    </a>
+    </Link>
   );
 };
 
