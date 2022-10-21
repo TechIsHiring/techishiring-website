@@ -5,12 +5,18 @@
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "reset-deps": "rm -rf node_modules && npm ci"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.3.6",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "framer-motion": "^6.5.1",
     "next": "^12.3.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-icons": "^4.6.0",
     "storybook-addon-next": "^1.6.9"
   },
   "devDependencies": {

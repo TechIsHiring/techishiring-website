@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const AppHead = () => {
+const DefaultAppHead = () => {
   return (
     <Head>
       <title>TechIsHiring - A space where great jobs and great devs can find each other!</title>
@@ -18,4 +18,4 @@ const AppHead = () => {
   )
 };
 
-export default AppHead;
+export default DefaultAppHead;
