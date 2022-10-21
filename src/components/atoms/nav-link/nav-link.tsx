@@ -1,12 +1,16 @@
+import DefaultText from "../typography/default-text";
+
 type NavLinkProps = NavLink;
 
 const NavLink = ({ url, text, activeLink, externalLink }: NavLinkProps) => {
   return (
     <a
-      className={`${activeLink ? console.log(activeLink) : ""} text-xl font-semibold`}
+      className={`${activeLink ? console.log(activeLink) : ""}`}
       href={url}
       target={externalLink ? "_blank" : "_self"} >
-        {text}
+        <DefaultText fontSize="xl" as="b">
+          {text}
+        </DefaultText>
     </a>
   );
 };

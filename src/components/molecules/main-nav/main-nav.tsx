@@ -34,7 +34,7 @@ const MainNav = ({ navList }: MainNavProps) => {
         )}
       </ul>
       <div aria-label="Menu" aria-expanded="false" className="md:hidden h-[70px] flex items-center" onClick={onOpen}>
-        <Icon ref={btnRef} Icon={FiMenu} iconAlt="Mobile Nav Icon" />
+        <Icon Icon={FiMenu} iconAlt="Mobile Nav Icon" />
         <Drawer
         isOpen={isOpen}
         placement='right'
