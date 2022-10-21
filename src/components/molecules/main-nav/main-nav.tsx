@@ -8,7 +8,7 @@ import {
   DrawerCloseButton,
   useDisclosure
 } from '@chakra-ui/react';
-import { useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import NavLink from "components/atoms/nav-link/nav-link";
 import Icon from "components/atoms/icon/icon";
 import { FiMenu } from "react-icons/fi";
@@ -25,12 +25,12 @@ const MainNav = ({ navList }: MainNavProps) => {
     <nav aria-label="Main">
       <ul className="md:flex gap-4 hidden">
         {navList.map((navItem, index) =>
-          <>
+          <Fragment key={index}>
             <li>
               <NavLink {...navItem} />
             </li>
             {index != navList.length - 1 && <span>|</span>}
-          </>
+          </Fragment>
         )}
       </ul>
       <div aria-label="Menu" aria-expanded="false" className="md:hidden h-[70px] flex items-center" onClick={onOpen}>
@@ -48,11 +48,9 @@ const MainNav = ({ navList }: MainNavProps) => {
           <DrawerBody>
             <ul>
               {navList.map((navItem, index) =>
-                <>
-                  <li className={`py-2 text-right ${index !== 0 && "border-t"}`}>
-                    <NavLink {...navItem} />
-                  </li>
-                </>
+                <li key={index} className={`py-2 text-right ${index !== 0 && "border-t"}`}>
+                  <NavLink {...navItem} />
+                </li>
               )}
             </ul>
           </DrawerBody>
