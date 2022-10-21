@@ -23,7 +23,7 @@ const MainNav = ({ navList }: MainNavProps) => {
 
   return (
     <nav aria-label="Main">
-      <ul className="md:flex gap-4 hidden">
+      <ul className="lg:flex gap-4 hidden">
         {navList.map((navItem, index) =>
           <Fragment key={index}>
             <li>
@@ -33,7 +33,7 @@ const MainNav = ({ navList }: MainNavProps) => {
           </Fragment>
         )}
       </ul>
-      <div aria-label="Menu" aria-expanded="false" className="md:hidden h-[70px] flex items-center" onClick={onOpen}>
+      <div aria-label="Menu" aria-expanded="false" className="lg:hidden h-[70px] flex items-center" onClick={onOpen}>
         <Icon Icon={FiMenu} iconAlt="Mobile Nav Icon" />
         <Drawer
         isOpen={isOpen}

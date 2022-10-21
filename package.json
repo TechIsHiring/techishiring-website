@@ -17,6 +17,7 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.6.0",
+    "react-twitter-embed": "^4.0.4",
     "storybook-addon-next": "^1.6.9"
   },
   "devDependencies": {

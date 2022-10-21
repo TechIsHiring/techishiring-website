@@ -1,10 +1,10 @@
 import WithPageLayout from 'interfaces/with-page-layouts';
+import NextDefaultBody from 'components/organisms/next-default-body/next-default-body';
 import DefaultLayout from 'components/templates/layouts/default-layout';
-import TwitterFeed from 'components/organisms/twitter-feed/twitter-feed';
 
 const Home: WithPageLayout = () => {
   return (
-    <TwitterFeed />
+    <NextDefaultBody />
   )
 }
 
