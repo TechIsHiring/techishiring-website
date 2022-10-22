@@ -10,7 +10,7 @@ const Header = () => {
     <header className="flex min-h-20 w-full justify-between items-end border-b px-4 py-2">
       <div className="flex items-center">
         <Logo />
-        <HeaderText className="w-[440px] px-5 hidden md:block" headingLevel="h1" size="md">
+        <HeaderText className="w-[440px] px-5 hidden md:block" level="h1" size="md">
           "Where great jobs and great Engineers go to find each other!"
         </HeaderText>
       </div>
