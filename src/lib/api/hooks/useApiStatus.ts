@@ -21,6 +21,6 @@ export const useApiStatus = (currentStatus = IDLE) => {
   return {
     apiStatus,
     setApiStatus,
-    ...statuses
+    statuses
   };
 };
