@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { IDLE, defaultStatuses } from "../constants/api-status";
+import { IDLE, defaultStatuses } from "../config/constants/api-status";
 import capitalize from "lib/utils/capitalize";
 
 const prepareStatuses = (currentStatus: string) => {

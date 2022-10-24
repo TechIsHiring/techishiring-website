@@ -2,7 +2,7 @@
 
 filename: example-api.ts
 
-import api from "../api";
+import api from "../config/api";
 
 export const fetchExampleRequest = () => {
   return api.get("https://restcountries.com/v2/all").then(res => res.data);

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useApiStatus } from "./useApiStatus";
-import { PENDING, SUCCESS, ERROR } from "../constants/api-status";
+import { PENDING, SUCCESS, ERROR } from "../config/constants/api-status";
 import { AxiosResponse } from "axios";
 
 export default function useApi(
