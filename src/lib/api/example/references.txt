@@ -1,0 +1,2 @@
+Video: https://www.youtube.com/watch?v=DMB7YUSckys
+GitHub Repo: https://github.com/ThomasFindlay/react-api-workshop

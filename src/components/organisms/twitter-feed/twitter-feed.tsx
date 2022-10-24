@@ -5,7 +5,7 @@ const TwitterFeed = () => {
   return (
     <div className="min-w-full md:px-[10%]">
       <header>
-        <HeaderText className="text-left pb-5" headingLevel="h2">
+        <HeaderText className="text-left pb-5" level="h2">
           Latest tweets from #TechIsHiring:
         </HeaderText>
       </header>
