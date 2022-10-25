@@ -8,4 +8,4 @@ export default storyConfig;
 
 export const DefaultLayoutStory = () => <DefaultLayout>
                                           Hello
-                                        </DefaultLayout>;
+</DefaultLayout>;

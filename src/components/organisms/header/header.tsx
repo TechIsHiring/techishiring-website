@@ -11,7 +11,7 @@ const Header = () => {
       <div className="flex items-center">
         <Logo />
         <HeaderText className="w-[440px] px-5 hidden md:block" level="h1" size="md">
-          "Where great jobs and great Engineers go to find each other!"
+          &apos;Where great jobs and great Engineers go to find each other!&apos;
         </HeaderText>
       </div>
       <MainNav navList={navList} />

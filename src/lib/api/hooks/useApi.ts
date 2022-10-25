@@ -13,23 +13,23 @@ export default function useApi(
 
   const apiCall = async (...args: any) => {
     try {
-      setApiStatus(PENDING)
+      setApiStatus(PENDING);
       const data = await apiFunction(...args);
-      setData(data)
-      setApiStatus(SUCCESS)
+      setData(data);
+      setApiStatus(SUCCESS);
       return {
         data,
-        error: null,
-      }
+        error: null
+      };
     } catch (error: any) {
-      setError(error)
-      setApiStatus(ERROR)
+      setError(error);
+      setApiStatus(ERROR);
       return {
         error,
-        data: null,
-      }
+        data: null
+      };
     }
-  }
+  };
 
   return {
     data,
