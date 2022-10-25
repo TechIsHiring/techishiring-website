@@ -1,7 +1,7 @@
 import WithPageLayout from 'interfaces/with-page-layouts';
-import NextDefaultBody from 'components/organisms/next-default-body/next-default-body';
 import DefaultLayout from 'components/templates/layouts/default-layout';
 import Head from 'next/head';
+import AboutContent from 'components/organisms/about-content/about-content';
 
 const Home: WithPageLayout = () => {
   return (
@@ -13,7 +13,7 @@ const Home: WithPageLayout = () => {
           content="TechIsHiring - About"
         />
       </Head>
-      <NextDefaultBody />
+      <AboutContent />
     </>
   )
 }
