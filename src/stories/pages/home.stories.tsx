@@ -8,5 +8,5 @@ const storyConfig = {
 export default storyConfig;
 
 export const HomeStory = () => <DefaultLayout>
-                                <Home />
-                               </DefaultLayout>;
+  <Home />
+</DefaultLayout>;

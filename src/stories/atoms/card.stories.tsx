@@ -7,5 +7,5 @@ const storyConfig = {
 export default storyConfig;
 
 export const CardStory = () => <Card>
-                                <>Hello</>
-                               </Card>;
+  <>Hello</>
+</Card>;

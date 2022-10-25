@@ -7,8 +7,8 @@ const Link = ({ url, children, activeLink, externalLink }: LinkProps) => {
     <a
       className={`${activeLink ? console.log(activeLink) : ""}`}
       href={url}
-      target={externalLink ? "_blank" : "_self"} >
-        {children}
+      target={externalLink ? "_blank" : "_self"} rel="noreferrer" >
+      {children}
     </a>
   );
 };

@@ -8,4 +8,4 @@ export default storyConfig;
 
 export const DefaultTextStory = () => <DefaultText>
                                         Hello
-                                      </DefaultText>;
+</DefaultText>;

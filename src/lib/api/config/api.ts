@@ -13,7 +13,7 @@ const api = (axios: AxiosInstance) => {
     put: (url: string, body: any, config: AxiosRequestConfig<any> = {}) => axios.put(url, body, config),
     patch: (url: string, body: any, config: AxiosRequestConfig<any> = {}) => axios.patch(url, body, config),
     delete: (url: string, config: AxiosRequestConfig<any> = {}) => axios.delete(url, config)
-  }
+  };
 };
 
 export default api(axiosInstance);

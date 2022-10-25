@@ -1,7 +1,7 @@
-import WithPageLayout from 'interfaces/with-page-layouts';
-import NextDefaultBody from 'components/organisms/next-default-body/next-default-body';
-import DefaultLayout from 'components/templates/layouts/default-layout';
-import Head from 'next/head';
+import WithPageLayout from "interfaces/with-page-layouts";
+import NextDefaultBody from "components/organisms/next-default-body/next-default-body";
+import DefaultLayout from "components/templates/layouts/default-layout";
+import Head from "next/head";
 
 const Home: WithPageLayout = () => {
   return (
@@ -15,9 +15,9 @@ const Home: WithPageLayout = () => {
       </Head>
       <NextDefaultBody />
     </>
-  )
-}
+  );
+};
 
 Home.PageLayout = DefaultLayout;
 
-export default Home
+export default Home;

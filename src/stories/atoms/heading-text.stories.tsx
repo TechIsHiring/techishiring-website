@@ -8,4 +8,4 @@ export default storyConfig;
 
 export const HeadingTextStory = () => <HeadingText level="h1">
                                         Hello
-                                      </HeadingText>;
+</HeadingText>;

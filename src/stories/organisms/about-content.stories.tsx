@@ -6,4 +6,4 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const AboutContentStory = () => <AboutContent />
+export const AboutContentStory = () => <AboutContent />;
