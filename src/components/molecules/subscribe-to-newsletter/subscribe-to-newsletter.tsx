@@ -1,6 +1,7 @@
 import DefaultButton from "components/atoms/button/button";
 import TextInput from "components/atoms/text-input/text-input";
 import DefaultText from "components/atoms/typography/default-text";
+import HeaderText from "components/atoms/typography/heading-text";
 import { verifyIsEmail } from "lib/utils/verify-email";
 import { useState } from "react";
 
@@ -14,24 +15,26 @@ const SubscribeToNewsletter = () => {
     if(isEmail) setEmail(textInput);
   };
 
-  const subscribe = () => {
+  const handleSubscribe = () => {
     console.log(error);
     console.log(email);
     if(!error && email) console.log("You have subscribed!");
   };
 
   return (
-    <>
-      <DefaultText>Subscribe to our newsletter!</DefaultText>
-      <TextInput
-        type="email"
-        placeholder="Enter your email"
-        onChange={event => updateEmail(event.target.value)}
-        isInvalid={error}
-      />
-      {error && <div className="p-3 text-red-700">This is not a valid email address!</div>}
-      <DefaultButton onClick={subscribe}>Subscribe</DefaultButton>
-    </>
+    <article className="flex flex-col gap-4">
+      <HeaderText level="h2">Subscribe to our newsletter!</HeaderText>
+      <div className="flex gap-2">
+        <TextInput
+          type="email"
+          placeholder="Enter your email"
+          onChange={event => updateEmail(event.target.value)}
+          isInvalid={error}
+        />
+        {error && <div className="p-3 text-red-700">This is not a valid email address!</div>}
+        <DefaultButton onClick={handleSubscribe}>Subscribe</DefaultButton>
+      </div>
+    </article>
   );
 };
 

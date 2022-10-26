@@ -3,20 +3,23 @@ import DefaultLayout from "components/templates/layouts/default-layout";
 import Head from "next/head";
 import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
 import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
+import Card from "components/atoms/card/card";
 
 const Home: WithPageLayout = ({ lastTenIssues }: any) => {
   
   return (
-    <>
-      <Head>
-        <title>TechIsHiring - Newsletter</title>
-        <meta
-          property="og:description"
-          content="TechIsHiring - Newsletter"
-        />
-      </Head>
-      <NewsletterContent />
-    </>
+    <Card section>
+      <>
+        <Head>
+          <title>TechIsHiring - Newsletter</title>
+          <meta
+            property="og:description"
+            content="TechIsHiring - Newsletter"
+          />
+        </Head>
+        <NewsletterContent />
+      </>
+    </Card>
   );
 };
 
