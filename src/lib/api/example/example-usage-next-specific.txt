@@ -15,7 +15,7 @@ const exampleComponent = ({ countriesData }) => {
 
 export const getServerSideProps = async () => {
 
-  const data = await fetchExampleRequest();
+  const countriesData = await fetchExampleRequest();
 
   return {
     props: {

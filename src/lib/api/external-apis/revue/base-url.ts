@@ -1,1 +1,0 @@
-export const REVUEBASEURL = "https://www.getrevue.co/api";

@@ -1,10 +1,9 @@
 import api from "lib/api/config/api";
-import { REVUEBASEURL } from "./base-url";
+import { REVUEBASEURL, RevueAuthHeader } from "./constants";
 
-export const fetchIssues = () => {
+export const fetchIssues = (): Promise<Issues[]> => {
   return api.get(
     `${REVUEBASEURL}/v2/issues`,
-    { headers: {
-      "Authorization": `Token ${process.env.NEXT_PUBLIC_REVUE_KEY}` 
-    }}).then(response => response.data);
+    RevueAuthHeader
+  ).then(response => response.data);
 };

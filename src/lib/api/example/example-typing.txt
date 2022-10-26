@@ -1,0 +1,12 @@
+/*
+
+filename: next-types.d.ts
+
+readonly interface Countries {
+  name: string;
+  topLeveDomain: string[];
+  alpha2Code: string;
+  ...etc
+}
+
+*/
