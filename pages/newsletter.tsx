@@ -1,10 +1,10 @@
 import WithPageLayout from "interfaces/with-page-layouts";
-import NextDefaultBody from "components/organisms/next-default-body/next-default-body";
 import DefaultLayout from "components/templates/layouts/default-layout";
 import Head from "next/head";
 import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
+import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
 
-const Home: WithPageLayout = ({ firstTenIssues }: any) => {
+const Home: WithPageLayout = ({ lastTenIssues }: any) => {
   
   return (
     <>
@@ -15,18 +15,18 @@ const Home: WithPageLayout = ({ firstTenIssues }: any) => {
           content="TechIsHiring - Newsletter"
         />
       </Head>
-      <NextDefaultBody />
+      <NewsletterContent />
     </>
   );
 };
 
 export const getServerSideProps = async () => {
   const data = await fetchIssues();
-  const firstTenIssues = data.filter((issue, index) => index < 10);
+  const lastTenIssues = data.filter((issue, index) => index < 10);
 
   return {
     props: {
-      firstTenIssues
+      lastTenIssues
     }
   };
 };
