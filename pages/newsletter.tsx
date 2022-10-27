@@ -8,7 +8,7 @@ import Card from "components/atoms/card/card";
 const Newsletter: WithPageLayout = ({ lastTenIssues }: any) => {
   
   return (
-    <Card section>
+    <Card section className="flex flex-col gap-8">
       <>
         <Head>
           <title>TechIsHiring - Newsletter</title>
@@ -17,7 +17,7 @@ const Newsletter: WithPageLayout = ({ lastTenIssues }: any) => {
             content="TechIsHiring - Newsletter"
           />
         </Head>
-        <NewsletterContent />
+        <NewsletterContent lastTenIssues={lastTenIssues} />
       </>
     </Card>
   );

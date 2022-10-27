@@ -41,9 +41,9 @@ const SubscribeToNewsletter = () => {
 
   return (
     <article className="flex flex-col gap-4">
-      <HeaderText level="h2">Subscribe to our newsletter!</HeaderText>
+      <HeaderText level="h2" className="pl-2">Subscribe to our newsletter!</HeaderText>
       { emailSent === "NotSent" &&
-        <div className="flex gap-2">
+        <div className="flex gap-3">
           <div className="w-full lg:w-1/2">
             <TextInput
               type="email"
