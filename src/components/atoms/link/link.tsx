@@ -1,3 +1,5 @@
+import NextLink from "next/link";
+
 interface LinkProps extends Link {
   children: JSX.Element;
 };

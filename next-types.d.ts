@@ -1,3 +1,5 @@
+// Base Project Types
+
 interface Link {
   url: string;
   activeLink?: boolean;
@@ -7,3 +9,15 @@ interface Link {
 interface NavLink extends Link {
   text: string;
 };
+
+// API Return Types
+
+// Revue
+
+readonly interface Issues {
+  id: number;
+  title: string;
+  description: string;
+  url: string;
+  send_at: string;
+}

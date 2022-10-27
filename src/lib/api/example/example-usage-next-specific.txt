@@ -15,7 +15,11 @@ const exampleComponent = ({ countriesData }) => {
 
 export const getServerSideProps = async () => {
 
-  const data = await fetchExampleRequest();
+  try {
+    const countriesData = await fetchExampleRequest();
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: {

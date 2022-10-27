@@ -1,23 +1,46 @@
 import WithPageLayout from "interfaces/with-page-layouts";
-import NextDefaultBody from "components/organisms/next-default-body/next-default-body";
 import DefaultLayout from "components/templates/layouts/default-layout";
 import Head from "next/head";
+import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
+import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
+import Card from "components/atoms/card/card";
 
-const Home: WithPageLayout = () => {
+const Newsletter: WithPageLayout = ({ lastTenIssues }: any) => {
+  
   return (
-    <>
-      <Head>
-        <title>TechIsHiring - Newsletter</title>
-        <meta
-          property="og:description"
-          content="TechIsHiring - Newsletter"
-        />
-      </Head>
-      <NextDefaultBody />
-    </>
+    <Card section className="flex flex-col gap-8">
+      <>
+        <Head>
+          <title>TechIsHiring - Newsletter</title>
+          <meta
+            property="og:description"
+            content="TechIsHiring - Newsletter"
+          />
+        </Head>
+        <NewsletterContent lastTenIssues={lastTenIssues} />
+      </>
+    </Card>
   );
 };
 
-Home.PageLayout = DefaultLayout;
+export const getServerSideProps = async () => {
 
-export default Home;
+  let lastTenIssues;
+
+  try {
+    const data = await fetchIssues();
+    lastTenIssues = data.filter((issue, index) => index < 10);
+  } catch (error) {
+    console.log(error);
+  }
+
+  return {
+    props: {
+      lastTenIssues
+    }
+  };
+};
+
+Newsletter.PageLayout = DefaultLayout;
+
+export default Newsletter;
