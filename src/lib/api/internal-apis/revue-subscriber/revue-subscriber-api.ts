@@ -5,7 +5,7 @@ interface InternalSubscriberPostBody {
   email: string;
 }
 
-export const addNewSubscriber = (requestBody: InternalSubscriberPostBody) => {
+export const RouteToInternalRevueApi = (requestBody: InternalSubscriberPostBody) => {
   return api.post(
     `${BASEURL}/api/revue-subscriber`,
     requestBody

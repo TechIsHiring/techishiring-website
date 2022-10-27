@@ -5,7 +5,7 @@ import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
 import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
 import Card from "components/atoms/card/card";
 
-const Home: WithPageLayout = ({ lastTenIssues }: any) => {
+const Newsletter: WithPageLayout = ({ lastTenIssues }: any) => {
   
   return (
     <Card section>
@@ -34,6 +34,6 @@ export const getServerSideProps = async () => {
   };
 };
 
-Home.PageLayout = DefaultLayout;
+Newsletter.PageLayout = DefaultLayout;
 
-export default Home;
+export default Newsletter;
