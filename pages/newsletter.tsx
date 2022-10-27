@@ -24,8 +24,15 @@ const Newsletter: WithPageLayout = ({ lastTenIssues }: any) => {
 };
 
 export const getServerSideProps = async () => {
-  const data = await fetchIssues();
-  const lastTenIssues = data.filter((issue, index) => index < 10);
+
+  let lastTenIssues;
+
+  try {
+    const data = await fetchIssues();
+    lastTenIssues = data.filter((issue, index) => index < 10);
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: {
