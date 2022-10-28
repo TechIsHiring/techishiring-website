@@ -1,0 +1,75 @@
+// layout example
+
+import Head from "next/head";
+import Footer from "components/organisms/footer/footer";
+import Header from "components/organisms/header/header";
+
+const ExampleLayout = ({children}: {children: React.ReactNode}) => {
+  return (
+    <>
+      <Head>
+        <meta 
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
+      </Head>
+      <div className="flex min-h-screen flex-col items-center justify-center">
+        <Header />
+        <main className="flex w-full min-h-[calc(100vh-190px)] flex-1 flex-col px-5 py-10">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default DefaultLayout;
+
+// Implementation example
+
+const ExampleComponent = () => {
+  return "Hello!";
+};
+
+// Example Interface for Configuration
+
+import type { NextPage } from "next";
+
+type WithPageLayout = NextPage & {
+    PageLayout?: React.ComponentType<any>;
+};
+
+export default WithPageLayout;
+
+ExampleComponent.PageLayout = DefaultLayout;
+
+// _app.tsx Configuration
+
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { ChakraProvider } from "@chakra-ui/react";
+import posthog from "posthog-js";
+
+type ComponentWithPageLayout = AppProps & {
+  Component: AppProps["Component"] & {
+    PageLayout?: React.ComponentType<any>;
+  };
+};
+
+function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
+
+  return (
+    <ChakraProvider>
+      {Component.PageLayout ? (
+        <Component.PageLayout>
+          <Component {...pageProps} />
+        </Component.PageLayout>
+      ) : (
+        <Component {...pageProps} />
+      )}
+    </ChakraProvider>
+  );
+}
+
+export default MyApp;
