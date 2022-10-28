@@ -1,17 +1,17 @@
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   useDisclosure
 } from "@chakra-ui/react";
-import { Fragment, useRef } from "react";
+import { Fragment } from "react";
 import NavLink from "components/atoms/nav-link/nav-link";
 import Icon from "components/atoms/icon/icon";
 import { FiMenu } from "react-icons/fi";
+import { useRouter } from "next/router";
 
 interface MainNavProps {
   navList: NavLink[];
@@ -19,7 +19,7 @@ interface MainNavProps {
 
 const MainNav = ({ navList }: MainNavProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef();
+  const router = useRouter();
 
   return (
     <nav aria-label="Main">
@@ -27,9 +27,8 @@ const MainNav = ({ navList }: MainNavProps) => {
         {navList.map((navItem, index) =>
           <Fragment key={index}>
             <li>
-              <NavLink {...navItem} />
+              <NavLink activeLink={router.pathname === navItem.url} {...navItem} />
             </li>
-            {index != navList.length - 1 && <span>|</span>}
           </Fragment>
         )}
       </ul>
