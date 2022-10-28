@@ -6,12 +6,13 @@ interface LinkProps extends Link {
 
 const Link = ({ url, children, activeLink, externalLink }: LinkProps) => {
   return (
-    <a
+    <NextLink
+      passHref
       className={`${activeLink ? console.log(activeLink) : ""} h-fit`}
       href={url}
       target={externalLink ? "_blank" : "_self"} rel="noreferrer" >
       {children}
-    </a>
+    </NextLink>
   );
 };
 

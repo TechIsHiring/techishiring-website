@@ -13,7 +13,9 @@ const Icon = ({ Icon, iconAlt, url, size = 24 }: IconProps) => {
     <>
       { url &&
         <Link url={url} externalLink >
-          <Icon size={size} title={iconAlt} />
+          <>
+            <Icon size={size} title={iconAlt} />
+          </>
         </Link>
       }
       { !url && <Icon size={size} title={iconAlt} /> }
