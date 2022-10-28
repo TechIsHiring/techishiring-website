@@ -7,7 +7,7 @@ interface LinkProps extends Link {
 const Link = ({ url, children, activeLink, externalLink }: LinkProps) => {
   return (
     <a
-      className={`${activeLink ? console.log(activeLink) : ""}`}
+      className={`${activeLink ? console.log(activeLink) : ""} h-fit`}
       href={url}
       target={externalLink ? "_blank" : "_self"} rel="noreferrer" >
       {children}
