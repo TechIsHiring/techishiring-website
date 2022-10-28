@@ -9,7 +9,7 @@ interface NewsLetterEntriesProps {
 const NewsLetterEntries = ({ issues }: NewsLetterEntriesProps) => {
   return (
     <article className="flex flex-col gap-5">
-      <HeaderText level="h2" className="pl-2">Check out our latest newsletters!</HeaderText>
+      <HeaderText level="h2">Check out our latest newsletters!</HeaderText>
       {issues.map(( issues: any, index: number ) => 
         <Link key={index} url={issues.url} externalLink >
           <Card>

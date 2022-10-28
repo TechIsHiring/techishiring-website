@@ -6,14 +6,11 @@ import { RouteToInternalRevueApi } from "lib/api/internal-apis/revue-subscriber/
 import { verifyIsEmail } from "lib/utils/verify-email";
 import { useState } from "react";
 
-type EmailSent = "NotSent" | "Sent" | "Error";
-
 const SubscribeToNewsletter = () => {
   const [ email, setEmail ] = useState("");
   const [ error, setError ] = useState(false);
-  const [ emailSent, setEmailSent ] = useState<EmailSent>("NotSent");
 
-  const { apiCall: sendEmailToRevue, statuses } = useApi(RouteToInternalRevueApi);
+  const { executeApiCall: sendEmailToRevue, statuses } = useApi(RouteToInternalRevueApi);
 
   const updateEmail = (textInput: string) => {
     const isEmail = verifyIsEmail(textInput);
@@ -21,19 +18,16 @@ const SubscribeToNewsletter = () => {
     if(isEmail) setEmail(textInput);
   };
 
-  const handleSubscribe = async () => {
-    console.log(error);
-    console.log(email);
+  const handleSubscribe = () => {
     if(!error && email) {
       const requestBody = {
         email: email
       };
+
       try {
-        await sendEmailToRevue(requestBody);
-        setEmailSent("Sent");
+        sendEmailToRevue(requestBody);
       } catch (error: any) {
         console.log(error);
-        setEmailSent("Error");
       }
     }
     if(!email) setError(true);
@@ -41,8 +35,8 @@ const SubscribeToNewsletter = () => {
 
   return (
     <article className="flex flex-col gap-4">
-      <HeaderText level="h2" className="pl-2">Subscribe to our newsletter!</HeaderText>
-      { emailSent === "NotSent" &&
+      <HeaderText level="h2">Subscribe to our newsletter!</HeaderText>
+      { !statuses.isSuccess && !statuses.isError &&
         <div className="flex gap-3">
           <div className="w-full lg:w-1/2">
             <TextInput
@@ -56,12 +50,12 @@ const SubscribeToNewsletter = () => {
           <DefaultButton onClick={handleSubscribe}>Subscribe</DefaultButton>
         </div>
       }
-      { emailSent === "Sent" &&
+      { statuses.isSuccess &&
         <div>
           Please check your email to confirm your subscription!
         </div>
       }
-      { emailSent === "Error" &&
+      { statuses.isError &&
         <div>
           I&apos;m sorry! Something has gone wrong with signing up your email!
         </div>

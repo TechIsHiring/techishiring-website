@@ -11,7 +11,7 @@ export default function useApi(
   const [ error, setError ] = useState();
   const { statuses, setApiStatus, apiStatus } = useApiStatus();
 
-  const apiCall = async (...args: any) => {
+  const executeApiCall = async (...args: any) => {
     try {
       setApiStatus(PENDING);
       const data = await apiFunction(...args);
@@ -37,7 +37,7 @@ export default function useApi(
     apiStatus,
     setApiStatus,
     error,
-    apiCall,
+    executeApiCall,
     statuses
   };
   
