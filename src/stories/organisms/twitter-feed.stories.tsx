@@ -6,4 +6,4 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const TwitterFeedStory = () => <TwitterFeed />
+export const TwitterFeedStory = () => <TwitterFeed />;

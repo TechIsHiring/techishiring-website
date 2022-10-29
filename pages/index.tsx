@@ -1,7 +1,7 @@
-import WithPageLayout from 'interfaces/with-page-layouts';
-import DefaultLayout from 'components/templates/layouts/default-layout';
-import TwitterFeed from 'components/organisms/twitter-feed/twitter-feed';
-import Head from 'next/head';
+import WithPageLayout from "interfaces/with-page-layouts";
+import DefaultLayout from "components/templates/layouts/default-layout";
+import TwitterFeed from "components/organisms/twitter-feed/twitter-feed";
+import Head from "next/head";
 
 const Home: WithPageLayout = () => {
   return (
@@ -15,9 +15,9 @@ const Home: WithPageLayout = () => {
       </Head>
       <TwitterFeed />
     </>
-  )
-}
+  );
+};
 
 Home.PageLayout = DefaultLayout;
 
-export default Home
+export default Home;

@@ -1,0 +1,31 @@
+/*
+
+filename: pages/example-usage.tsx
+
+import { fetchExampleRequest } from "./example-api";
+
+const exampleComponent = ({ countriesData }) => {
+  
+  return (
+    <div>
+      {countriesData}
+    </div>
+  );
+}
+
+export const getServerSideProps = async () => {
+
+  try {
+    const countriesData = await fetchExampleRequest();
+  } catch (error) {
+    console.log(error);
+  }
+
+  return {
+    props: {
+      countriesData
+    }
+  };
+};
+
+*/

@@ -1,0 +1,23 @@
+/*
+
+filename: example-usage.tsx
+
+import useApi from "../hooks/useApi";
+import { fetchExampleRequest } from "./example-api";
+
+const exampleComponent = () => {
+  const { data: countriesData, apiCall: fetchCountries, statuses } = useApi(fetchExampleRequest);
+  
+  return (
+    <div onClick={fetchCountries}>
+      <>
+        {statuses.isIdle ? <div>I'm idle!</div> : null }
+        {statuses.isLoading ? <div>I'm loading!</div> : null }
+        {statuses.isError ? <div>I broke...</div> : null }
+        {statuses.isSuccess ? {countriesData} : null }
+      </>
+    </div>
+  );
+}
+
+*/

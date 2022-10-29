@@ -6,4 +6,4 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const FooterStory = () => <Footer />
+export const FooterStory = () => <Footer />;

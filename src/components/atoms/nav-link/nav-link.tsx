@@ -5,12 +5,12 @@ type NavLinkProps = NavLink;
 const NavLink = ({ url, text, activeLink, externalLink }: NavLinkProps) => {
   return (
     <a
-      className={`${activeLink ? console.log(activeLink) : ""}`}
+      className={`${activeLink ? "border-b-2 border-black" : ""}`}
       href={url}
-      target={externalLink ? "_blank" : "_self"} >
-        <DefaultText fontSize="xl" as="b">
-          {text}
-        </DefaultText>
+      target={externalLink ? "_blank" : "_self"} rel="noreferrer" >
+      <DefaultText fontSize="xl" as="b">
+        {text}
+      </DefaultText>
     </a>
   );
 };

@@ -6,4 +6,4 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const HeaderStory = () => <Header />
+export const HeaderStory = () => <Header />;
