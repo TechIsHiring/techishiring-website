@@ -10,13 +10,13 @@ interface NewsletterEntryProps {
 const NewsletterEntry = ({ url, title }: NewsletterEntryProps) => {
   return (
     <Link url={url} externalLink >
-      <>
+      <a target="_blank" rel="noreferrer">
         <Card>
           <HeaderText level="h3" className="!text-lg">
             {title}
           </HeaderText>
         </Card>
-      </>
+      </a>
     </Link>
   );
 };
