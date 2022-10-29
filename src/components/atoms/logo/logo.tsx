@@ -5,9 +5,9 @@ import TechIsHiringLogo from "../../../images/techishiring-logo.png";
 const Logo = () => {
   return (
     <Link url="/">
-      <>
+      <a>
         <Image className="rounded-lg" src={TechIsHiringLogo} height={70} width={254} alt="TechIsHiring logo" />
-      </>
+      </a>
     </Link>
   );
 };
