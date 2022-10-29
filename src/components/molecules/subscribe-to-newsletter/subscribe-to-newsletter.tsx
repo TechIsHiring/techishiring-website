@@ -27,7 +27,7 @@ const SubscribeToNewsletter = () => {
       try {
         sendEmailToRevue(requestBody);
       } catch (error: any) {
-        console.log(error);
+        console.log("Something went wrong!");
       }
     }
     if(!email) setError(true);
