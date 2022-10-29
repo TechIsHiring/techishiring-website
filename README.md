@@ -2,30 +2,74 @@
 
 The website for TechIsHiring.com
 
-## Next.js + Tailwind CSS Example
+## Technologies Used
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+* Next.js
+* Tailwind CSS
+* Chakra UI
+* TypeScript
+* Storybook
+* Axios
 
-## Deploy your own
+## Project Design Document
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+This is a link to the Design Document for this project: [Design Document](https://drive.google.com/file/d/15jYKdhq1NcL4rHJIvBxoLUuNlYRqOhMr/view?usp=sharing)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Atomic Design
 
-## How to use
+This project uses Atomic Design for it's Components. Here are several resources for Atomic Design if you are unfamiliar:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+* [Atomic Design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
+* [Atomic Design - How To Make Web and UI Design Easier](https://www.youtube.com/watch?v=W3A33dmp17E)
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+## Storybook
+
+The Stoybook for this project can be found at [https://design.techishiring.com](https://design.techishiring.com).
+
+### Run it locally
+
+```shell
+npm run storybook
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+## Local development
+
+To install the application:
+
+```shell
+npm ci
 ```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+To run the application on a developement server:
+
+```shell
+npm run dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+To reinstall your node_modules if a problem occurs with your dependencies:
+
+```shell
+npm run reset-deps
+```
+
+### Code linting
+
+To check the code and styles quality, use the following command:
+
+```shell
+npm run lint
+```
+
+To fix the linting errors, use the following command:
+
+```shell
+npm run format
+```
+
+### Production deployment
+
+Run this command to build the project.
+
+```shell
+npm run build
+```
