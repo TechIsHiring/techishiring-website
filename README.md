@@ -24,7 +24,7 @@ This project uses Atomic Design for it's Components. Here are several resources 
 
 ## Storybook
 
-The Stoybook for this project can be found at [https://design.techishiring.com](https://design.techishiring.com).
+The Stoybook for this project can be found at [https://stories.techishiring.com](https://stories.techishiring.com).
 
 ### Run it locally
 
