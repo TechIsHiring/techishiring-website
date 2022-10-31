@@ -4,12 +4,9 @@ import Head from "next/head";
 import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
 import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
 import Card from "components/atoms/card/card";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
-interface NewsletterProps {
-  lastTenIssues: Issues[];
-}
-
-const Newsletter: WithPageLayout<NewsletterProps> = ({ lastTenIssues }) => {
+const Newsletter: WithPageLayout<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ lastTenIssues }) => {
   
   return (
     <Card section className="flex flex-col gap-8">
@@ -27,7 +24,7 @@ const Newsletter: WithPageLayout<NewsletterProps> = ({ lastTenIssues }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps<{ lastTenIssues: Issues[] | undefined }> = async () => {
 
   let lastTenIssues;
 
