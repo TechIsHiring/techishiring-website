@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-type WithPageLayout = NextPage & {
+type WithPageLayout<T> = NextPage<T> & {
     PageLayout?: React.ComponentType<any>;
 };
 

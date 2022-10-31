@@ -2,7 +2,7 @@ import HeaderText from "components/atoms/typography/heading-text";
 import NewsletterEntry from "components/molecules/newsletter-entry/newsletter-entry";
 
 interface NewsLetterEntriesProps {
-  issues: any;
+  issues: Issues[];
 }
 
 const NewsLetterEntries = ({ issues }: NewsLetterEntriesProps) => {

@@ -5,7 +5,11 @@ import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
 import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
 import Card from "components/atoms/card/card";
 
-const Newsletter: WithPageLayout = ({ lastTenIssues }: any) => {
+interface NewsletterProps {
+  lastTenIssues: Issues[];
+}
+
+const Newsletter: WithPageLayout<NewsletterProps> = ({ lastTenIssues }) => {
   
   return (
     <Card section className="flex flex-col gap-8">

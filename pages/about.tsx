@@ -3,7 +3,11 @@ import DefaultLayout from "components/templates/layouts/default-layout";
 import Head from "next/head";
 import AboutContent from "components/organisms/about-content/about-content";
 
-const Home: WithPageLayout = () => {
+interface AboutProps {
+
+};
+
+const About: WithPageLayout<AboutProps> = () => {
   return (
     <>
       <Head>
@@ -18,6 +22,6 @@ const Home: WithPageLayout = () => {
   );
 };
 
-Home.PageLayout = DefaultLayout;
+About.PageLayout = DefaultLayout;
 
-export default Home;
+export default About;
