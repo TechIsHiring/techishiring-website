@@ -13,7 +13,7 @@ The website for TechIsHiring.com
 
 ## Project Design Document
 
-This is a link to the Design Document for this project: [Design Document](https://drive.google.com/file/d/15jYKdhq1NcL4rHJIvBxoLUuNlYRqOhMr/view?usp=sharing)
+This is a link to the Engineering Design Document for v1.0.0 release: [Engerineering Design Document](https://drive.google.com/file/d/15jYKdhq1NcL4rHJIvBxoLUuNlYRqOhMr/view?usp=sharing)
 
 ## Atomic Design
 

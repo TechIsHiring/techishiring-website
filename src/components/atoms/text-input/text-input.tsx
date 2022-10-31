@@ -6,9 +6,7 @@ interface InputProps extends React.ComponentProps<typeof ChakraInputComponent> {
 
 const TextInput = (props: InputProps) => {
   return (
-    <ChakraInputComponent {...props} >
-      {props.children}
-    </ChakraInputComponent>
+    <ChakraInputComponent {...props} />
   );
 };
 
