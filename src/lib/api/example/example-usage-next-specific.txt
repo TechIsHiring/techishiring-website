@@ -3,7 +3,7 @@
 filename: pages/example-usage.tsx
 
 import { fetchExampleRequest } from "./example-api";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { InferGetServerSidePropsType } from "next";
 
 const exampleComponent: WithPageLayout<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ countriesData }) => {
   
@@ -14,7 +14,7 @@ const exampleComponent: WithPageLayout<InferGetServerSidePropsType<typeof getSer
   );
 }
 
-export const getServerSideProps: GetServerSideProps<{ countriesData: countries[] | undefined }> = async () => {
+export const getServerSideProps = async () => {
 
   try {
     const countriesData = await fetchExampleRequest();
