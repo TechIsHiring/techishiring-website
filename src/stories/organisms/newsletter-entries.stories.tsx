@@ -6,8 +6,12 @@ const storyConfig = {
 
 const testIssues = [
   {
+    id: 1,
     url: "https://www.google.com",
-    title: "test title"
+    title: "test title",
+    description: "",
+    // eslint-disable-next-line
+    send_at: ""
   }
 ];
 
