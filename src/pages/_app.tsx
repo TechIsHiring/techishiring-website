@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { initiateAnalytics } from "../src/lib/utils/analytics";
+import { initiateAnalytics } from "../lib/utils/analytics";
 import posthog from "posthog-js";
 
 type ComponentWithPageLayout = AppProps & {
