@@ -4,7 +4,7 @@ import Head from "next/head";
 import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
 import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
 import Card from "components/atoms/card/card";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { InferGetServerSidePropsType } from "next";
 
 const Newsletter: WithPageLayout<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ lastTenIssues }) => {
   
@@ -24,7 +24,7 @@ const Newsletter: WithPageLayout<InferGetServerSidePropsType<typeof getServerSid
   );
 };
 
-export const getServerSideProps: GetServerSideProps<{ lastTenIssues: Issues[] | undefined }> = async () => {
+export const getServerSideProps = async () => {
 
   let lastTenIssues;
 
