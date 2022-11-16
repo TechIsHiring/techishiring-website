@@ -6,7 +6,13 @@ interface InputProps extends React.ComponentProps<typeof ChakraInputComponent> {
 
 const TextInput = (props: InputProps) => {
   return (
-    <ChakraInputComponent {...props} />
+    <ChakraInputComponent
+      {...props}
+      className={`${props.className ? props.className : ""}`}
+      borderColor="blackAlpha.500"
+      focusBorderColor="blue.400"
+      _hover={{ }}
+    />
   );
 };
 

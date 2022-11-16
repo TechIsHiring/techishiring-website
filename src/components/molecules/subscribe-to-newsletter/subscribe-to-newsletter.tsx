@@ -1,3 +1,4 @@
+import { background } from "@chakra-ui/react";
 import DefaultButton from "components/atoms/button/button";
 import TextInput from "components/atoms/text-input/text-input";
 import HeaderText from "components/atoms/typography/heading-text";
@@ -35,19 +36,30 @@ const SubscribeToNewsletter = () => {
 
   return (
     <article className="flex flex-col gap-4">
-      <HeaderText level="h2">Subscribe to our newsletter!</HeaderText>
+      <HeaderText level="h2">Subscribe To Our Newsletter!</HeaderText>
       { !statuses.isSuccess && !statuses.isError &&
-        <div className="flex gap-3">
-          <div className="w-full lg:w-1/2">
+        <div className="flex flex-col gap-3">
+          <label className="pl-4">
+            Enter your email
+          </label>
+          <div className="flex gap-3 w-full lg:w-1/2">
             <TextInput
               type="email"
               placeholder="Enter your email"
               onChange={event => updateEmail(event.target.value)}
               isInvalid={error}
             />
+            <DefaultButton
+              backgroundColor={"blue.500"}
+              color={"white"}
+              _hover={{
+                background: "darkgray"
+              }}
+              onClick={handleSubscribe}>
+              Subscribe
+            </DefaultButton>
             {error && <div className="p-3 text-red-700">This is not a valid email address!</div>}
           </div>
-          <DefaultButton onClick={handleSubscribe}>Subscribe</DefaultButton>
         </div>
       }
       { statuses.isSuccess &&
