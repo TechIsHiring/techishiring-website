@@ -11,7 +11,7 @@ const testIssues = [
     title: "test title",
     description: "",
     // eslint-disable-next-line
-    send_at: ""
+    sent_at: ""
   }
 ];
 
