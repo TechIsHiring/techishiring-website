@@ -4,7 +4,7 @@ const storyConfig = {
   title: "Design System/Organisms/Newsletter Entries"
 };
 
-const testIssues = [
+const testIssues: Issues[] = [
   {
     id: 1,
     url: "https://www.google.com",

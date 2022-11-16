@@ -1,4 +1,3 @@
-import { background } from "@chakra-ui/react";
 import DefaultButton from "components/atoms/button/button";
 import TextInput from "components/atoms/text-input/text-input";
 import HeaderText from "components/atoms/typography/heading-text";
