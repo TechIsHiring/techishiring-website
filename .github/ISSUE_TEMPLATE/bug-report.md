@@ -1,3 +1,12 @@
+---
+name: "\U0001F680 Bug Report"
+about: "I want to report a bug \U0001F642)!"
+title: ''
+labels: 'i: bug, i: needs triage'
+assignees: ''
+
+---
+
 <!--- Provide a general summary of the issue in the Title above -->
 
 ## Expected Behavior
