@@ -1,6 +1,6 @@
 # TechIsHiring Website
 
-The website for TechIsHiring.com
+TechIsHiring's website, focusing on showcasing the top tweets from the Twitter account and the TechIsHiring newsletter.
 
 ## Technologies Used
 
@@ -10,6 +10,7 @@ The website for TechIsHiring.com
 * TypeScript
 * Storybook
 * Axios
+* Posthog
 
 ## Project Design Document
 
