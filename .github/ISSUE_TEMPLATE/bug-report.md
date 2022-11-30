@@ -1,6 +1,6 @@
 ---
-name: "\U0001F680 Bug Report"
-about: "I want to report a bug \U0001F642)!"
+name: "🐞 Bug Report"
+about: "I want to report a bug 😟..."
 title: ''
 labels: 'i: bug, i: needs triage'
 assignees: ''
