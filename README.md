@@ -12,6 +12,10 @@ TechIsHiring's website, focusing on showcasing the top tweets from the Twitter a
 * Axios
 * Posthog
 
+## Project Figma
+
+This is a link to the Figma File for the TechIsHiring Website: [TechIsHiring Website Figma](https://www.figma.com/file/AHf38Z5LQ4v1YBIgJv0tsM/TechIsHiring?t=ItybLH9XnPZ96T8A-6)
+
 ## Project Design Document
 
 This is a link to the Engineering Design Document for v1.0.0 release: [Engerineering Design Document](https://drive.google.com/file/d/15jYKdhq1NcL4rHJIvBxoLUuNlYRqOhMr/view?usp=sharing)
@@ -74,3 +78,11 @@ Run this command to build the project.
 ```shell
 npm run build
 ```
+
+## Contributing
+
+Check out the [CONTRIBUTING.md](CONTRIBUTING.md) guide to assist with all you need to know before getting started with making changes to the codebase.
+
+## License
+
+[MIT License](LICENSE)
