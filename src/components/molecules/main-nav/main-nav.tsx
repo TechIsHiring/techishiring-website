@@ -50,8 +50,11 @@ const MainNav = ({ navList }: MainNavProps) => {
             <DrawerBody>
               <ul>
                 {navList.map((navItem, index) =>
-                  <li key={index} className={`py-2 text-right ${index !== 0 && "border-t"}`}>
+                  <li key={index} className={`flex items-center justify-end gap-2 py-2 ${index !== 0 && "border-t"}`}>
                     <NavLink {...navItem} />
+                    {
+                      navItem.externalLink && <Icon Icon={FiExternalLink} size={22} iconAlt="external link for TechIsHiring newsletter" />
+                    }
                   </li>
                 )}
               </ul>
