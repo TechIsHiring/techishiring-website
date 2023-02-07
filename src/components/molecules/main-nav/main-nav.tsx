@@ -10,7 +10,7 @@ import {
 import { Fragment } from "react";
 import NavLink from "components/atoms/nav-link/nav-link";
 import Icon from "components/atoms/icon/icon";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiExternalLink } from "react-icons/fi";
 import { useRouter } from "next/router";
 
 interface MainNavProps {
@@ -26,8 +26,11 @@ const MainNav = ({ navList }: MainNavProps) => {
       <ul className="lg:flex gap-4 hidden">
         {navList.map((navItem, index) =>
           <Fragment key={index}>
-            <li>
+            <li className="flex items-center gap-2">
               <NavLink activeLink={router.pathname === navItem.url} {...navItem} />
+              {
+                navItem.externalLink && <Icon Icon={FiExternalLink} size={22} iconAlt="external link for TechIsHiring newsletter" />
+              }
             </li>
           </Fragment>
         )}
