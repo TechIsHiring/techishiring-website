@@ -9,25 +9,25 @@ describe("lib/utils/capitalize", () => {
 
   it("should return an empty string if the string is empty", () => {
     expect(capitalize("")).toBe("");
-  })
+  });
 
   it("should return the same string if the first letter is already capitalized", () => {
     expect(capitalize("Hello")).toBe("Hello");
-  })
+  });
 
-  it('should return the same string if the first letter is a number', () => {
+  it("should return the same string if the first letter is a number", () => {
     expect(capitalize("1Hello")).toBe("1Hello");
-  })
+  });
 
-  it('should return the same string if the first letter is a symbol', () => {
+  it("should return the same string if the first letter is a symbol", () => {
     expect(capitalize("!Hello")).toBe("!Hello");
-  })
+  });
 
-  it('should return the same string if the first letter is a space', () => {
+  it("should return the same string if the first letter is a space", () => {
     expect(capitalize(" Hello")).toBe(" Hello");
-  })
+  });
 
-  it('should return the same string if the first letter is a special character', () => {
+  it("should return the same string if the first letter is a special character", () => {
     expect(capitalize("$hello")).toBe("$hello");
-  })
-})
+  });
+});
