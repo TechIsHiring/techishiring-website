@@ -9,7 +9,12 @@ const navList: NavLink[] = [
     url: "https://www.google.com",
     text: "test",
     externalLink: true
+  },
+  {
+    url: "https://www.google.com",
+    text: "test 2"
   }
+
 ];
 
 export default storyConfig;
