@@ -7,7 +7,7 @@ const Header = () => {
   const navList = useMainNav();
 
   return (
-    <header className="flex bg-white h-24 w-full sticky top-0 justify-between items-center border-b px-4 py-2">
+    <header className="flex z-[999] bg-white h-24 w-full sticky top-0 justify-between items-center border-b px-4 py-2">
       <div className="flex items-center">
         <Logo />
         <HeaderText className="w-[440px] px-5 hidden md:block" level="h1" size="md">
