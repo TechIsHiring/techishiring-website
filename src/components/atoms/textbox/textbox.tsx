@@ -1,4 +1,5 @@
 import { Textarea as ChakraTextboxComponent } from "@chakra-ui/react";
+import React from "react";
 
 interface TextboxProps extends React.ComponentProps<typeof ChakraTextboxComponent> {
   //Add additional prop definitions here

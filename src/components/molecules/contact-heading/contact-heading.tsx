@@ -2,6 +2,7 @@ import { Box, VStack } from "@chakra-ui/react";
 import HeaderText from "components/atoms/typography/heading-text";
 import DefaultText from "components/atoms/typography/default-text";
 import Link from "components/atoms/link/link";
+import React from "react";
 
 const ContactHeading = () => {
   return ( 

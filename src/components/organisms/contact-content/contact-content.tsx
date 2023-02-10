@@ -3,6 +3,7 @@ import { contactImg } from "images/Index";
 import DefaultImage from "components/atoms/image/image";
 import ContactHeading from "components/molecules/contact-heading/contact-heading";
 import ContactForm from "components/molecules/contact-form/contact-form";
+import React from "react";
 
 const ContactContent = () => {
 
