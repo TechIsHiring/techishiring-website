@@ -12,14 +12,14 @@ const ContactHeading = () => {
         </HeaderText>
         <DefaultText className={"text-gray"}>
                 You can reach us anytime via 
-          <Box>
-            <Link
-              url={"#"}>
-              <a href="mailto:chadstewart@techishiring.com" className={"text-primary"}>
+          <br/>
+          <Link
+            url={"#"}>
+            <a href="mailto:chadstewart@techishiring.com" className={"text-primary"}>
                       chadstewart@techishiring.com
-              </a>
-            </Link>
-          </Box>
+            </a>
+          </Link>
+          
                 
         </DefaultText>
       </VStack>
