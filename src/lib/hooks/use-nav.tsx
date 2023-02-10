@@ -6,8 +6,9 @@ const useMainNav = () => {
       text: "Home"
     },
     {
-      url: "/newsletter",
-      text: "Newsletter"
+      url: "https://techishiring.substack.com/",
+      text: "Newsletter",
+      externalLink: true
     },
     {
       url: "/about",
