@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { contactImg } from "images/Index";
-import DefaultImage from "components/atoms/image/image";
+import Image from "next/image";
 import ContactHeading from "components/molecules/contact-heading/contact-heading";
 import ContactForm from "components/molecules/contact-form/contact-form";
 import React from "react";
@@ -11,12 +11,7 @@ const ContactContent = () => {
     <div className="flex w-full ">
       <div className="lg:w-[45%] hidden xl:flex lg:flex justify-center items-center">
 
-        <DefaultImage 
-          src={"https://res.cloudinary.com/phantom1245/image/upload/v1675875866/techishiring/techish_qcfih9.png" || contactImg}
-          alt="contact-img" 
-          w={"100%"}
-          h={"auto"}
-        />
+        <Image src={"https://res.cloudinary.com/phantom1245/image/upload/v1675875866/techishiring/techish_qcfih9.png" || contactImg}  alt="Contact Form Image" width={1000}  height={1000} />
         
       </div>
       

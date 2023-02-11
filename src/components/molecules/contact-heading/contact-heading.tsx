@@ -16,8 +16,8 @@ const ContactHeading = () => {
           <br/>
           <Link
             url={"#"}>
-            <a href="mailto:chadstewart@techishiring.com" className={"text-primary"}>
-                      chadstewart@techishiring.com
+            <a href="mailto:techishiring@gmail.com" className={"text-primary"}>
+                      techishiring@gmail.com
             </a>
           </Link>
           
