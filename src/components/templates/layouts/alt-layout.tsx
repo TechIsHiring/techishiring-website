@@ -2,7 +2,7 @@ import Head from "next/head";
 import Footer from "components/organisms/footer/footer";
 import Header from "components/organisms/header/header";
 
-const ContactLayout = ({children}: {children: React.ReactNode}) => {
+const AltLayout = ({children}: {children: React.ReactNode}) => {
   return (
     <>
       <Head>
@@ -22,4 +22,4 @@ const ContactLayout = ({children}: {children: React.ReactNode}) => {
   );
 };
 
-export default ContactLayout;
+export default AltLayout;

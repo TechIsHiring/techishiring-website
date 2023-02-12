@@ -1,25 +1,48 @@
 import Card from "components/atoms/card/card";
 import DefaultText from "components/atoms/typography/default-text";
 import HeaderText from "components/atoms/typography/heading-text";
+import {
+  Stack,
+  Flex,
+  Button,
+  Text,
+  VStack,
+  useBreakpointValue
+} from "@chakra-ui/react";
 
 const AboutContent = () => {
   return (
-    <Card section className="flex flex-col gap-8 min-h-full">
-      <>
-        <article className="flex flex-col gap-2">
-          <HeaderText level="h2">What is TechIsHiring?</HeaderText>
-          <DefaultText as="p">
-            TechIsHiring is an organization who&apos;s mission is to help great Engineers and great jobs find each other. We try to accomplish this by focusing less on advertising job opportunities but by encouraging meaningful interactions between someone searching for job opportunities and those who can help.
-          </DefaultText>
-        </article>
-        <article className="flex flex-col gap-2">
-          <HeaderText level="h2">TechIsHiring&apos;s Story</HeaderText>
-          <DefaultText as="p">
-            TechIsHiring was born on Twitter when <a href="www.twitter.com/Chad_R_Stewart" target="_blank">Chad Stewart</a>, the Founder of TechIsHiring noticed during the pandemic that a lot of people were tweeting searching for job opportunities and posting opportunities that they had came across. There was no centralized place for these tweets and so &apos;#TechIsHiring&apos; and the <a href="www.twitter.com/TechIsHiring">TechIsHiring account</a> was born.
-          </DefaultText>
-        </article>
-      </>
-    </Card>
+    <>
+      <Flex
+        w={"full"}
+        h={"80vh"}
+        mb={10}
+        backgroundImage={
+          "url(https://res.cloudinary.com/phantom1245/image/upload/v1676232321/techishiring/Rectangle_1335_dzx45d.png)"
+        }
+        backgroundSize={"cover"}
+        backgroundPosition={"center center"}>
+        <VStack
+          w={"full"}
+          justify={"center"}
+          px={useBreakpointValue({ base: 4, md: 8 })}
+          bgGradient={"linear(to-r, blackAlpha.600, transparent)"}>
+          <Stack  align={"center"} spacing={6}>
+            <HeaderText level={"h1"} className={"text-white"} fontWeight={"extrabold"} fontSize={"56px"}>
+                Transnational <span className="text-[#7AB8F1]">Job Listing</span> Channel
+            </HeaderText>
+            <DefaultText className={"text-white"} w={"60%"} textAlign={"center"}>
+              So many jobs available, all you have to do is keep up with  our posts. Check below for recent job openings. 
+            </DefaultText>
+
+          </Stack>
+        </VStack>
+      </Flex>
+
+    </>
+    // <Card section className="flex flex-col gap-8 min-h-full">
+      
+  // </Card>
   );
 };
 
