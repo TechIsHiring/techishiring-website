@@ -11,7 +11,7 @@ interface AboutProps {
 const About: WithPageLayout<AboutProps> = () => {
   return (
     <>
-      <HeadContent content={"Newsletter"}/>
+      <HeadContent content={"About"}/>
       <Head>
         <title>TechIsHiring - About</title>
         <meta
