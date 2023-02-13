@@ -4,10 +4,14 @@ const storyConfig = {
   title: "Design System/Organisms/Newsletter Entries"
 };
 
-const testIssues = [
+const testIssues: Issues[] = [
   {
+    id: 1,
     url: "https://www.google.com",
-    title: "test title"
+    title: "test title",
+    description: "",
+    // eslint-disable-next-line
+    sent_at: ""
   }
 ];
 

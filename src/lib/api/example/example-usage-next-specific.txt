@@ -3,8 +3,9 @@
 filename: pages/example-usage.tsx
 
 import { fetchExampleRequest } from "./example-api";
+import { InferGetServerSidePropsType } from "next";
 
-const exampleComponent = ({ countriesData }) => {
+const exampleComponent: WithPageLayout<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ countriesData }) => {
   
   return (
     <div>

@@ -4,8 +4,9 @@ import Head from "next/head";
 import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
 import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
 import Card from "components/atoms/card/card";
+import { InferGetServerSidePropsType } from "next";
 
-const Newsletter: WithPageLayout = ({ lastTenIssues }: any) => {
+const Newsletter: WithPageLayout<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ lastTenIssues }) => {
   
   return (
     <Card section className="flex flex-col gap-8">

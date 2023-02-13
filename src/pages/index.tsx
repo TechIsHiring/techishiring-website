@@ -3,7 +3,11 @@ import DefaultLayout from "components/templates/layouts/default-layout";
 import TwitterFeed from "components/organisms/twitter-feed/twitter-feed";
 import Head from "next/head";
 
-const Home: WithPageLayout = () => {
+interface HomeProps {
+
+};
+
+const Home: WithPageLayout<HomeProps> = () => {
   return (
     <>
       <Head>

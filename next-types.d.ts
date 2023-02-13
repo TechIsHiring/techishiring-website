@@ -19,5 +19,5 @@ readonly interface Issues {
   title: string;
   description: string;
   url: string;
-  send_at: string;
+  sent_at: string;
 }

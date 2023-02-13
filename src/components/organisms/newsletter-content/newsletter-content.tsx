@@ -2,7 +2,7 @@ import SubscribeToNewsletter from "components/molecules/subscribe-to-newsletter/
 import NewsLetterEntries from "../newsletter-entries/newsletter-entries";
 
 interface NewsletterContentProps {
-  lastTenIssues: any;
+  lastTenIssues: Issues[] | undefined;
 }
 
 const NewsletterContent = ({ lastTenIssues }: NewsletterContentProps) => {
