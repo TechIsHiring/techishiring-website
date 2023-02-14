@@ -12,13 +12,9 @@ on:
 
 jobs:
   test:
-  
+
     name: Run Tests
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
       - uses: actions/checkout@v3
