@@ -13,7 +13,7 @@ on:
 jobs:
   test:
 
-    name: Run Tests
+    name: Run Unit Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +24,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run test --if-present
-      - run: npm run test:cypress --if-present
 
 
   lint:
@@ -40,3 +39,17 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run format
+
+
+  cypress-run:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5.0.9
+        with:
+          # Specify Browser since container image is compile with Firefox
+          browser: firefox
