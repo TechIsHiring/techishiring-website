@@ -42,6 +42,8 @@ jobs:
 
 
   cypress-run:
+
+    name: Run Cypress Tests
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
@@ -52,4 +54,4 @@ jobs:
         uses: cypress-io/github-action@v5.0.9
         with:
           # Specify Browser since container image is compile with Firefox
-          browser: firefox
+          browser: chrome
