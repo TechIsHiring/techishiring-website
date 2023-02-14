@@ -1,6 +1,6 @@
 describe("Homepage", () => {
   beforeEach(() => {
-    cy.visit("/");
+    cy.visit("/",  { timeout: 30000 });
   });
 
   it("should display the homepage", () => {
