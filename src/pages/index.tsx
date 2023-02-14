@@ -4,7 +4,7 @@ import DefaultLayout from "components/templates/layouts/default-layout";
 import TwitterFeed from "components/organisms/twitter-feed/twitter-feed";
 import Head from "next/head";
 
-import { HeroStory } from "stories/molecules/hero.stories";
+import Hero from "../components/molecules/heroSection/Hero";
 
 interface HomeProps {
 
@@ -20,8 +20,8 @@ const Home: WithPageLayout<HomeProps> = () => {
           content="TechIsHiring - A space where great jobs and great devs can find each other!"
         />
       </Head>
-      {/* <Hero /> */}
-      <HeroStory />
+      <Hero />
+
       <TwitterFeed />
     </>
   );
