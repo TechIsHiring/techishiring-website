@@ -55,3 +55,4 @@ jobs:
         with:
           # Specify Browser since container image is compile with Firefox
           browser: chrome
+          start: npm run dev
