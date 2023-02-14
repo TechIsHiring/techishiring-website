@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16
       - run: npm ci
       - run: npm run test --if-present
 
@@ -33,10 +33,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16
       - run: npm ci
       - run: npm run format
 
@@ -50,9 +50,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm run build
+
       - name: Cypress run
         uses: cypress-io/github-action@v5.0.9
         with:
           # Specify Browser since container image is compile with Firefox
           browser: chrome
-          start: npm run dev
+          start: npm start
