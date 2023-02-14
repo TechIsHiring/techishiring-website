@@ -55,11 +55,10 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-      - run: npm run build
 
       - name: Cypress run
         uses: cypress-io/github-action@v5.0.9
         with:
           # Specify Browser since container image is compile with Firefox
           browser: chrome
-          start: npm start
+          start: npm run dev
