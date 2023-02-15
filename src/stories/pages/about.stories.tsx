@@ -7,7 +7,8 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const AboutStory = () =>
+export const AboutStory = () => (
   <DefaultLayout>
     <About />
-  </DefaultLayout>;
+  </DefaultLayout>
+);
