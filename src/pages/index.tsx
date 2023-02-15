@@ -1,7 +1,10 @@
+
 import WithPageLayout from "interfaces/with-page-layouts";
 import DefaultLayout from "components/templates/layouts/default-layout";
 import TwitterFeed from "components/organisms/twitter-feed/twitter-feed";
 import Head from "next/head";
+
+import Hero from "../components/molecules/heroSection/Hero";
 
 interface HomeProps {
 
@@ -17,6 +20,8 @@ const Home: WithPageLayout<HomeProps> = () => {
           content="TechIsHiring - A space where great jobs and great devs can find each other!"
         />
       </Head>
+      <Hero />
+
       <TwitterFeed />
     </>
   );
