@@ -11,7 +11,7 @@ const TextInput = (props: InputProps) => {
       className={`${props.className ? props.className : ""}`}
       borderColor="blackAlpha.500"
       focusBorderColor="blue.400"
-      _hover={{ }}
+      _hover={{}}
     />
   );
 };

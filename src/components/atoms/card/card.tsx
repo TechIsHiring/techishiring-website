@@ -21,14 +21,17 @@ interface NeitherArticleOrSection extends CardCommonProps {
 type CardProps = IsArticle | IsSection | NeitherArticleOrSection;
 
 const Card = ({ children, className, section, article }: CardProps) => {
-
-  const cardClassDefinition = `${className ? className : ""} w-full p-8 shadow-md rounded-lg border-[1px] border-grey`;
+  const cardClassDefinition = `${
+    className ? className : ""
+  } w-full p-8 shadow-md rounded-lg border-[1px] border-grey`;
 
   return (
     <>
-      {section && <section className={cardClassDefinition} >{children}</section>}
-      {article && <article className={cardClassDefinition} >{children}</article>}
-      {!article && !section && <div className={cardClassDefinition} >{children}</div>}
+      {section && <section className={cardClassDefinition}>{children}</section>}
+      {article && <article className={cardClassDefinition}>{children}</article>}
+      {!article && !section && (
+        <div className={cardClassDefinition}>{children}</div>
+      )}
     </>
   );
 };
