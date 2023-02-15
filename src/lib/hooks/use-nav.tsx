@@ -1,5 +1,4 @@
 const useMainNav = () => {
-  
   const navList: NavLink[] = [
     {
       url: "/",
@@ -15,8 +14,8 @@ const useMainNav = () => {
       text: "About"
     }
   ];
-  
-  return navList; 
+
+  return navList;
 };
 
 export default useMainNav;

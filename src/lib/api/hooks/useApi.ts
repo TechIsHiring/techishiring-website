@@ -7,8 +7,8 @@ export default function useApi(
   apiFunction: (...args: any) => Promise<AxiosResponse<any, any>>,
   initialData = {}
 ) {
-  const [ data, setData ] = useState(initialData);
-  const [ error, setError ] = useState();
+  const [data, setData] = useState(initialData);
+  const [error, setError] = useState();
   const { statuses, setApiStatus, apiStatus } = useApiStatus();
 
   const executeApiCall = async (...args: any) => {
@@ -40,5 +40,4 @@ export default function useApi(
     executeApiCall,
     statuses
   };
-  
-};
+}

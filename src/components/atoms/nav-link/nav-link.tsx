@@ -7,7 +7,9 @@ const NavLink = ({ url, text, activeLink, externalLink }: NavLinkProps) => {
     <a
       className={`${activeLink ? "border-b-2 border-black" : ""}`}
       href={url}
-      target={externalLink ? "_blank" : "_self"} rel="noreferrer" >
+      target={externalLink ? "_blank" : "_self"}
+      rel="noreferrer"
+    >
       <DefaultText fontSize="xl" as="b">
         {text}
       </DefaultText>

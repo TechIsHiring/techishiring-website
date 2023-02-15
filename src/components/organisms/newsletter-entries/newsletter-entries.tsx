@@ -8,28 +8,31 @@ interface NewsLetterEntriesProps {
 const NewsLetterEntries = ({ issues }: NewsLetterEntriesProps) => {
   return (
     <article className="flex flex-col gap-5">
-      <HeaderText level="h2">Check Out Where TechIsHiring This Week!</HeaderText>
-      {issues &&
+      <HeaderText level="h2">
+        Check Out Where TechIsHiring This Week!
+      </HeaderText>
+      {issues && (
         <ul className="flex flex-col gap-5">
-          {
-            issues.map(( issue, index ) => <li key={index}>
+          {issues.map((issue, index) => (
+            <li key={index}>
               <NewsletterEntry
                 url={issue.url}
-                title={new Date(issue.sent_at).toLocaleDateString(
-                  "en-US",
-                  {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric"
-                  }
-                )}
+                title={new Date(issue.sent_at).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric"
+                })}
               />
             </li>
-            )
-          }
+          ))}
         </ul>
-      }
-      {!issues && <NewsletterEntry url="#" title="Something has gone wrong! Please reload the page!"/>}
+      )}
+      {!issues && (
+        <NewsletterEntry
+          url="#"
+          title="Something has gone wrong! Please reload the page!"
+        />
+      )}
     </article>
   );
 };

@@ -4,13 +4,13 @@ TechIsHiring's website, focusing on showcasing the top tweets from the Twitter a
 
 ## Technologies Used
 
-* Next.js
-* Tailwind CSS
-* Chakra UI
-* TypeScript
-* Storybook
-* Axios
-* Posthog
+- Next.js
+- Tailwind CSS
+- Chakra UI
+- TypeScript
+- Storybook
+- Axios
+- Posthog
 
 ## Project Figma
 
@@ -24,8 +24,8 @@ This is a link to the Engineering Design Document for v1.0.0 release: [Engerinee
 
 This project uses Atomic Design for it's Components. Here are several resources for Atomic Design if you are unfamiliar:
 
-* [Atomic Design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
-* [Atomic Design - How To Make Web and UI Design Easier](https://www.youtube.com/watch?v=W3A33dmp17E)
+- [Atomic Design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
+- [Atomic Design - How To Make Web and UI Design Easier](https://www.youtube.com/watch?v=W3A33dmp17E)
 
 ## Storybook
 

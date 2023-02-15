@@ -6,17 +6,15 @@ import NewsletterContent from "components/organisms/newsletter-content/newslette
 import Card from "components/atoms/card/card";
 import { InferGetServerSidePropsType } from "next";
 
-const Newsletter: WithPageLayout<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ lastTenIssues }) => {
-  
+const Newsletter: WithPageLayout<
+  InferGetServerSidePropsType<typeof getServerSideProps>
+> = ({ lastTenIssues }) => {
   return (
     <Card section className="flex flex-col gap-8">
       <>
         <Head>
           <title>TechIsHiring - Newsletter</title>
-          <meta
-            property="og:description"
-            content="TechIsHiring - Newsletter"
-          />
+          <meta property="og:description" content="TechIsHiring - Newsletter" />
         </Head>
         <NewsletterContent lastTenIssues={lastTenIssues} />
       </>
@@ -25,7 +23,6 @@ const Newsletter: WithPageLayout<InferGetServerSidePropsType<typeof getServerSid
 };
 
 export const getServerSideProps = async () => {
-
   let lastTenIssues;
 
   try {
