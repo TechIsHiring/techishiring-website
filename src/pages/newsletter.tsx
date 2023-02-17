@@ -1,19 +1,18 @@
 import WithPageLayout from "interfaces/with-page-layouts";
 import DefaultLayout from "components/templates/layouts/default-layout";
-import Head from "next/head";
 import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
 import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
 import Card from "components/atoms/card/card";
 import { InferGetServerSidePropsType } from "next";
 import HeadContent from "components/particles/head/HeadContent";
 
-const Newsletter: WithPageLayout<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ lastTenIssues }) => {
-  
+const Newsletter: WithPageLayout<
+  InferGetServerSidePropsType<typeof getServerSideProps>
+> = ({ lastTenIssues }) => {
   return (
     <Card section className="flex flex-col gap-8">
       <>
         <HeadContent content={"Newsletter"}/>
- 
         <NewsletterContent lastTenIssues={lastTenIssues} />
       </>
     </Card>
@@ -21,7 +20,6 @@ const Newsletter: WithPageLayout<InferGetServerSidePropsType<typeof getServerSid
 };
 
 export const getServerSideProps = async () => {
-
   let lastTenIssues;
 
   try {

@@ -4,9 +4,7 @@ import Head from "next/head";
 import AboutContent from "components/organisms/about-content/about-content";
 import HeadContent from "components/particles/head/HeadContent";
 
-interface AboutProps {
-
-};
+interface AboutProps {}
 
 const About: WithPageLayout<AboutProps> = () => {
   return (
@@ -14,10 +12,7 @@ const About: WithPageLayout<AboutProps> = () => {
       <HeadContent content={"About"}/>
       <Head>
         <title>TechIsHiring - About</title>
-        <meta
-          property="og:description"
-          content="TechIsHiring - About"
-        />
+        <meta property="og:description" content="TechIsHiring - About" />
       </Head>
       <AboutContent />
     </>

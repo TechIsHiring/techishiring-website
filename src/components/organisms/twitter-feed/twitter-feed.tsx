@@ -7,14 +7,11 @@ const TwitterFeed = () => {
     <Card section className="min-w-full md:px-[10%]">
       <>
         <header>
-          <HeaderText className="text-left pb-5" level="h2">
+          <HeaderText className="pb-5 text-left" level="h2">
             Latest tweets from #TechIsHiring:
           </HeaderText>
         </header>
-        <TwitterTimelineEmbed
-          sourceType="profile"
-          screenName="TechIsHiring"
-        />
+        <TwitterTimelineEmbed sourceType="profile" screenName="TechIsHiring" />
       </>
     </Card>
   );

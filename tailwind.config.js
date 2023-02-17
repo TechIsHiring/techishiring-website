@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        autodesktop: "repeat(auto-fit, minmax(410px, 1fr))", automobile: "repeat(auto-fit, minmax(300px, 1fr))"
+        autodesktop: "repeat(auto-fit, minmax(410px, 1fr))",
+        automobile: "repeat(auto-fit, minmax(300px, 1fr))"
       },
       screens: {
         xs: "425px",

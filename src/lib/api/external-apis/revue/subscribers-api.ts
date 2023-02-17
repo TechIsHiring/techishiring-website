@@ -7,9 +7,7 @@ interface SubscriberPostBody {
 }
 
 export const addNewSubscriber = (requestBody: SubscriberPostBody) => {
-  return api.post(
-    `${REVUEBASEURL}/v2/subscribers`,
-    requestBody,
-    RevueAuthHeader
-  ).then(response => response.data);
+  return api
+    .post(`${REVUEBASEURL}/v2/subscribers`, requestBody, RevueAuthHeader)
+    .then((response) => response.data);
 };

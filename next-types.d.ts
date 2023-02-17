@@ -3,18 +3,18 @@
 interface Link {
   url: string;
   activeLink?: boolean;
-  externalLink? : boolean;
+  externalLink?: boolean;
 }
 
 interface NavLink extends Link {
   text: string;
-};
+}
 
 // API Return Types
 
 // Revue
 
-readonly interface Issues {
+interface Issues {
   id: number;
   title: string;
   description: string;

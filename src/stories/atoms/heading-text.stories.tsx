@@ -6,7 +6,6 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const HeadingTextStory = () =>
-  <HeadingText level="h1">
-                                        Hello
-  </HeadingText>;
+export const HeadingTextStory = () => (
+  <HeadingText level="h1">Hello</HeadingText>
+);

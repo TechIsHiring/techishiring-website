@@ -7,19 +7,21 @@ import { verifyIsEmail } from "lib/utils/verify-email";
 import { useState } from "react";
 
 const SubscribeToNewsletter = () => {
-  const [ email, setEmail ] = useState("");
-  const [ error, setError ] = useState(false);
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(false);
 
-  const { executeApiCall: sendEmailToRevue, statuses } = useApi(RouteToInternalRevueApi);
+  const { executeApiCall: sendEmailToRevue, statuses } = useApi(
+    RouteToInternalRevueApi
+  );
 
   const updateEmail = (textInput: string) => {
     const isEmail = verifyIsEmail(textInput);
     setError(!isEmail);
-    if(isEmail) setEmail(textInput);
+    if (isEmail) setEmail(textInput);
   };
 
   const handleSubscribe = () => {
-    if(!error && email) {
+    if (!error && email) {
       const requestBody = {
         email: email
       };
@@ -30,22 +32,20 @@ const SubscribeToNewsletter = () => {
         console.log("Something went wrong!");
       }
     }
-    if(!email) setError(true);
+    if (!email) setError(true);
   };
 
   return (
     <article className="flex flex-col gap-4">
       <HeaderText level="h2">Subscribe To Our Newsletter!</HeaderText>
-      { !statuses.isSuccess && !statuses.isError &&
+      {!statuses.isSuccess && !statuses.isError && (
         <div className="flex flex-col gap-3">
-          <label className="pl-4">
-            Enter your email
-          </label>
-          <div className="flex gap-3 w-full lg:w-1/2">
+          <label className="pl-4">Enter your email</label>
+          <div className="flex w-full gap-3 lg:w-1/2">
             <TextInput
               type="email"
               placeholder="Enter your email"
-              onChange={event => updateEmail(event.target.value)}
+              onChange={(event) => updateEmail(event.target.value)}
               isInvalid={error}
             />
             <DefaultButton
@@ -54,23 +54,26 @@ const SubscribeToNewsletter = () => {
               _hover={{
                 background: "darkgray"
               }}
-              onClick={handleSubscribe}>
+              onClick={handleSubscribe}
+            >
               Subscribe
             </DefaultButton>
-            {error && <div className="p-3 text-red-700">This is not a valid email address!</div>}
+            {error && (
+              <div className="p-3 text-red-700">
+                This is not a valid email address!
+              </div>
+            )}
           </div>
         </div>
-      }
-      { statuses.isSuccess &&
-        <div>
-          Please check your email to confirm your subscription!
-        </div>
-      }
-      { statuses.isError &&
+      )}
+      {statuses.isSuccess && (
+        <div>Please check your email to confirm your subscription!</div>
+      )}
+      {statuses.isError && (
         <div>
           I&apos;m sorry! Something has gone wrong with signing up your email!
         </div>
-      }
+      )}
     </article>
   );
 };
