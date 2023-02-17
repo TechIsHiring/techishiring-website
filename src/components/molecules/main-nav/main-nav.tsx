@@ -53,7 +53,6 @@ const MainNav = ({ navList, mobileList }: MainNavProps) => {
       >
         <Icon Icon={FiMenu} iconAlt="Mobile Nav Icon" />
         <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
-        <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
@@ -76,7 +75,6 @@ const MainNav = ({ navList, mobileList }: MainNavProps) => {
                     )}
                   </li>
                 ))}
-                ))}
               </ul>
             </DrawerBody>
           </DrawerContent>
@@ -87,4 +85,3 @@ const MainNav = ({ navList, mobileList }: MainNavProps) => {
 };
 
 export default MainNav;
-
