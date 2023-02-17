@@ -1,4 +1,4 @@
-const useMainNav = () => {
+const useMobileNav = () => {
   const navList: NavLink[] = [
     {
       url: "/",
@@ -11,10 +11,14 @@ const useMainNav = () => {
     {
       url: "/about",
       text: "About"
+    },
+    {
+      url: "/contact",
+      text: "Contact Us"
     }
   ];
 
   return navList;
 };
 
-export default useMainNav;
+export default useMobileNav;

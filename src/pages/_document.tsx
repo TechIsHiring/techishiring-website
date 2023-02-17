@@ -1,4 +1,10 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext
+} from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -26,10 +32,19 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta property="og:url" content="https://www.techishiring.com" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="TechIsHiring - A space where great jobs and great devs can find each other!" />
+          <meta
+            property="og:title"
+            content="TechIsHiring - A space where great jobs and great devs can find each other!"
+          />
           <meta name="twitter:card" content="summary" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta property="og:image" content="/techishiring-social-card.png" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
