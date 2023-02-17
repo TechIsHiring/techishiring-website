@@ -11,7 +11,7 @@ import {
 import { Fragment } from "react";
 import NavLink from "components/atoms/nav-link/nav-link";
 import Icon from "components/atoms/icon/icon";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiExternalLink } from "react-icons/fi";
 import { useRouter } from "next/router";
 import DefaultButton from "../../atoms/button/button";
 interface MainNavProps {
@@ -53,6 +53,7 @@ const MainNav = ({ navList, mobileList }: MainNavProps) => {
       >
         <Icon Icon={FiMenu} iconAlt="Mobile Nav Icon" />
         <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+        <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
@@ -66,7 +67,15 @@ const MainNav = ({ navList, mobileList }: MainNavProps) => {
                     className={`py-2 text-right ${index !== 0 && "border-t"}`}
                   >
                     <NavLink {...navItem} />
+                    {navItem.externalLink && (
+                      <Icon
+                        Icon={FiExternalLink}
+                        size={22}
+                        iconAlt="external link for TechIsHiring newsletter"
+                      />
+                    )}
                   </li>
+                ))}
                 ))}
               </ul>
             </DrawerBody>
@@ -78,3 +87,4 @@ const MainNav = ({ navList, mobileList }: MainNavProps) => {
 };
 
 export default MainNav;
+

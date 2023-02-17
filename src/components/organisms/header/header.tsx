@@ -9,7 +9,7 @@ const Header = () => {
   const mobileList = useMobileNav();
 
   return (
-    <header className="flex bg-white h-24 w-full sticky top-0 justify-between items-center border-b px-4 py-2">
+    <header className="sticky top-0 z-10 flex h-24 w-full items-center justify-between border-b bg-white px-4 py-2">
       <div className="flex items-center">
         <Logo />
       </div>

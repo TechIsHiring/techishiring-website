@@ -8,6 +8,8 @@
     "build-storybook": "build-storybook",
     "lint": "next lint",
     "format": "next lint -- --fix --dir .",
+    "test": "vitest",
+    "test:cypress": "npx cypress open",
     "reset-deps": "rm -rf node_modules && npm ci",
     "postbuild": "next-sitemap"
   },
@@ -37,15 +39,29 @@
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
+    "@testing-library/react": "^13.4.0",
     "@types/node": "17.0.35",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.5",
+    "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
+    "cypress": "^12.5.1",
     "eslint": "8.26.0",
     "eslint-config-next": "12.3.1",
+    "jsdom": "^21.1.0",
     "postcss": "^8.4.14",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.2",
     "tailwindcss": "^3.1.2",
-    "typescript": "4.7.2"
+    "typescript": "4.7.2",
+    "vitest": "^0.28.4"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "arrowParens": "always",
+    "bracketSpacing": true
   }
 }

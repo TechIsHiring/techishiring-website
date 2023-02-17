@@ -6,4 +6,4 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const TextInputStory = () => <TextInput className="border"/>;
+export const TextInputStory = () => <TextInput className="border" />;

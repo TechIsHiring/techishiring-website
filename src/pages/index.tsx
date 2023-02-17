@@ -1,7 +1,8 @@
 import WithPageLayout from "interfaces/with-page-layouts";
 import DefaultLayout from "components/templates/layouts/default-layout";
 import TwitterFeed from "components/organisms/twitter-feed/twitter-feed";
-import Head from "next/head";
+import HeadContent from "components/particles/head/HeadContent";
+import Hero from "components/molecules/heroSection/Hero";
 
 interface HomeProps {}
 

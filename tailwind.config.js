@@ -19,6 +19,11 @@ module.exports = {
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"]
+      },
+      colors: {
+        primary: "#165C9C",
+        secondary: "#101828",
+        gray: "#667085"
       }
     }
   },

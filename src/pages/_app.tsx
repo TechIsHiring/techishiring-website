@@ -13,10 +13,9 @@ type ComponentWithPageLayout = AppProps & {
 };
 
 function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
-  
   // From documentation on using Posthog with Next.js: https://posthog.com/docs/integrate/third-party/next-js
   const router = useRouter();
-  
+
   useEffect(() => {
     initiateAnalytics();
 
