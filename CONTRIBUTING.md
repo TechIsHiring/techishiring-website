@@ -140,6 +140,47 @@ A good branch name would be (where issue #30 is the ticket you're working on):
 git checkout -b 325-implement-new-component
 ```
 
+Add origin for upstream:
+
+   ```sh
+    git remote add upstream https://github.com/TechIsHiring/techishiring-website.git
+   ```
+   
+Stage your Commit:
+
+   ```sh
+    git add .
+   ```
+Commit your Changes:
+
+   ```sh
+    git commit -m 'Feature: added an amazing feature'
+   ```
+   
+Push to the Branch:
+
+   ```sh
+    git push origin 325-implement-new-component
+   ```
+   
+Open a Pull Request
+
+### alternatively, for existing contributors 
+
+ Fetch upstream:
+ 
+   ```sh
+    git fetch upstream
+   ```
+   
+ Merge upstream:
+ 
+   ```sh
+    git merge upstream/dev
+   ```
+
+**fix errors/ conflict (if any)** <br>
+
 The project is structured in Atomic Design. If you need to familiarize yourself with Atomic Design, please check out the resources below:
 
 - [Atomic Design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
