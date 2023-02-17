@@ -1,4 +1,5 @@
 import { Input as ChakraInputComponent } from "@chakra-ui/react";
+import React from "react";
 
 interface InputProps extends React.ComponentProps<typeof ChakraInputComponent> {
   //Add additional prop definitions here
