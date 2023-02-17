@@ -12,4 +12,10 @@ const testIssues = {
 
 export default storyConfig;
 
-export const NewsletterEntryStory = () => <NewsletterEntry url={testIssues.url} title={testIssues.title} key={testIssues.key} />;
+export const NewsletterEntryStory = () => (
+  <NewsletterEntry
+    url={testIssues.url}
+    title={testIssues.title}
+    key={testIssues.key}
+  />
+);

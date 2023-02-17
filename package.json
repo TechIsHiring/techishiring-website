@@ -51,8 +51,17 @@
     "eslint-config-next": "12.3.1",
     "jsdom": "^21.1.0",
     "postcss": "^8.4.14",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.2",
     "tailwindcss": "^3.1.2",
     "typescript": "4.7.2",
     "vitest": "^0.28.4"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "arrowParens": "always",
+    "bracketSpacing": true
   }
 }

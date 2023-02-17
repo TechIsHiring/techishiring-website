@@ -17,4 +17,6 @@ const testIssues: Issues[] = [
 
 export default storyConfig;
 
-export const NewsletterEntriesStory = () => <NewsletterEntries issues={testIssues} />;
+export const NewsletterEntriesStory = () => (
+  <NewsletterEntries issues={testIssues} />
+);

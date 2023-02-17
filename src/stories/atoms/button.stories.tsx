@@ -6,7 +6,4 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const DefaultButtonStory = () =>
-  <DefaultButton>
-    Hello
-  </DefaultButton>;
+export const DefaultButtonStory = () => <DefaultButton>Hello</DefaultButton>;

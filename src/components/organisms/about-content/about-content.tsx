@@ -81,7 +81,7 @@ const AboutContent = () => {
           </Flex>
         </Box>
       </Box>
-      <Box className={"flex justify-center text-center md:text-left text-lg md:text-xl leading-[41px] py-20 items-center flex-col gap-8 font-700 text-altDark "}>
+      <article className={"flex justify-center text-center md:text-left text-lg md:text-xl leading-[41px] py-0 md:py-20 items-center flex-col gap-8 font-700 text-altDark "}>
         <DefaultText as={"p"} w={{base:"80%", md:"70%"}}>
           <b>TechIsHiring</b> tries to assist tech professionals in finding employment 
           by encouraging meaningful interactions between people looking for employment 
@@ -109,7 +109,7 @@ const AboutContent = () => {
         </Box>
         <article className="text-primary py-8 px-10 md:px-0">‘Where great Jobs and great Engineers come to find one another!’</article>
         
-      </Box>
+      </article>
 
     </Box>
     // <Card section className="flex flex-col gap-8 min-h-full">

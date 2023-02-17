@@ -6,7 +6,6 @@ interface NewsletterContentProps {
 }
 
 const NewsletterContent = ({ lastTenIssues }: NewsletterContentProps) => {
-
   return (
     <>
       <SubscribeToNewsletter />

@@ -3,9 +3,7 @@ import AltLayout from "components/templates/layouts/alt-layout";
 import AboutContent from "components/organisms/about-content/about-content";
 import HeadContent from "components/particles/head/HeadContent";
 
-interface AboutProps {
-
-};
+interface AboutProps {}
 
 const About: WithPageLayout<AboutProps> = () => {
   return (

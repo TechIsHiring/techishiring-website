@@ -6,7 +6,8 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const CardStory = () =>
+export const CardStory = () => (
   <Card>
     <>Hello</>
-  </Card>;
+  </Card>
+);

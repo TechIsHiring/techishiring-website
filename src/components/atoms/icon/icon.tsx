@@ -12,14 +12,14 @@ interface IconProps {
 const Icon = ({ Icon, iconAlt, url, className, size = 24 }: IconProps) => {
   return (
     <>
-      { url &&
-        <Link url={url} >
+      {url && (
+        <Link url={url}>
           <a target="_blank" rel="noreferrer">
             <Icon size={size} title={iconAlt} className={className}/>
           </a>
         </Link>
-      }
-      { !url && <Icon size={size} title={iconAlt} /> }
+      )}
+      {!url && <Icon size={size} title={iconAlt} />}
     </>
   );
 };

@@ -2,14 +2,15 @@ import NextLink from "next/link";
 
 interface LinkProps extends Link {
   children: JSX.Element;
-};
+}
 
 const Link = ({ url, children, activeLink }: LinkProps) => {
   return (
     <NextLink
       passHref
       className={`${activeLink ? console.log(activeLink) : ""} h-fit`}
-      href={url}>
+      href={url}
+    >
       {children}
     </NextLink>
   );
