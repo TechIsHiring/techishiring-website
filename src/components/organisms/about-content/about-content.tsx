@@ -28,7 +28,8 @@ const AboutContent = () => {
         w={"full"}
         h={{base: "100vh", md:"80vh"}}
         backgroundImage={ 
-          { base: "url(https://res.cloudinary.com/phantom1245/image/upload/v1676232320/techishiring/Rectangle_1336_ncjum3.png)", md: "url(https://res.cloudinary.com/phantom1245/image/upload/v1676232321/techishiring/Rectangle_1335_dzx45d.png)" }
+          { base: "url(https://res.cloudinary.com/phantom1245/image/upload/v1676232320/techishiring/Rectangle_1336_ncjum3.png)",
+          md: "url(https://res.cloudinary.com/phantom1245/image/upload/v1676232321/techishiring/Rectangle_1335_dzx45d.png)" }
         }
         backgroundSize={"cover"}
         backgroundPosition={"center center"}>
@@ -48,7 +49,7 @@ const AboutContent = () => {
           </Stack>
         </VStack>
       </Flex>
-      <Box className={"relative bottom-32 md:bottom-14 px-10 lg:px-0 flex md:justify-center"} mx={"auto"} w={{ base:"100%", md:"100%", lg:"60%"}}>
+      <Box className={"relative bottom-32 md:bottom-14 px-10 lg:px-0 flex md:justify-center"} mx={"auto"} w={{ sm:"80%", md:"100%", lg:"60%"}}>
         <Flex background={"#0B2F4F"} flex={{ base: 1, md: "auto" }} flexDirection={{base:"column",md:"row"}} w={"100%"} p={8} gap={9} borderLeftRadius={"8px"} >
           <Box>
             <HeaderText level={"h4"} color={"white"} fontSize={"20px"}>Have a question ?</HeaderText>
@@ -72,7 +73,7 @@ const AboutContent = () => {
 
           </Box>
         </Flex>
-        <Box w={"50%"} display={{ base: "none", md: "flex" }} borderRightRadius={"8px"} className={"px-10 bg-white justify-center items-center flex-col gap-3"}>
+        <Box w={"50%"} display={{ base: "none", md: "flex" }} borderRightRadius={"8px"} className={"px-10 bg-white justify-center items-center shadow-md flex-col gap-3"}>
           <DefaultText className={"text-dark text-[16px]"}>Follow us on Social Media:</DefaultText>
           <Flex className="flex gap-12 w-full items-center justify-center">      
             <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" url="https://www.twitter.com/techishiring" className={"text-primary"}/>
