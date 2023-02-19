@@ -17,11 +17,13 @@ module.exports = {
         "2xl": "1440px"
         // => @media (min-width: 1440px) { ... }
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"]
+      },
       colors: {
         primary: "#165C9C",
         secondary: "#101828",
         gray: "#667085"
-
       }
     }
   },

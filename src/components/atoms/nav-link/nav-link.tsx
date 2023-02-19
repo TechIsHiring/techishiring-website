@@ -1,19 +1,25 @@
 import DefaultText from "../typography/default-text";
-
+import Link from "next/link";
 type NavLinkProps = NavLink;
 
 const NavLink = ({ url, text, activeLink, externalLink }: NavLinkProps) => {
   return (
-    <a
-      className={`${activeLink ? "border-b-2 border-black" : ""}`}
+    <Link
       href={url}
+      passHref
       target={externalLink ? "_blank" : "_self"}
       rel="noreferrer"
     >
-      <DefaultText fontSize="xl" as="b">
-        {text}
-      </DefaultText>
-    </a>
+      <a
+        className={`${
+          activeLink ? "border-b-2 border-blue-500 text-blue-500" : "text-black"
+        } font-inter  font-semibold`}
+      >
+        <DefaultText fontSize="lg" as="span">
+          {text}
+        </DefaultText>
+      </a>
+    </Link>
   );
 };
 

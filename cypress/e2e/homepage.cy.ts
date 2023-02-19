@@ -6,9 +6,7 @@ describe("Homepage", () => {
   it("should display the homepage", () => {
     cy.title().should("include", "TechIsHiring");
     cy.get("header").should("be.visible");
-    cy.get("header>div").contains(
-      "h1",
-      "Where great jobs and great Engineers go to find each other!"
-    );
+    cy.get('.sticky > :nth-child(1) > a > .chakra-text').contains('TechIsHiring');
+    cy.get('header > nav > ul').should('be.visible');
   });
 });
