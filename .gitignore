@@ -39,3 +39,7 @@ next-env.d.ts
 #SEO
 /public/robots.txt
 /public/sitemap*
+
+# VSCODE
+*.code-workspace
+.vscode
