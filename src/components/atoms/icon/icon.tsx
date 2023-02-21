@@ -5,21 +5,11 @@ interface IconProps {
   Icon: IconType;
   iconAlt: string;
   size?: number;
-  url?: string;
 }
 
-const Icon = ({ Icon, iconAlt, url, size = 24 }: IconProps) => {
+const Icon = ({ Icon, iconAlt, size = 24 }: IconProps) => {
   return (
-    <>
-      {url && (
-        <Link url={url}>
-          <a target="_blank" rel="noreferrer">
-            <Icon size={size} title={iconAlt} />
-          </a>
-        </Link>
-      )}
-      {!url && <Icon size={size} title={iconAlt} />}
-    </>
+    <Icon size={size} title={iconAlt} />
   );
 };
 
