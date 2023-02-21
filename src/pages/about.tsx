@@ -1,5 +1,5 @@
 import WithPageLayout from "interfaces/with-page-layouts";
-import AltLayout from "components/templates/layouts/alt-layout";
+import DefaultLayout from "components/templates/layouts/default-layout";
 import AboutContent from "components/organisms/about-content/about-content";
 import HeadContent from "components/particles/head/HeadContent";
 
@@ -15,6 +15,6 @@ const About: WithPageLayout<AboutProps> = () => {
   );
 };
 
-About.PageLayout = AltLayout;
+About.PageLayout = DefaultLayout;
 
 export default About;

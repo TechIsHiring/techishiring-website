@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import AltLayout from "components/templates/layouts/alt-layout";
-=======
-import ContactLayout from "components/templates/layouts/contact-layout";
->>>>>>> upstream/dev
+import DefaultLayout from "components/templates/layouts/default-layout";
 import Contact from "../../pages/contact";
 
 const storyConfig = {
@@ -12,12 +8,6 @@ const storyConfig = {
 export default storyConfig;
 
 export const ContactStory = () =>
-<<<<<<< HEAD
-  <AltLayout>
+  <DefaultLayout>
     <Contact />
-  </AltLayout>;
-=======
-  <ContactLayout>
-    <Contact />
-  </ContactLayout>;
->>>>>>> upstream/dev
+  </DefaultLayout>
