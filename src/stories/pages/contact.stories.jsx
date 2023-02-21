@@ -7,7 +7,8 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const ContactStory = () =>
+export const ContactStory = () => (
   <DefaultLayout>
     <Contact />
   </DefaultLayout>
+);
