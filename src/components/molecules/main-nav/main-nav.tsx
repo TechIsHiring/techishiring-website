@@ -5,8 +5,7 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  useDisclosure,
-  Button
+  useDisclosure
 } from "@chakra-ui/react";
 import { Fragment } from "react";
 import NavLink from "components/atoms/nav-link/nav-link";
@@ -34,7 +33,7 @@ const MainNav = ({ navList }: MainNavProps) => {
                     <Icon
                       Icon={FiExternalLink}
                       size={22}
-                      iconAlt="external link for TechIsHiring newsletter"
+                      iconAlt={navItem.externalLinkAlt ?? ""}
                     />
                   )}
                   <NavLink
