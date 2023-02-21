@@ -1,5 +1,4 @@
 import { IconType } from "react-icons";
-import Link from "components/atoms/link/link";
 
 interface IconProps {
   Icon: IconType;
