@@ -11,7 +11,7 @@ module.exports = {
         automobile: "repeat(auto-fit, minmax(300px, 1fr))"
       },
       screens: {
-
+        xs: "425px",
         // => @media (min-width: 425px) { ... }
 
         "2xl": "1440px"
