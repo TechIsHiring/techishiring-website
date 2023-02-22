@@ -1,5 +1,4 @@
 import Logo from "components/atoms/logo/logo";
-import HeaderText from "components/atoms/typography/heading-text";
 import MainNav from "components/molecules/main-nav/main-nav";
 import useMainNav from "lib/hooks/use-nav";
 
