@@ -61,6 +61,8 @@ const AboutContent = () => {
           </Box>
           <Box>
             <DefaultButton
+              as={"a"}
+              href={"/contact"}
               w={"100%"}
               py={3}
               color={"white"}
