@@ -6,10 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        aboutImg : 'url("/src/images/about-image1.png")'
       
-      },
       gridTemplateColumns: {
         autodesktop: "repeat(auto-fit, minmax(410px, 1fr))",
         automobile: "repeat(auto-fit, minmax(300px, 1fr))"

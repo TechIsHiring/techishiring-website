@@ -11,8 +11,11 @@ export default function AboutHeader() {
     // });
 
   return (
-    <div className={`flex w-full bg-[#141414] bg-center h-screen md:h-[80vh] bg-cover bg-no-repeat`}>
-        <div className="w-full flex flex-col items-center justify-center px-[18px] lg:px-0 bg-[linear(to-r, blackAlpha.600, transparent)] gap-4">
+    <div
+        className="flex w-full bg-center h-screen md:h-[80vh] bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url(${aboutImage.src})` }}
+    >
+        <div className="w-full flex flex-col items-center justify-center px-[18px] lg:px-0 bg-gradient-to-r from-black/60  to-transparent gap-4">
             
             <HeaderText level={"h1"} className={"text-white"} fontWeight={"extrabold"} fontSize={{base: "39px", md:"56px"}}>
                 Transnational <span className="text-[#7AB8F1]">Job Listing</span> Channel
