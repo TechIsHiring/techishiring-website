@@ -7,11 +7,16 @@ const useMainNav = () => {
     {
       url: "https://techishiring.substack.com/",
       text: "Newsletter",
-      externalLink: true
+      externalLink: true,
+      externalLinkAlt: "external link for TechIsHiring newsletter"
     },
     {
       url: "/about",
       text: "About"
+    },
+    {
+      url: "/contact",
+      text: "Contact Us"
     }
   ];
 

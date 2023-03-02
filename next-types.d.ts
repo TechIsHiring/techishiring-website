@@ -4,6 +4,7 @@ interface Link {
   url: string;
   activeLink?: boolean;
   externalLink?: boolean;
+  externalLinkAlt?: string;
 }
 
 interface NavLink extends Link {

@@ -2,12 +2,6 @@ import React from 'react'
 import DefaultText from "components/atoms/typography/default-text";
 import HeaderText from "components/atoms/typography/heading-text";
 import DefaultButton from "components/atoms/button/button";
-import {
-  Flex,
-  Divider,
-  Box,
-} from "@chakra-ui/react";
-import Link from "components/atoms/link/link";
 import Icon from "components/atoms/icon/icon";
 import { 
   SiTwitter,
@@ -45,11 +39,11 @@ export default function AboutBanner() {
         </div>
         <div className="w-1/2 hidden md:flex rounded-r-lg px-10 bg-white justify-center items-center shadow-md flex-col gap-3">
           <DefaultText className={"text-dark text-[16px]"}>Follow us on Social Media:</DefaultText>
-          <Flex className="flex gap-12 w-full items-center justify-center">      
+          <div className="flex gap-12 w-full items-center justify-center">      
             <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" url="https://www.twitter.com/techishiring" className={"text-primary"}/>
             <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" url="https://www.linkedin.com/company/techishiring" className={""} />
             <Icon Icon={SiFacebook} iconAlt="LinkedIn for Tech Is Hiring" url="https://www.linkedin.com/company/techishiring" className={"text-primary"}/>
-          </Flex>
+          </div>
         </div>
       </div>
   )
