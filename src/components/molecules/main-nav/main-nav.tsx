@@ -34,7 +34,7 @@ const MainNav = ({ navList }: MainNavProps) => {
                     <Icon
                       Icon={FiExternalLink}
                       size={22}
-                      iconAlt="external link for TechIsHiring newsletter"
+                      iconAlt={navItem.externalLinkAlt ?? ""}
                     />
                   )}
                   <NavLink

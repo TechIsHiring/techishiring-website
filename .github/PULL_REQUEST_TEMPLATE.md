@@ -11,6 +11,10 @@
 <!--- If fixing a bug, there should be an issue describing it with steps to reproduce -->
 <!--- Please link to the issue here: -->
 
+Resolves: <!-- Add issue number here, i.e. #27. -->
+
+<!-- If this PR fixes multiple issues, copy previous line for each issue that this PR addresses -->
+
 ## Motivation and Context
 
 <!--- Why is this change required? What problem does it solve? -->
