@@ -6,11 +6,14 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta 
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
       </Head>
       <div className="flex min-h-screen flex-col items-center justify-center">
         <Header />
-        <main className="flex min-h-[calc(100vh-190px)] w-full flex-1 flex-col">
+        <main className="flex w-full min-h-[calc(100vh-190px)] flex-1 flex-col">
           {children}
         </main>
         <Footer />

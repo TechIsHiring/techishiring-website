@@ -7,7 +7,7 @@ interface IconProps {
   color?: string;
 }
 
-const Icon = ({ Icon, iconAlt, size = 24, color }: IconProps) => {
+const Icon = ({ Icon, iconAlt, size = 24, color = "#000" }: IconProps) => {
   return <Icon size={size} title={iconAlt} color={color} />;
 };
 

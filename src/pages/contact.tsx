@@ -1,5 +1,5 @@
 import WithPageLayout from "interfaces/with-page-layouts";
-import ContactLayout from "components/templates/layouts/contact-layout";
+import DefaultLayout from "components/templates/layouts/default-layout";
 import ContactContent from "components/organisms/contact-content/contact-content";
 import HeadContent from "components/particles/head/HeadContent";
 
@@ -19,5 +19,5 @@ const Contact: WithPageLayout<ContactProps> = () => {
     </div>
   );
 };
-Contact.PageLayout = ContactLayout;
+Contact.PageLayout = DefaultLayout;
 export default Contact;
