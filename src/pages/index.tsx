@@ -13,7 +13,7 @@ const Home: WithPageLayout<HomeProps> = () => {
         content={"A space where great jobs and great devs can find each other!"}
       />
       <Hero />
-      <TwitterFeed />
+      {/* <TwitterFeed /> */}
     </>
   );
 };

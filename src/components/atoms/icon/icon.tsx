@@ -4,12 +4,11 @@ interface IconProps {
   Icon: IconType;
   iconAlt: string;
   size?: number;
+  color?: string;
 }
 
-const Icon = ({ Icon, iconAlt, size = 24 }: IconProps) => {
-  return (
-    <Icon size={size} title={iconAlt} />
-  );
+const Icon = ({ Icon, iconAlt, size = 24, color }: IconProps) => {
+  return <Icon size={size} title={iconAlt} color={color} />;
 };
 
 export default Icon;
