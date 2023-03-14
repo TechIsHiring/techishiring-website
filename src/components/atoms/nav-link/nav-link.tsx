@@ -1,8 +1,9 @@
 import DefaultText from "../typography/default-text";
+import DefaultButton from "components/atoms/button/button";
 import Link from "next/link";
 type NavLinkProps = NavLink;
 
-const NavLink = ({ url, text, activeLink, externalLink }: NavLinkProps) => {
+const NavLink = ({ url, text, activeLink, button, externalLink }: NavLinkProps) => {
   return (
     <Link
       href={url}
@@ -15,9 +16,21 @@ const NavLink = ({ url, text, activeLink, externalLink }: NavLinkProps) => {
           activeLink ? "border-b-2 border-blue-500 text-blue-500" : "text-black"
         } font-inter  font-semibold`}
       >
-        <DefaultText fontSize="lg" as="span">
-          {text}
-        </DefaultText>
+        {button !== true && 
+          <DefaultText fontSize="lg" as="span">
+            {text}
+          </DefaultText>
+        }
+        {button === true &&
+          <DefaultButton
+            variant="solid"
+            size="md"
+            colorScheme="facebook"
+            className=""
+          >
+            <span className="text-white">Contact Us</span>
+          </DefaultButton>
+        }
       </a>
     </Link>
   );

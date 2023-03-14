@@ -16,7 +16,8 @@ const useMainNav = () => {
     },
     {
       url: "/contact",
-      text: "Contact Us"
+      text: "Contact Us",
+      button: true
     }
   ];
 
