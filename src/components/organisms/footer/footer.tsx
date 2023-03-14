@@ -3,9 +3,8 @@ import {
   SiTwitter,
   SiLinkedin,
   SiPatreon,
-  SiRevue,
-  SiGithub,
-  SiYoutube
+  SiSubstack,
+  SiGithub
 } from "react-icons/si";
 import Link from "components/atoms/link/link";
 import { Text } from "@chakra-ui/react";
@@ -100,8 +99,8 @@ const mobileFooter = () => {
           </Link>
           <Link url="https://www.getrevue.co/profile/techishiring">
             <Icon
-              Icon={SiRevue}
-              iconAlt="Revue for Tech Is Hiring"
+              Icon={SiSubstack}
+              iconAlt="Substack for Tech Is Hiring"
               color="white"
               size={35}
             />
@@ -207,8 +206,8 @@ const desktopFooter = () => {
             </Link>
             <Link url="https://www.getrevue.co/profile/techishiring">
               <Icon
-                Icon={SiRevue}
-                iconAlt="Revue for Tech Is Hiring"
+                Icon={SiSubstack}
+                iconAlt="Substack for Tech Is Hiring"
                 color="white"
                 size={35}
               />
