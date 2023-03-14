@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import HeroImage from "../../../../public/assets/images/heroImages.svg";
+import { HeroImage } from "../../../images/Index";
 
 import Icon from "components/atoms/icon/icon";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -38,7 +38,7 @@ const Hero = () => {
             </div>
           </div>
           <div className=" relative mt-6 h-[20rem] w-full md:h-[30rem] lg:mt-0 lg:h-[35rem] ">
-            <Image src={HeroImage} alt="Hero Image" layout="fill" />
+            <Image src={ HeroImage } alt="Black male at a desk in front of a computer taking notes." layout="fill" />
           </div>
         </div>
       </div>
