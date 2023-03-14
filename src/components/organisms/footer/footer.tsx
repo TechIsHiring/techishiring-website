@@ -6,6 +6,7 @@ import {
   SiSubstack,
   SiGithub
 } from "react-icons/si";
+import { FiExternalLink } from "react-icons/fi";
 import Link from "components/atoms/link/link";
 import { Text } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";
@@ -43,9 +44,17 @@ const mobileFooter = () => {
           </Text>
         </Link>
         <Link url="https://techishiring.substack.com/">
-          <Text className="cursor-pointer font-inter text-base text-white">
-            Newsletter
-          </Text>
+            <div className="flex justify-center gap-2">
+              <Icon
+                Icon={FiExternalLink}
+                size={22}
+                color="white"
+                iconAlt={"External Link to TechIsHiring newsLetter"}
+              />
+              <Text className="cursor-pointer font-inter text-base text-white">
+                Newsletter
+              </Text>
+            </div>
         </Link>
         <Link url="#">
           <Text className="cursor-pointer font-inter text-base text-white">
@@ -140,9 +149,17 @@ const desktopFooter = () => {
             </Text>
           </Link>
           <Link url="https://techishiring.substack.com/">
-            <Text className="cursor-pointer font-inter text-base text-white">
-              Newsletter
-            </Text>
+            <div className="flex justify-center gap-2">
+              <Icon
+                Icon={FiExternalLink}
+                size={22}
+                color="white"
+                iconAlt={"External Link to TechIsHiring newsLetter"}
+              />
+              <Text className="cursor-pointer font-inter text-base text-white">
+                Newsletter
+              </Text>
+            </div>
           </Link>
           <Link url="#">
             <Text className="cursor-pointer font-inter text-base text-white">
