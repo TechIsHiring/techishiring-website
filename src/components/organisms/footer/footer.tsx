@@ -65,46 +65,46 @@ const mobileFooter = () => {
       </div>
       <div className="flex flex-col space-y-1">
         <div className="flex items-center justify-center space-x-8 pb-5">
-          <Link url="https://www.twitter.com/techishiring">
+          <a target="_blank" rel="noreferrer" href="https://www.twitter.com/techishiring">
             <Icon
               Icon={SiTwitter}
               iconAlt="Twitter for Tech Is Hiring"
               color="white"
               size={20}
             />
-          </Link>
-          <Link url="https://www.github.com/techishiring">
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://www.github.com/techishiring">
             <Icon
               Icon={SiGithub}
               iconAlt="GitHub for Tech Is Hiring"
               color="white"
               size={20}
             />
-          </Link>
-          <Link url="https://www.linkedin.com/company/techishiring">
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/techishiring">
             <Icon
               Icon={SiLinkedin}
               iconAlt="LinkedIn for Tech Is Hiring"
               color="white"
               size={20}
             />
-          </Link>
-          <Link url="https://www.patreon.com/techishiring">
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://www.patreon.com/techishiring">
             <Icon
               Icon={SiPatreon}
               iconAlt="Patreon for Tech Is Hiring"
               color="white"
               size={20}
             />
-          </Link>
-          <Link url="https://www.getrevue.co/profile/techishiring">
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://techishiring.substack.com/">
             <Icon
               Icon={SiSubstack}
               iconAlt="Substack for Tech Is Hiring"
               color="white"
-              size={35}
+              size={20}
             />
-          </Link>
+          </a>
         </div>
         <DefaultText className="pb-4 text-center font-inter text-xs font-medium text-white">
           {`© Copyright ${new Date().getFullYear()}, All rights reserved.`}
@@ -171,47 +171,47 @@ const desktopFooter = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-1">
-          <div className="flex items-center justify-end space-x-8">
-            <Link url="https://www.twitter.com/techishiring">
+          <div className="flex items-center justify-end space-x-8 pb-2">
+            <a target="_blank" rel="noreferrer" href="https://www.twitter.com/techishiring">
               <Icon
                 Icon={SiTwitter}
                 iconAlt="Twitter for Tech Is Hiring"
                 color="white"
                 size={20}
               />
-            </Link>
-            <Link url="https://www.github.com/techishiring">
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://www.github.com/techishiring">
               <Icon
                 Icon={SiGithub}
                 iconAlt="GitHub for Tech Is Hiring"
                 color="white"
                 size={20}
               />
-            </Link>
-            <Link url="https://www.linkedin.com/company/techishiring">
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/techishiring">
               <Icon
                 Icon={SiLinkedin}
                 iconAlt="LinkedIn for Tech Is Hiring"
                 color="white"
                 size={20}
               />
-            </Link>
-            <Link url="https://www.patreon.com/techishiring">
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://www.patreon.com/techishiring">
               <Icon
                 Icon={SiPatreon}
                 iconAlt="Patreon for Tech Is Hiring"
                 color="white"
                 size={20}
               />
-            </Link>
-            <Link url="https://www.getrevue.co/profile/techishiring">
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://techishiring.substack.com/">
               <Icon
                 Icon={SiSubstack}
                 iconAlt="Substack for Tech Is Hiring"
                 color="white"
-                size={35}
+                size={20}
               />
-            </Link>
+            </a>
           </div>
           <DefaultText className="text-right font-inter text-xs font-medium text-white lg:text-sm">
             {`© Copyright ${new Date().getFullYear()}, All rights reserved.`}
