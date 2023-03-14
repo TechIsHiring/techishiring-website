@@ -28,7 +28,9 @@ const NavLink = ({ url, text, activeLink, button, externalLink }: NavLinkProps) 
             colorScheme="facebook"
             className=""
           >
-            <span className="text-white">Contact Us</span>
+            <DefaultText className="text-white" fontSize="lg" as="span">
+              {text}
+            </DefaultText>
           </DefaultButton>
         }
       </a>
