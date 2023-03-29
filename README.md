@@ -27,9 +27,13 @@ This project uses Atomic Design for it's Components. Here are several resources 
 - [Atomic Design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
 - [Atomic Design - How To Make Web and UI Design Easier](https://www.youtube.com/watch?v=W3A33dmp17E)
 
+## Dev Environment
+
+Check out what the we're currently work on at [https://dev.techishiring.com](https://dev.techishiring.com)
+
 ## Storybook
 
-The Stoybook for this project can be found at [https://stories.techishiring.com](https://stories.techishiring.com).
+The Stoybook for this project can be found at [https://stories.techishiring.com](https://stories.techishiring.com)
 
 ### Run it locally
 
