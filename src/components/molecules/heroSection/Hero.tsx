@@ -5,6 +5,8 @@ import HeroImage from "../../../../public/assets/images/heroImages.svg";
 import Icon from "components/atoms/icon/icon";
 import { AiOutlineSearch } from "react-icons/ai";
 
+//Mission Start!
+
 const Hero = () => {
   return (
     <div className=" h-full w-full bg-[#eaeaea] ">
