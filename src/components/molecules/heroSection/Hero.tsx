@@ -1,19 +1,17 @@
 import Image from "next/image";
 import React from "react";
-import HeroImage from "../../../../public/assets/images/heroImages.svg";
+import { HeroImage } from "../../../images/Index";
 
 import Icon from "components/atoms/icon/icon";
 import { AiOutlineSearch } from "react-icons/ai";
 
-//Mission Start!
-
 const Hero = () => {
   return (
-    <div className=" h-full w-full bg-[#eaeaea] ">
-      <div className=" min-h-[700px] md:min-h-[806px]">
+    <div className="h-full w-full bg-[#eaeaea] ">
+      <div className={`min-h-[700px] md:min-h-[806px] bg-[url('/assets/images/hero-bg-image.jpg')]`}>
         <div className="mx-auto flex h-full max-w-[1210px] flex-col items-center justify-between px-10 py-8 lg:flex-row">
           <div className="w-full max-w-[650px]">
-            <p className=" text-4xl font-[750] md:text-6xl md:leading-[70px]">
+            <p className="text-4xl font-[750] md:text-6xl md:leading-[70px]">
               Where great <span className="text-[#7AB8F1]">Jobs</span> and great{" "}
               <span className="text-[#A38DFD]">Engineers</span> come to find one
               another !
