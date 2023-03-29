@@ -14,8 +14,8 @@ export default function AboutBanner() {
       <div className="relative bottom-32 md:bottom-14 px-10 lg:px-40 flex md:justify-center mx-auto sm:w-[80%] md:w-full">
         <div className="bg-[#0B2F4F] flex flex-1 md:flex-auto flex-col md:flex-row w-full p-8 gap-9 rounded-l-lg " >
           <div>
-            <HeaderText level={"h4"} color={"white"} fontSize={"20px"}>Have a question ?</HeaderText>
-            <DefaultText className={"text-altWhite text-[16px]"}>If you have any questions , please contact us</DefaultText>
+            <HeaderText level={"h4"} color={"white"} fontSize={"20px"}>Have a question?</HeaderText>
+            <DefaultText className={"text-altWhite text-[16px]"}>If you have any questions, please contact us</DefaultText>
           </div>
           <div>
             <DefaultButton

@@ -17,7 +17,7 @@ export default function AboutDetails() {
           and those who can assist, rather than focusing primarily on advertising job openings.
         </DefaultText>
         <DefaultText as={"p"} w={{base:"80%", md:"70%"}}>
-          During the epidemic, <b>Chad Stewart</b>, the <b>founder of TechIsHiring</b>, noticed that many 
+          During the pandemic, <b>Chad Stewart</b>, the <b>founder of TechIsHiring</b>, noticed that many 
           people were tweeting about job openings they had discovered and advertising possibilities 
           that they had come across, which is how <b>TechIsHiring</b> came to be. Since there was no one place  
           where these tweets could be collected, the hashtag <Link
