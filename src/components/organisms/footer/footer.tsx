@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Icon from "components/atoms/icon/icon";
 import {
   SiTwitter,
@@ -6,15 +7,21 @@ import {
   SiSubstack,
   SiGithub
 } from "react-icons/si";
+import useMainNav from "lib/hooks/use-nav";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "components/atoms/link/link";
+import NavLink from "components/atoms/nav-link/nav-link";
 import { Text } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";
 import DefaultText from "components/atoms/typography/default-text";
 import { Input } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 
-const mobileFooter = () => {
+interface FooterProps {
+  mobileNav: JSX.Element[];
+}
+
+const MobileFooter = ({ mobileNav }: FooterProps) => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-col space-y-2">
@@ -33,34 +40,7 @@ const mobileFooter = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-between space-y-6 py-7">
-        <Link url="/about">
-          <Text className="cursor-pointer font-inter text-base text-white">
-            About
-          </Text>
-        </Link>
-        <Link url="/">
-          <Text className="cursor-pointer font-inter text-base text-white">
-            Home
-          </Text>
-        </Link>
-        <Link url="https://techishiring.substack.com/">
-            <div className="flex justify-center gap-2">
-              <Icon
-                Icon={FiExternalLink}
-                size={22}
-                color="white"
-                iconAlt={"External Link to TechIsHiring newsLetter"}
-              />
-              <Text className="cursor-pointer font-inter text-base text-white">
-                Newsletter
-              </Text>
-            </div>
-        </Link>
-        <Link url="#">
-          <Text className="cursor-pointer font-inter text-base text-white">
-            Jobs
-          </Text>
-        </Link>
+        {mobileNav.map(navElement => navElement)}
       </div>
       <Link url="/">
         <a>
@@ -126,7 +106,7 @@ const mobileFooter = () => {
   );
 };
 
-const desktopFooter = () => {
+const DesktopFooter = ({ mobileNav }: FooterProps) => {
   return (
     <div className="flex flex-col items-center ">
       <Link url="/">
@@ -138,34 +118,7 @@ const desktopFooter = () => {
       </Link>
       <div className="mt-5 w-[40%]">
         <div className="flex  items-center justify-between space-x-4">
-          <Link url="/about">
-            <Text className="cursor-pointer font-inter text-base text-white">
-              About
-            </Text>
-          </Link>
-          <Link url="/">
-            <Text className="cursor-pointer font-inter text-base text-white">
-              Home
-            </Text>
-          </Link>
-          <Link url="https://techishiring.substack.com/">
-            <div className="flex justify-center gap-2">
-              <Icon
-                Icon={FiExternalLink}
-                size={22}
-                color="white"
-                iconAlt={"External Link to TechIsHiring newsLetter"}
-              />
-              <Text className="cursor-pointer font-inter text-base text-white">
-                Newsletter
-              </Text>
-            </div>
-          </Link>
-          <Link url="#">
-            <Text className="cursor-pointer font-inter text-base text-white">
-              Jobs
-            </Text>
-          </Link>
+          {mobileNav.map(navElement => navElement)}
         </div>
       </div>
       <div className="mt-4 w-full">
@@ -243,10 +196,34 @@ const desktopFooter = () => {
 };
 
 const Footer = () => {
+  const navList = useMainNav();
+
+  const navItems = navList.map((navItem, index) => {
+    return (
+      <Fragment key={index}>
+        <li className="flex items-center gap-2">
+          {navItem.externalLink && (
+            <Icon
+              Icon={FiExternalLink}
+              color="white"
+              size={22}
+              iconAlt={navItem.externalLinkAlt ?? ""}
+            />
+          )}
+          <NavLink {...navItem} footer />
+        </li>
+      </Fragment>
+    );
+  });
+
   return (
     <footer className="w-full bg-[#134D82] px-4 pt-6 pb-8 md:px-5 md:pb-16 lg:px-14">
-      <div className="hidden md:block">{desktopFooter()}</div>
-      <div className="md:hidden">{mobileFooter()}</div>
+      <div className="hidden md:block">
+        <DesktopFooter mobileNav={navItems} />
+      </div>
+      <div className="md:hidden">
+        <MobileFooter mobileNav={navItems}/>
+      </div>
     </footer>
   );
 };

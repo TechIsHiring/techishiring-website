@@ -3,7 +3,7 @@ import DefaultButton from "components/atoms/button/button";
 import Link from "next/link";
 type NavLinkProps = NavLink;
 
-const NavLink = ({ url, text, activeLink, button, externalLink }: NavLinkProps) => {
+const NavLink = ({ url, text, activeLink, button, externalLink, footer = false }: NavLinkProps) => {
   return (
     <Link
       href={url}
@@ -13,15 +13,10 @@ const NavLink = ({ url, text, activeLink, button, externalLink }: NavLinkProps) 
     >
       <a
         className={`${
-          activeLink ? "border-b-2 border-blue-500 text-blue-500" : "text-black"
+          activeLink ? "border-b-2 border-blue-500 text-blue-500" : footer ? "text-white" : "text-black"
         } font-inter  font-semibold`}
       >
-        {button !== true && 
-          <DefaultText fontSize="lg" as="span">
-            {text}
-          </DefaultText>
-        }
-        {button === true &&
+        {footer === false && button === true ?
           <DefaultButton
             variant="solid"
             size="md"
@@ -32,6 +27,10 @@ const NavLink = ({ url, text, activeLink, button, externalLink }: NavLinkProps) 
               {text}
             </DefaultText>
           </DefaultButton>
+        : 
+          <DefaultText fontSize="lg" as="span">
+            {text}
+          </DefaultText>
         }
       </a>
     </Link>

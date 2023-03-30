@@ -10,6 +10,7 @@ interface Link {
 interface NavLink extends Link {
   text: string;
   button?: boolean;
+  footer?: boolean;
 }
 
 // API Return Types
