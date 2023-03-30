@@ -1,23 +1,23 @@
 import WithPageLayout from "interfaces/with-page-layouts";
 import DefaultLayout from "components/templates/layouts/default-layout";
-import ContactContent from "components/organisms/contact-content/contact-content";
+import HireChadContent from "components/organisms/hire-chad-content/hire-chad-content";
 import HeadContent from "components/particles/head/HeadContent";
 
-interface ContactProps {
+interface HireChadProps {
 
 };
 
-const Contact: WithPageLayout<ContactProps> = () => {
+const HireChad: WithPageLayout<HireChadProps> = () => {
 
   return ( 
     <div>
 
       <HeadContent content={"hire-chad"}/>
 
-      <ContactContent />
+      <HireChadContent />
 
     </div>
   );
 };
-Contact.PageLayout = DefaultLayout;
-export default Contact;
+HireChad.PageLayout = DefaultLayout;
+export default HireChad;
