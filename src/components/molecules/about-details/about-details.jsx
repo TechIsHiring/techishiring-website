@@ -21,7 +21,7 @@ export default function AboutDetails() {
           people were tweeting about job openings they had discovered and advertising possibilities 
           that they had come across, which is how <b>TechIsHiring</b> came to be. Since there was no one place  
           where these tweets could be collected, the hashtag <Link
-            url={"https://twitter.com"}>
+            url={"https://twitter.com/TechIsHiring/"}>
             <b className="text-primary font-800 cursor-pointer">
                #TechIsHiring
             </b>

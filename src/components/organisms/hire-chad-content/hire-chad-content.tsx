@@ -1,7 +1,6 @@
-import { ChadProfilePic } from "images/Index";
 import Image from "next/image";
-import ContactHeading from "components/molecules/contact-heading/contact-heading";
-import React from "react";
+import HireChadDetails from "components/molecules/hire-chad-details/hire-chad-details";
+import { ChadProfilePic } from "images/Index";
 
 const HireChadContent = () => {
 
@@ -13,9 +12,9 @@ const HireChadContent = () => {
         
       </div>
       
-      <div className="w-full lg:w-1/2 lg:px-32 px-5 md:px-10 my-10 flex flex-col">
+      <div className="w-full lg:w-1/2 lg:px-16 px-5 md:px-10 my-10 flex flex-col">
 
-        <ContactHeading />
+        <HireChadDetails />
           
       </div>
     </div>
