@@ -17,7 +17,7 @@ const ContactContent = () => {
       
       <div className="w-full lg:w-1/2 lg:px-32 px-5 md:px-10 mt-20 flex flex-col">
 
-        <div className="md:hidden absolute right-0 top-[6rem]">
+        <div className="lg:hidden absolute right-0 top-[6rem]">
           <Image src= {contactMobileImg} alt="contact form mobile image" width={150} height={180} />
         </div>
 
