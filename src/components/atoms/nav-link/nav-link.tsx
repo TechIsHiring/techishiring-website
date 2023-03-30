@@ -11,24 +11,23 @@ const NavLink = ({ url, text, activeLink, button, externalLink, footer = false }
       target={externalLink ? "_blank" : "_self"}
       rel="noreferrer"
     >
-      <a
-        className={`${
-          activeLink ? "border-b-2 border-blue-500 text-blue-500" : footer ? "text-white" : "text-black"
-        } font-inter  font-semibold`}
-      >
+      <a className={`${footer ? "text-white" : "text-black"} font-inter  font-semibold`} >
         {footer === false && button === true ?
           <DefaultButton
+            className=""
             variant="solid"
             size="md"
             colorScheme="facebook"
-            className=""
           >
             <DefaultText className="text-white" fontSize="lg" as="span">
               {text}
             </DefaultText>
           </DefaultButton>
         : 
-          <DefaultText fontSize="lg" as="span">
+          <DefaultText
+            className={`${activeLink ? "border-b-2 border-blue-500 text-blue-500" : ""}`}
+            fontSize="lg"
+            as="span">
             {text}
           </DefaultText>
         }
