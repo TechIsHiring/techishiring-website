@@ -12,7 +12,7 @@ export default function AboutHeader() {
 
   return (
     <div
-        className="flex w-full bg-center h-screen md:h-[80vh] bg-cover bg-no-repeat"
+        className="flex w-full bg-center h-screen lg:h-[80vh] bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${aboutImage.src})` }}
     >
         <div className="w-full flex flex-col items-center justify-center px-[18px] lg:px-0 bg-gradient-to-r from-black/60  to-transparent gap-4">

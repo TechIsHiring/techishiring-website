@@ -20,6 +20,9 @@ const Hero = () => {
               So many jobs available, all you have to do is keep up with our
               posts. Check below for recent job openings.
             </p>
+
+            {/* Commented out based on whether we commit to continuing to use the Twitter API
+            
             <div className="flex items-center  justify-between rounded-lg bg-white p-2">
               <div className="flex items-center text-[#2188E7]">
                 <Icon Icon={AiOutlineSearch} iconAlt="Search Icon" />
@@ -35,7 +38,8 @@ const Hero = () => {
                   Search
                 </button>
               </div>
-            </div>
+            </div> */}
+
           </div>
           <div className=" relative mt-6 h-[20rem] w-full md:h-[30rem] lg:mt-0 lg:h-[35rem] ">
             <Image src={HeroImage} alt="Hero Image" layout="fill" />
