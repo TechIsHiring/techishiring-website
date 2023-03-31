@@ -5,7 +5,9 @@ import Link from "components/atoms/link/link";
 import Icon from "components/atoms/icon/icon";
 import { 
   SiTwitter,
-  SiLinkedin
+  SiLinkedin,
+  SiGithub,
+  SiDevdotto
 } from "react-icons/si";
 
 const HireChadDetails = () => {
@@ -13,7 +15,7 @@ const HireChadDetails = () => {
     <Box as={"div"} className="w-full">
       <VStack justifyContent={"flex-start"} alignItems={"flex-start"}>
         <HeaderText level={"h2"} className={"text-secondary py-2"}>
-          Hire Chad Stewart
+          Hire Chad R. Stewart
         </HeaderText>
         <DefaultText>
           Chad Stewart is a really cool guy.
@@ -26,7 +28,7 @@ const HireChadDetails = () => {
           </a>
         </Link>
         <div className="flex w-4/5 flex-col outline-none">
-          <DefaultText className={"text-black text-[23px] capitalize py-6 font-bold "}>Check out my Social Media</DefaultText>
+          <DefaultText className={"text-black text-[23px] capitalize py-6 font-bold "}>Check out my links</DefaultText>
           <div className="flex gap-12 w-full items-center">
             <Link url="https://www.twitter.com/Chad_R_Stewart">
               <a href="https://www.twitter.com/Chad_R_Stewart">
@@ -36,6 +38,16 @@ const HireChadDetails = () => {
             <Link url="https://www.linkedin.com/in/ChadRStewart/">
               <a href="https://www.linkedin.com/in/ChadRStewart/">
                 <Icon Icon={SiLinkedin} iconAlt="Chad Stewart LinkedIn" />
+              </a>
+            </Link>
+            <Link url="https://www.github.com/ChadStewart/">
+              <a href="https://www.github.com/ChadStewart/">
+                <Icon Icon={SiGithub} iconAlt="Chad Stewart GitHub" />
+              </a>
+            </Link>
+            <Link url="https://www.dev.to/Chad_R_Stewart/">
+              <a href="https://www.dev.to/Chad_R_Stewart/">
+                <Icon Icon={SiDevdotto} size={32} iconAlt="Chad Stewart Dev.to" />
               </a>
             </Link>
           </div>
