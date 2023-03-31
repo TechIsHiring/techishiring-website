@@ -1,7 +1,7 @@
 import WithPageLayout from "interfaces/with-page-layouts";
 import DefaultLayout from "components/templates/layouts/default-layout";
 import HireChadContent from "components/organisms/hire-chad-content/hire-chad-content";
-import HeadContent from "components/particles/head/HeadContent";
+import Head from "next/head";
 
 interface HireChadProps {
 
@@ -12,7 +12,13 @@ const HireChad: WithPageLayout<HireChadProps> = () => {
   return ( 
     <div>
 
-      <HeadContent content="Hire Chad" />
+      <Head>
+        <title>TechIsHiring - Hire Chad</title>
+        <meta
+          property="og:description"
+          content={"TechIsHiring - Hire Chad"}
+        />
+      </Head>
 
       <HireChadContent />
 
