@@ -26,7 +26,7 @@ const HireChadDetails = () => {
           </a>
         </Link>
         <div className="flex w-4/5 flex-col outline-none">
-          <DefaultText className={"text-black text-[23px] capitalize py-8 font-bold "}>Check out my Social Media</DefaultText>
+          <DefaultText className={"text-black text-[23px] capitalize py-6 font-bold "}>Check out my Social Media</DefaultText>
           <div className="flex gap-12 w-full items-center">
             <Link url="https://www.twitter.com/Chad_R_Stewart">
               <a href="https://www.twitter.com/Chad_R_Stewart">
