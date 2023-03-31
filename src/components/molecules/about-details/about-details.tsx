@@ -5,7 +5,7 @@ import Icon from "components/atoms/icon/icon";
 import { 
   SiTwitter,
   SiLinkedin,
-  SiFacebook
+  SiYoutube
 } from "react-icons/si";
 
 export default function AboutDetails() {
@@ -29,10 +29,22 @@ export default function AboutDetails() {
         </DefaultText>
         <div className="flex lg:hidden w-4/5 flex-col border-t-2 border-t-[#838383] outline-none">
           <DefaultText className={"text-black text-[23px] capitalize pt-14 pb-8 font-bold "}>Follow us</DefaultText>
-          <div className="flex gap-12 w-full items-center justify-center">      
-            <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" />
-            <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" />
-            <Icon Icon={SiFacebook} iconAlt="LinkedIn for Tech Is Hiring" />
+          <div className="flex gap-12 w-full items-center justify-center">
+            <Link url="https://www.twitter.com/TechIsHiring/">
+              <a href="https://www.twitter.com/TechIsHiring/">
+                <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" />
+              </a>
+            </Link>
+            <Link url="https://www.linkedin.com/company/TechIsHiring/">
+              <a href="https://www.linkedin.com/company/TechIsHiring/">
+                <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" />
+              </a>
+            </Link>
+            <Link url="https://www.youtube.com/@TechIsHiring">
+              <a href="https://www.youtube.com/@TechIsHiring">
+                <Icon Icon={SiYoutube} iconAlt="YouTube for Tech Is Hiring"/>
+              </a>
+            </Link>
           </div>
         </div>
         
