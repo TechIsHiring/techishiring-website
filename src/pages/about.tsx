@@ -8,7 +8,7 @@ interface AboutProps {}
 const About: WithPageLayout<AboutProps> = () => {
   return (
     <>
-      <HeadContent content={"About"}/>
+      <HeadContent content="About"/>
 
       <AboutContent />
     </>

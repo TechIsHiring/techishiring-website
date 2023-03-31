@@ -1,6 +1,10 @@
 import Head from "next/head";
 
-export default function HeadContent({content}: any) {
+interface HeadContentProps {
+  content: string;
+}
+
+export default function HeadContent({ content }: HeadContentProps) {
   return (
     <Head>
       <title>TechIsHiring - {content}</title>

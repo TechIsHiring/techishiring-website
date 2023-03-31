@@ -12,7 +12,7 @@ const Contact: WithPageLayout<ContactProps> = () => {
   return ( 
     <div>
 
-      <HeadContent content={"contact"}/>
+      <HeadContent content="Contact" />
 
       <ContactContent />
 

@@ -12,7 +12,7 @@ const HireChad: WithPageLayout<HireChadProps> = () => {
   return ( 
     <div>
 
-      <HeadContent content={"Hire Chad"}/>
+      <HeadContent content="Hire Chad" />
 
       <HireChadContent />
 

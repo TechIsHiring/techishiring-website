@@ -6,7 +6,7 @@ const HireChadContent = () => {
 
   return ( 
     <div className="flex flex-col lg:flex-row w-full justify-between items-center">
-      <div className="lg:w-[50%] xl:flex lg:flex">
+      <div className="lg:w-[50%] max-h-[900px] xl:flex lg:flex">
 
         <Image src={ ChadProfilePic } alt="Chad Stewart Profile Pic" />
         

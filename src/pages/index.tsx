@@ -11,7 +11,7 @@ const Home: WithPageLayout<HomeProps> = () => {
   return (
     <>
       <HeadContent
-        content={"A space where great jobs and great devs can find each other!"}
+        content="A space where great jobs and great devs can find each other!"
       />
       <Hero />
       <WhyChooseSection />

@@ -12,7 +12,7 @@ const Newsletter: WithPageLayout<
   return (
     <Card section className="flex flex-col gap-8">
       <>
-        <HeadContent content={"Newsletter"}/>
+        <HeadContent content="Newsletter" />
         <NewsletterContent lastTenIssues={lastTenIssues} />
       </>
     </Card>
