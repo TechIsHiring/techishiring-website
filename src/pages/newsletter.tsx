@@ -4,7 +4,7 @@ import { fetchIssues } from "lib/api/external-apis/revue/issues-api";
 import NewsletterContent from "components/organisms/newsletter-content/newsletter-content";
 import Card from "components/atoms/card/card";
 import { InferGetServerSidePropsType } from "next";
-import HeadContent from "components/particles/head/HeadContent";
+import Head from "next/head";
 
 const Newsletter: WithPageLayout<
   InferGetServerSidePropsType<typeof getServerSideProps>
@@ -12,7 +12,13 @@ const Newsletter: WithPageLayout<
   return (
     <Card section className="flex flex-col gap-8">
       <>
-        <HeadContent content={"Newsletter"}/>
+        <Head>
+          <title>TechIsHiring - Newsletter</title>
+          <meta
+            property="og:description"
+            content={"TechIsHiring - Newsletter"}
+          />
+        </Head>
         <NewsletterContent lastTenIssues={lastTenIssues} />
       </>
     </Card>
