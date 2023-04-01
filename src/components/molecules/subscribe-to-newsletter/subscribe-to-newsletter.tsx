@@ -1,18 +1,17 @@
 import DefaultButton from "components/atoms/button/button";
 import TextInput from "components/atoms/text-input/text-input";
 import HeaderText from "components/atoms/typography/heading-text";
-import useApi from "lib/api/hooks/useApi";
-import { RouteToInternalRevueApi } from "lib/api/internal-apis/revue-subscriber/revue-subscriber-api";
 import { verifyIsEmail } from "lib/utils/verify-email";
 import { useState } from "react";
 
 const SubscribeToNewsletter = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
-
-  const { executeApiCall: sendEmailToRevue, statuses } = useApi(
-    RouteToInternalRevueApi
-  );
+  const [statuses, setStatuses] = useState({
+    isSuccess: false,
+    isError: false,
+    isIdle: true
+  });
 
   const updateEmail = (textInput: string) => {
     const isEmail = verifyIsEmail(textInput);
@@ -21,18 +20,7 @@ const SubscribeToNewsletter = () => {
   };
 
   const handleSubscribe = () => {
-    if (!error && email) {
-      const requestBody = {
-        email: email
-      };
-
-      try {
-        sendEmailToRevue(requestBody);
-      } catch (error: any) {
-        console.log("Something went wrong!");
-      }
-    }
-    if (!email) setError(true);
+    
   };
 
   return (
