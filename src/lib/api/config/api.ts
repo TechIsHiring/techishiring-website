@@ -1,26 +1,27 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
-
-const axiosParams = {
-  baseURL: ""
+const api = {
+  get: (url: URL | RequestInfo, config: RequestInit = {}) => fetch(url, {
+    method: "GET",
+    ...config
+  }),
+  post: (url: URL | RequestInfo, body: any, config: RequestInit = {}) => fetch(url, {
+    method: "POST",
+    body,
+    ...config
+  }),
+  put: (url: URL | RequestInfo, body: any, config: RequestInit = {}) => fetch(url, {
+    method: "PUT",
+    body,
+    ...config
+  }),
+  patch: (url: URL | RequestInfo, body: any, config: RequestInit = {}) => fetch(url, {
+    method: "PATCH",
+    body,
+    ...config
+  }),
+  delete: (url: URL | RequestInfo, config: RequestInit = {}) => fetch(url, {
+    method: "DELETE",
+    ...config
+  })
 };
 
-// Mission Start!! ... finally
-
-const axiosInstance = axios.create(axiosParams);
-
-const api = (axios: AxiosInstance) => {
-  return {
-    get: (url: string, config: AxiosRequestConfig<any> = {}) =>
-      axios.get(url, config),
-    post: (url: string, body: any, config: AxiosRequestConfig<any> = {}) =>
-      axios.post(url, body, config),
-    put: (url: string, body: any, config: AxiosRequestConfig<any> = {}) =>
-      axios.put(url, body, config),
-    patch: (url: string, body: any, config: AxiosRequestConfig<any> = {}) =>
-      axios.patch(url, body, config),
-    delete: (url: string, config: AxiosRequestConfig<any> = {}) =>
-      axios.delete(url, config)
-  };
-};
-
-export default api(axiosInstance);
+export default api;

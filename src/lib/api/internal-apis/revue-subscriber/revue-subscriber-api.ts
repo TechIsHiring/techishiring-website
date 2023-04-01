@@ -10,5 +10,5 @@ export const RouteToInternalRevueApi = (
 ) => {
   return api
     .post(`${BASEURL}/api/revue-subscriber`, requestBody)
-    .then((response) => response.data);
+    .then((response) => response.json());
 };
