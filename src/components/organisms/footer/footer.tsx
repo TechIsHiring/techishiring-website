@@ -116,8 +116,8 @@ const DesktopFooter = ({ mobileNav }: FooterProps) => {
           </Text>
         </a>
       </Link>
-      <div className="mt-5 w-[40%]">
-        <div className="flex  items-center justify-between space-x-4">
+      <div className="mt-5">
+        <div className="flex items-center justify-between space-x-4">
           {mobileNav.map(navElement => navElement)}
         </div>
       </div>

@@ -2,11 +2,12 @@ import React from 'react'
 import DefaultText from "components/atoms/typography/default-text";
 import HeaderText from "components/atoms/typography/heading-text";
 import DefaultButton from "components/atoms/button/button";
+import Link from 'components/atoms/link/link';
 import Icon from "components/atoms/icon/icon";
 import { 
   SiTwitter,
   SiLinkedin,
-  SiFacebook
+  SiYoutube
 } from "react-icons/si";
 
 export default function AboutBanner() {
@@ -39,10 +40,22 @@ export default function AboutBanner() {
         </div>
         <div className="w-1/2 hidden lg:flex rounded-r-lg px-10 bg-white justify-center items-center shadow-md flex-col gap-3">
           <DefaultText className={"text-dark text-[16px]"}>Follow us on Social Media:</DefaultText>
-          <div className="flex gap-12 w-full items-center justify-center">      
-            <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" url="https://www.twitter.com/techishiring" className={"text-primary"}/>
-            <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" url="https://www.linkedin.com/company/techishiring" className={""} />
-            <Icon Icon={SiFacebook} iconAlt="LinkedIn for Tech Is Hiring" url="https://www.linkedin.com/company/techishiring" className={"text-primary"}/>
+          <div className="flex gap-12 w-full items-center justify-center">
+            <Link url="https://www.twitter.com/TechIsHiring/">
+              <a href="https://www.twitter.com/TechIsHiring/">
+                <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" />
+              </a>
+            </Link>
+            <Link url="https://www.linkedin.com/company/TechIsHiring/">
+              <a href="https://www.linkedin.com/company/TechIsHiring/">
+                <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" />
+              </a>
+            </Link>
+            <Link url="https://www.youtube.com/@TechIsHiring">
+              <a href="https://www.youtube.com/@TechIsHiring">
+                <Icon Icon={SiYoutube} iconAlt="YouTube for Tech Is Hiring"/>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import Icon from "components/atoms/icon/icon";
 import { 
   SiTwitter,
   SiLinkedin,
-  SiFacebook
+  SiYoutube
 } from "react-icons/si";
 
 export default function AboutDetails() {
@@ -17,22 +17,47 @@ export default function AboutDetails() {
           and those who can assist, rather than focusing primarily on advertising job openings.
         </DefaultText>
         <DefaultText as={"p"} w={{base:"80%", lg:"70%"}}>
-          During the pandemic, <b>Chad Stewart</b>, the <b>founder of TechIsHiring</b>, noticed that many 
+          During the pandemic,
+          <Link url="https://www.linkedin.com/in/ChadRStewart/">
+            <a href="https://www.linkedin.com/in/ChadRStewart/" className="text-primary">
+              <b> Chad R. Stewart</b>
+            </a>
+          </Link>
+          , the <b>founder of TechIsHiring</b>, noticed that many 
           people were tweeting about job openings they had discovered and advertising possibilities 
           that they had come across, which is how <b>TechIsHiring</b> came to be. Since there was no one place  
           where these tweets could be collected, the hashtag <Link
-            url={"https://twitter.com"}>
+            url={"https://twitter.com/TechIsHiring/"}>
             <b className="text-primary font-800 cursor-pointer">
                #TechIsHiring
             </b>
           </Link> and the TechIsHiring account were created.
         </DefaultText>
+        <DefaultText as={"p"} w={{base:"80%", lg:"70%"}}>
+          Looking to work with the Founder directly?
+          <Link url="/hire-chad">
+            <b className="text-primary cursor-pointer"> Hire Chad R. Stewart</b>
+          </Link>
+          .
+        </DefaultText>
         <div className="flex lg:hidden w-4/5 flex-col border-t-2 border-t-[#838383] outline-none">
           <DefaultText className={"text-black text-[23px] capitalize pt-14 pb-8 font-bold "}>Follow us</DefaultText>
-          <div className="flex gap-12 w-full items-center justify-center">      
-            <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" url="https://www.twitter.com/techishiring" className={"text-primary"}/>
-            <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" url="https://www.linkedin.com/company/techishiring" className={""} />
-            <Icon Icon={SiFacebook} iconAlt="LinkedIn for Tech Is Hiring" url="https://www.linkedin.com/company/techishiring" className={"text-primary"}/>
+          <div className="flex gap-12 w-full items-center justify-center">
+            <Link url="https://www.twitter.com/TechIsHiring/">
+              <a href="https://www.twitter.com/TechIsHiring/">
+                <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" />
+              </a>
+            </Link>
+            <Link url="https://www.linkedin.com/company/TechIsHiring/">
+              <a href="https://www.linkedin.com/company/TechIsHiring/">
+                <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" />
+              </a>
+            </Link>
+            <Link url="https://www.youtube.com/@TechIsHiring">
+              <a href="https://www.youtube.com/@TechIsHiring">
+                <Icon Icon={SiYoutube} iconAlt="YouTube for Tech Is Hiring"/>
+              </a>
+            </Link>
           </div>
         </div>
         
