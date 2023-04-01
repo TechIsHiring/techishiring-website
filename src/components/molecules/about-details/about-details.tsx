@@ -33,7 +33,7 @@ export default function AboutDetails() {
             </b>
           </Link> and the TechIsHiring account were created.
         </DefaultText>
-        <DefaultText as={"p"} className="w-4/5">
+        <DefaultText as={"p"} w={{base:"80%", lg:"70%"}}>
           Looking to work with the Founder directly?
           <Link url="/hire-chad">
             <b className="text-primary cursor-pointer"> Hire Chad R. Stewart</b>
