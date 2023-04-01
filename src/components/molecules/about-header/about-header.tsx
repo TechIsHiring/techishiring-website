@@ -21,7 +21,7 @@ export default function AboutHeader() {
                 Transnational <span className="text-[#7AB8F1]">Job Listing</span> Channel
             </HeaderText>
 
-            <div className="text-white flex justify-start items-start px-5 w-full lg:w-[40%] text-left lg:text-center">
+            <div className="text-white flex justify-start items-start lg:px-5 w-full lg:w-[40%] text-left lg:text-center">
               <p className="">
                 So many jobs available, all you have to do is keep up with  our posts. Check below for recent job openings. 
               </p>
