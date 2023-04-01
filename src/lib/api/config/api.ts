@@ -4,6 +4,8 @@ const axiosParams = {
   baseURL: ""
 };
 
+// Mission Start!! ... finally
+
 const axiosInstance = axios.create(axiosParams);
 
 const api = (axios: AxiosInstance) => {
