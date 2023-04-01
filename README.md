@@ -9,7 +9,6 @@ TechIsHiring's website, focusing on showcasing the top tweets from the Twitter a
 - Chakra UI
 - TypeScript
 - Storybook
-- Axios
 - Posthog
 
 ## Project Figma
