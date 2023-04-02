@@ -7,7 +7,7 @@ const storyConfig = {
 export default storyConfig;
 
 export const NavLinkStory = () => (
-  <Link url="https://www.google.com" externalLink>
+  <Link href="https://www.google.com" externalLink>
     <>Hello</>
   </Link>
 );

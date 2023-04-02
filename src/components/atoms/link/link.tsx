@@ -14,7 +14,7 @@ const Link = (props: LinkProps) => {
     <NextLink
       {...props}
       passHref
-      className={`${props.activeLink ? console.log(props.activeLink) : ""} h-fit`}
+      className={`${props.activeLink ? console.log(props.activeLink) : ""} h-fit ${props.className}`}
     >
       {props.children}
     </NextLink>

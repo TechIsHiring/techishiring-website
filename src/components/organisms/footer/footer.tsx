@@ -42,12 +42,10 @@ const MobileFooter = ({ mobileNav }: FooterProps) => {
       <div className="flex flex-col items-center justify-between space-y-6 py-7">
         {mobileNav.map(navElement => navElement)}
       </div>
-      <Link url="/">
-        <a>
-          <Text fontSize="xl" className="footer-logo">
-            TechIsHiring
-          </Text>
-        </a>
+      <Link href="/">
+        <Text fontSize="xl" className="footer-logo">
+          TechIsHiring
+        </Text>
       </Link>
       <div className="my-4 w-full">
         <Divider colorScheme="gray" />
@@ -109,12 +107,10 @@ const MobileFooter = ({ mobileNav }: FooterProps) => {
 const DesktopFooter = ({ mobileNav }: FooterProps) => {
   return (
     <div className="flex flex-col items-center ">
-      <Link url="/">
-        <a>
-          <Text fontSize="xl" className="footer-logo">
-            TechIsHiring
-          </Text>
-        </a>
+      <Link href="/">
+        <Text fontSize="xl" className="footer-logo">
+          TechIsHiring
+        </Text>
       </Link>
       <div className="mt-5">
         <div className="flex items-center justify-between space-x-4">

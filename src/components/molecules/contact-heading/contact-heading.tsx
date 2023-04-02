@@ -16,7 +16,8 @@ const ContactHeading = () => {
           <br/>
           <Link
             href={"mailto:techishiring@gmail.com"}
-            className={"text-primary"}>
+            className={"text-primary"}
+          >
               <>techishiring@gmail.com</>
           </Link>
           

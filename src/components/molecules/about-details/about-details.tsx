@@ -24,10 +24,11 @@ export default function AboutDetails() {
           , the <b>founder of TechIsHiring</b>, noticed that many 
           people were tweeting about job openings they had discovered and advertising possibilities 
           that they had come across, which is how <b>TechIsHiring</b> came to be. Since there was no one place  
-          where these tweets could be collected, the hashtag <Link
+          where these tweets could be collected, the hashtag
+          <Link
             href={"https://twitter.com/TechIsHiring/"}>
             <b className="text-primary font-800 cursor-pointer">
-               #TechIsHiring
+              #TechIsHiring
             </b>
           </Link> and the TechIsHiring account were created.
         </DefaultText>
@@ -48,7 +49,7 @@ export default function AboutDetails() {
               <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" />
             </Link>
             <Link href="https://www.youtube.com/@TechIsHiring">
-                <Icon Icon={SiYoutube} iconAlt="YouTube for Tech Is Hiring"/> 
+              <Icon Icon={SiYoutube} iconAlt="YouTube for Tech Is Hiring"/> 
             </Link>
           </div>
         </div>
