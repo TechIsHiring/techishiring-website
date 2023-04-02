@@ -6,11 +6,9 @@ import { Text } from "@chakra-ui/react";
 const Logo = () => {
   return (
     <Link url="/">
-      <a>
-        <Text fontSize="2xl" className="logo">
-          TechIsHiring
-        </Text>
-      </a>
+      <Text fontSize="2xl" className="logo">
+        TechIsHiring
+      </Text>
     </Link>
   );
 };
