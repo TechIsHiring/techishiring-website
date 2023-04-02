@@ -15,12 +15,15 @@ interface NavLink extends Link {
 
 // API Return Types
 
-// Revue
+/* 
 
-interface Issues {
-  id: number;
-  title: string;
-  description: string;
-  url: string;
-  sent_at: string;
-}
+  Example:
+
+  readonly interface Countries {
+    name: string;
+    topLeveDomain: string[];
+    alpha2Code: string;
+    ...etc
+  }
+
+*/

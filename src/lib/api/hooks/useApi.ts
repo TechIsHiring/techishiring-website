@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useApiStatus } from "./useApiStatus";
 import { PENDING, SUCCESS, ERROR } from "../config/constants/api-status";
-import { AxiosResponse } from "axios";
 
 export default function useApi(
-  apiFunction: (...args: any) => Promise<AxiosResponse<any, any>>,
+  apiFunction: (...args: any) => Promise<Response>,
   initialData = {}
 ) {
   const [data, setData] = useState(initialData);
