@@ -4,8 +4,10 @@ filename: example-api.ts
 
 import api from "../config/api";
 
-export const fetchExampleRequest = (): Promise<Countries> => {
-  return api.get("https://restcountries.com/v2/all").then(res => res.data);
+export const fetchExampleRequest = async (): Promise<Countries> => {
+  const response = await api.get("https://restcountries.com/v2/all");
+  const data = response.json();
+  return data;
 };
 
  */
