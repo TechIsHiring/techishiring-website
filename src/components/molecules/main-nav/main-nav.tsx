@@ -28,17 +28,17 @@ const MainNav = ({ navList }: MainNavProps) => {
           return (
             <Fragment key={index}>
               <li className="flex items-center gap-2">
-                {navItem.externalLink && (
-                  <Icon
-                    Icon={FiExternalLink}
-                    size={22}
-                    iconAlt={navItem.externalLinkAlt ?? ""}
-                  />
-                )}
                 <NavLink
                   activeLink={router.pathname === navItem.url}
                   {...navItem}
-                />
+                  />
+                  {navItem.externalLink && (
+                    <Icon
+                      Icon={FiExternalLink}
+                      size={22}
+                      iconAlt={navItem.externalLinkAlt ?? ""}
+                    />
+                  )}
               </li>
             </Fragment>
           );
