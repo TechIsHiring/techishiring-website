@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="mx-auto flex h-full max-w-[1210px] flex-col items-center justify-between px-10 py-8 lg:flex-row">
           <div className="w-full max-w-[650px]">
             <p className="text-4xl font-[750] md:text-6xl md:leading-[70px]">
-              Where great <span className="text-[#7AB8F1]">Jobs</span> and great{" "}
+              Where great <span className="text-[#2188e7]">Jobs</span> and great{" "}
               <span className="text-[#A38DFD]">Engineers</span> come to find one
               another!
             </p>
@@ -42,7 +42,7 @@ const Hero = () => {
 
           </div>
           <div className=" relative mt-6 h-[20rem] w-full md:h-[30rem] lg:mt-0 lg:h-[35rem] ">
-            <Image src={HeroImage} alt="Hero Image" layout="fill" />
+            <Image src={HeroImage} alt="Hero Image" />
           </div>
         </div>
       </div>

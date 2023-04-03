@@ -15,10 +15,10 @@ const ContactHeading = () => {
                 You can reach us anytime via 
           <br/>
           <Link
-            url={"mailto:techishiring@gmail.com"}>
-            <a href="mailto:techishiring@gmail.com" className={"text-primary"}>
-                      techishiring@gmail.com
-            </a>
+            href={"mailto:techishiring@gmail.com"}
+            className={"text-primary"}
+          >
+              <>techishiring@gmail.com</>
           </Link>
           
                 

@@ -24,35 +24,25 @@ const HireChadDetails = () => {
           and events, more recently on Open Source Friday, run by GitHub, to talk about
           TechIsHiring and hiring.
         </DefaultText>
-        <Link url="https://drive.google.com/file/d/1tI3GwHaTz0GqWkx2w9pME5MLvSSqPks_/view?usp=share_link">
-          <a href="https://drive.google.com/file/d/1tI3GwHaTz0GqWkx2w9pME5MLvSSqPks_/view?usp=share_link">
-            <DefaultText className="hover:text-primary text-gray hover:underline">
-              Check out my resume
-            </DefaultText>
-          </a>
+        <Link href="https://drive.google.com/file/d/1tI3GwHaTz0GqWkx2w9pME5MLvSSqPks_/view?usp=share_link">
+          <DefaultText className="hover:text-primary text-gray hover:underline">
+            Check out my resume
+          </DefaultText>
         </Link>
         <div className="flex w-4/5 flex-col outline-none">
           <DefaultText className={"text-black text-[23px] capitalize py-6 font-bold "}>Check out my links</DefaultText>
           <div className="flex gap-12 w-full items-center justify-center lg:justify-start">
-            <Link url="https://www.twitter.com/Chad_R_Stewart">
-              <a href="https://www.twitter.com/Chad_R_Stewart">
-                <Icon Icon={SiTwitter} iconAlt="Chad Stewart Twitter" />
-              </a>
+            <Link href="https://www.twitter.com/Chad_R_Stewart">
+              <Icon Icon={SiTwitter} iconAlt="Chad Stewart Twitter" />
             </Link>
-            <Link url="https://www.linkedin.com/in/ChadRStewart/">
-              <a href="https://www.linkedin.com/in/ChadRStewart/">
-                <Icon Icon={SiLinkedin} iconAlt="Chad Stewart LinkedIn" />
-              </a>
+            <Link href="https://www.linkedin.com/in/ChadRStewart/">
+              <Icon Icon={SiLinkedin} iconAlt="Chad Stewart LinkedIn" />
             </Link>
-            <Link url="https://www.github.com/ChadStewart/">
-              <a href="https://www.github.com/ChadStewart/">
-                <Icon Icon={SiGithub} iconAlt="Chad Stewart GitHub" />
-              </a>
+            <Link href="https://www.github.com/ChadStewart/">
+              <Icon Icon={SiGithub} iconAlt="Chad Stewart GitHub" />
             </Link>
-            <Link url="https://www.dev.to/Chad_R_Stewart/">
-              <a href="https://www.dev.to/Chad_R_Stewart/">
-                <Icon Icon={SiDevdotto} size={32} iconAlt="Chad Stewart Dev.to" />
-              </a>
+            <Link href="https://www.dev.to/Chad_R_Stewart/">
+              <Icon Icon={SiDevdotto} size={32} iconAlt="Chad Stewart Dev.to" />
             </Link>
           </div>
         </div>

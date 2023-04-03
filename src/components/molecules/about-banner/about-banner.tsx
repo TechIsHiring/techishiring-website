@@ -41,20 +41,14 @@ export default function AboutBanner() {
         <div className="w-1/2 hidden lg:flex rounded-r-lg px-10 bg-white justify-center items-center shadow-md flex-col gap-3">
           <DefaultText className={"text-dark text-[16px]"}>Follow us on Social Media:</DefaultText>
           <div className="flex gap-12 w-full items-center justify-center">
-            <Link url="https://www.twitter.com/TechIsHiring/">
-              <a href="https://www.twitter.com/TechIsHiring/">
-                <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" />
-              </a>
+            <Link href="https://www.twitter.com/TechIsHiring/">
+              <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" />
             </Link>
-            <Link url="https://www.linkedin.com/company/TechIsHiring/">
-              <a href="https://www.linkedin.com/company/TechIsHiring/">
-                <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" />
-              </a>
+            <Link href="https://www.linkedin.com/company/TechIsHiring/">
+              <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" />
             </Link>
-            <Link url="https://www.youtube.com/@TechIsHiring">
-              <a href="https://www.youtube.com/@TechIsHiring">
-                <Icon Icon={SiYoutube} iconAlt="YouTube for Tech Is Hiring"/>
-              </a>
+            <Link href="https://www.youtube.com/@TechIsHiring">
+              <Icon Icon={SiYoutube} iconAlt="YouTube for Tech Is Hiring"/>
             </Link>
           </div>
         </div>

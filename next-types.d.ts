@@ -1,14 +1,14 @@
 // Base Project Types
 
 interface Link {
-  url: string;
-  activeLink?: boolean;
   externalLink?: boolean;
   externalLinkAlt?: string;
 }
 
 interface NavLink extends Link {
+  url: string;
   text: string;
+  activeLink?: boolean;
   button?: boolean;
   footer?: boolean;
 }
