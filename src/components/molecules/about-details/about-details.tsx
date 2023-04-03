@@ -21,15 +21,13 @@ export default function AboutDetails() {
           <Link href="https://www.linkedin.com/in/ChadRStewart/" className="text-primary">
             <b> Chad R. Stewart</b>
           </Link>
-          , the <b>founder of TechIsHiring</b>, noticed that many 
+          , the <b>Founder of TechIsHiring</b>, noticed that many 
           people were tweeting about job openings they had discovered and advertising possibilities 
           that they had come across, which is how <b>TechIsHiring</b> came to be. Since there was no one place  
-          where these tweets could be collected, the hashtag
+          where these tweets could be collected, the hashtag 
           <Link
             href={"https://twitter.com/TechIsHiring/"}>
-            <b className="text-primary font-800 cursor-pointer">
-              #TechIsHiring
-            </b>
+            <b className="text-primary font-800 cursor-pointer"> #TechIsHiring</b>
           </Link> and the TechIsHiring account were created.
         </DefaultText>
         <DefaultText as={"p"} w={{base:"80%", lg:"70%"}}>

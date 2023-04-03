@@ -1,4 +1,4 @@
-import HeroSection from "../../components/molecules/hero-section/Hero";
+import HeroSection from "../../components/molecules/hero-section/hero";
 
 const storyConfig = {
   title: "Design System/Molecules/Hero Section"

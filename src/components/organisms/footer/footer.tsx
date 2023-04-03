@@ -198,6 +198,7 @@ const Footer = () => {
     return (
       <Fragment key={index}>
         <li className="flex items-center gap-2">
+          <NavLink {...navItem} footer />
           {navItem.externalLink && (
             <Icon
               Icon={FiExternalLink}
@@ -206,7 +207,6 @@ const Footer = () => {
               iconAlt={navItem.externalLinkAlt ?? ""}
             />
           )}
-          <NavLink {...navItem} footer />
         </li>
       </Fragment>
     );

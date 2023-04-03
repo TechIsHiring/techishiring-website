@@ -2,7 +2,7 @@ import WithPageLayout from "interfaces/with-page-layouts";
 import DefaultLayout from "components/templates/layouts/default-layout";
 import TwitterFeed from "components/organisms/twitter-feed/twitter-feed";
 import Head from "next/head";
-import Hero from "components/molecules/hero-section/Hero";
+import Hero from "components/molecules/hero-section/hero";
 import WhyChooseSection from "components/molecules/why-choose/why-choose-section";
 
 interface HomeProps {}

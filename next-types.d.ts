@@ -1,7 +1,6 @@
 // Base Project Types
 
 interface Link {
-  activeLink?: boolean;
   externalLink?: boolean;
   externalLinkAlt?: string;
 }
@@ -9,6 +8,7 @@ interface Link {
 interface NavLink extends Link {
   url: string;
   text: string;
+  activeLink?: boolean;
   button?: boolean;
   footer?: boolean;
 }
