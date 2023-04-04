@@ -7,6 +7,7 @@ import { useState } from "react";
 import React from "react";
 import { sendEmail } from "lib/api/internal-apis/send-grid";
 import useApi from "lib/api/hooks/useApi";
+import { verifyIsEmail } from "lib/utils/verify-email";
 
 const ContactForm = () => {
   const[ email, setEmail ] = useState("");
@@ -21,7 +22,65 @@ const ContactForm = () => {
 
   const { executeApiCall: handleEmail , statuses } = useApi(sendEmail);
 
+  const verifyInput = () => {
+    let badInput = false;
+
+    setError(prevState => {
+      return {
+        ...prevState,
+        email: false,
+        name: false,
+        message: false
+      }
+    });
+
+    const wrongEmail = email.length === 0;
+    const noName = name.length === 0;
+    const noMessage = message.length === 0;
+    
+    if(noName) {
+      badInput = true;
+      
+      setError(prevState => {
+
+        return {
+          ...prevState,
+          name: true
+        };
+      });
+    };
+
+    if(wrongEmail) {
+      badInput = true;
+      
+      setError(prevState => { 
+        
+        return {
+          ...prevState,
+          email: true
+        };
+      });
+    };
+
+    if(noMessage) {
+      badInput = true;
+      
+      setError(prevState => {
+      
+        return {
+          ...prevState,
+          message: true
+        };
+      })
+    };
+
+    return badInput;
+  };
+
   const handleClick = async () => {
+    const badInput = verifyInput();
+    if(badInput) return;
+
     try {
       await handleEmail({
         email,
