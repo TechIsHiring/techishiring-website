@@ -1,8 +1,8 @@
 ---
 name: "🚀 Feature Request"
 about: "I have a suggestion (and may want to implement it 🙂)!"
-title: ""
-labels: "i: enhancement, i: needs triage"
+title: "[Feature]: "
+labels: ["enhancement"]
 assignees: ""
 ---
 

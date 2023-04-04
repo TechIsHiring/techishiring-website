@@ -66,14 +66,14 @@ const MainNav = ({ navList }: MainNavProps) => {
                       index !== 0 && "border-t"
                     }`}
                   >
+                    <NavLink {...navItem} button={false} />
                     {navItem.externalLink && (
                       <Icon
                         Icon={FiExternalLink}
                         size={22}
-                        iconAlt="external link for TechIsHiring newsletter"
+                        iconAlt={navItem.externalLinkAlt ?? ""}
                       />
                     )}
-                    <NavLink {...navItem} button={false} />
                   </li>
                 ))}
               </ul>
