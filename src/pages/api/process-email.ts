@@ -13,14 +13,15 @@ export default async function handleSubscribe(
   sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY as string);
   
   const msg = {
-    to: 'techishiring@gmail.com', // Change to your recipient
-    from: 'techishiring@gmail.com', // Change to your verified sender
-    subject: 'Sending with SendGrid is Fun',
+    to: 'techishiring@gmail.com',
+    from: 'techishiring@gmail.com',
+    subject: `TechIsHiring.com Query - from ${name} (${email})`,
     text: message,
-    html: `<strong>${message}</strong>`,
+    html: `<h1>Message from TechIsHiring.com</h1>
+      <p>${message}</p>`
   };
   
-  /* sgMail
+  sgMail
     .send(msg)
     .then(() => {
       console.log("Email sent");
@@ -29,5 +30,5 @@ export default async function handleSubscribe(
       return res.status(500).json({ data: error });
     });
     
-    return res.status(200).json({ data: "Email sent" }); */
+  return res.status(200).json({ data: "Email sent" });
 };
