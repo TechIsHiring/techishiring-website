@@ -1,8 +1,8 @@
 ---
 name: "🛠️ Developer Experience Issue"
 about: "I have a suggestion (and may want to implement it 🤔)!"
-title: ""
-labels: "i: enhancement, i: needs triage"
+title: "[Developer Experience]: "
+labels: ["developer experience", "needs triage"]
 assignees: ""
 ---
 

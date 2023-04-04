@@ -1,9 +1,9 @@
 ---
 name: "🐞 Bug Report"
 about: "I want to report a bug 😟..."
-title: ""
-labels: "i: bug, i: needs triage"
-assignees: ""
+title: "[BUG]: "
+labels: ["bug", "needs triage"]
+assignees: "chadstewart"
 ---
 
 <!--- Provide a general summary of the issue in the Title above -->
