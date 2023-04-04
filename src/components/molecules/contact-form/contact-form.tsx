@@ -7,6 +7,7 @@ import { useState } from "react";
 import React from "react";
 import { sendEmail } from "lib/api/internal-apis/send-grid";
 import useApi from "lib/api/hooks/useApi";
+import { ZodString, string } from "zod";
 
 const ContactForm = () => {
   const[ email, setEmail ] = useState("");
@@ -33,9 +34,17 @@ const ContactForm = () => {
       }
     });
 
-    const wrongEmail = email.length === 0;
-    const noName = name.length === 0;
-    const noMessage = message.length === 0;
+    const zodCheck = (zodVariable: ZodString, stringToTest: string) => {
+      try {
+        return zodVariable.parse(stringToTest);
+      } catch {
+        return false;
+      }
+    };
+
+    const wrongEmail = !zodCheck(string().nonempty().email(), email);
+    const noName = !zodCheck(string().nonempty(), name);
+    const noMessage = !zodCheck(string().nonempty(), message);
     
     if(noName) {
       badInput = true;
