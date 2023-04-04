@@ -7,7 +7,6 @@ import { useState } from "react";
 import React from "react";
 import { sendEmail } from "lib/api/internal-apis/send-grid";
 import useApi from "lib/api/hooks/useApi";
-import { verifyIsEmail } from "lib/utils/verify-email";
 
 const ContactForm = () => {
   const[ email, setEmail ] = useState("");
@@ -99,21 +98,45 @@ const ContactForm = () => {
           <Label>
             Name
           </Label>
-          <TextInput maxLength={30} type={"text"} placeholder={"Your name"} value={name} onChange= {(e) => setName(e.target.value)}/>
+          <TextInput
+            maxLength={50}
+            type={"text"}
+            placeholder={"Your name"}
+            value={name}
+            isInvalid={error.name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          {error.name && <span className="text-rose-500">Please add a name</span>}
         </VStack>
       
         <VStack mt={5} justifyContent={"flex-start"} alignItems={"flex-start"}>
           <Label>
             Email
           </Label>
-          <TextInput maxLength={45} type={"email"} placeholder={"you@company.com"} value={email} onChange= {(e) => setEmail(e.target.value)}/>
+          <TextInput
+            maxLength={60}
+            type={"email"}
+            placeholder={"you@company.com"}
+            value={email}
+            isInvalid={error.email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {error.email && <span className="text-rose-500">Please add a proper email address</span>}
         </VStack>
 
         <VStack mt={5} justifyContent={"flex-start"} alignItems={"flex-start"}>
           <Label>
             Leave us a note!
           </Label>
-          <TextBox maxLength={400} h={20} placeholder={"Tell us something..."} value={message} onChange= {(e) => setMessage(e.target.value)}/>
+          <TextBox
+            maxLength={400}
+            h={20}
+            placeholder={"Tell us something..."}
+            value={message}
+            isInvalid={error.message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          {error.message && <span className="text-rose-500">Please add a message</span>}
         </VStack>
 
         <div className="mt-8">

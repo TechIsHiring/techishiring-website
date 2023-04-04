@@ -26,7 +26,7 @@ interface NavLink extends Link {
     ...etc
   }
   
-  */
+*/
  
 readonly interface Email {
   email: string;
