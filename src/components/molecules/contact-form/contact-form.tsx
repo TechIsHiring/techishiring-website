@@ -29,13 +29,11 @@ const ContactForm = () => {
           <TextInput type={"email"} placeholder={"you@company.com"} value={email} onChange= {(e) => setEmail(e.target.value)}/>
         </VStack>
 
-
         <VStack mt={5} justifyContent={"flex-start"} alignItems={"flex-start"}>
           <Label>
             Leave us a note!
           </Label>
           <TextBox h={20} placeholder={"Tell us something..."} value={message} onChange= {(e) => setMessage(e.target.value)}/>
-          
         </VStack>
 
         <div className="mt-8">
