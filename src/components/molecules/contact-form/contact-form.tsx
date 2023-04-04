@@ -5,12 +5,33 @@ import TextBox from "components/atoms/textbox/textbox";
 import DefaultButton from "components/atoms/button/button";
 import { useState } from "react";
 import React from "react";
+import { sendEmail } from "lib/api/internal-apis/send-grid";
+import useApi from "lib/api/hooks/useApi";
 
 const ContactForm = () => {
+  const[ email, setEmail ] = useState("");
+  const[ name, setName ] = useState("");
+  const[ message, setMessage ] = useState("");
 
-  const[email,setEmail] = useState("");
-  const[name,setName] = useState("");
-  const[message,setMessage] = useState("");
+  const [ error, setError ] = useState({
+    email: false,
+    name: false,
+    message: false
+  });
+
+  const { executeApiCall: handleEmail , statuses } = useApi(sendEmail);
+
+  const handleClick = async () => {
+    try {
+      await handleEmail({
+        email,
+        name,
+        message
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return ( 
     <Box>
@@ -46,6 +67,7 @@ const ContactForm = () => {
             _hover={{
               background: "darkgray"
             }}
+            onClick={handleClick}
           >
             Send message
           </DefaultButton>
