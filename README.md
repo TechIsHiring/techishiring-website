@@ -8,7 +8,9 @@ TechIsHiring's website, focusing on showcasing the top tweets from the Twitter a
 - Tailwind CSS
 - Chakra UI
 - TypeScript
+- Zod
 - Storybook
+- SendGrid
 - Posthog
 
 ## Project Figma

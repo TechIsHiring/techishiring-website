@@ -1,6 +1,5 @@
 import { contactImg, contactMobileImg } from "images/Index";
 import Image from "next/image";
-import ContactHeading from "components/molecules/contact-heading/contact-heading";
 import ContactForm from "components/molecules/contact-form/contact-form";
 import React from "react";
 
@@ -20,7 +19,6 @@ const ContactContent = () => {
           <Image src= {contactMobileImg} alt="contact form mobile image" width={150} height={180} />
         </div>
 
-        <ContactHeading />
         <ContactForm />
           
       </div>
