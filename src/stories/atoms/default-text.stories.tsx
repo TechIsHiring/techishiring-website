@@ -6,7 +6,4 @@ const storyConfig = {
 
 export default storyConfig;
 
-export const DefaultTextStory = () =>
-  <DefaultText>
-                                        Hello
-  </DefaultText>;
+export const DefaultTextStory = () => <DefaultText>Hello</DefaultText>;

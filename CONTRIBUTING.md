@@ -1,4 +1,5 @@
 !-- omit in toc -->
+
 # Contributing to the TechIsHiring Website
 
 Thank you so very much for taking the time to visit the TechIsHiring Website project! This project is a part of an ongoing effort to help make getting hired in Tech more accessible and easier. Any contribution to this project will contribute to that effort! ❤️
@@ -13,6 +14,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 > - Mention the project at local meetups and tell your friends/colleagues
 
 <!-- omit in toc -->
+
 ## Table of Contents
 
 - [Contributing to the TechIsHiring Website](#contributing-to-the-techishiring-website)
@@ -66,6 +68,7 @@ Depending on how large the project is, you may want to outsource the questioning
 ### Reporting Bugs
 
 <!-- omit in toc -->
+
 #### Before Submitting a Bug Report
 
 A good bug report shouldn't leave others needing to chase you up for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible.
@@ -82,16 +85,18 @@ A good bug report shouldn't leave others needing to chase you up for more inform
   - Can you reliably reproduce the issue? And can you also reproduce it with older versions?
 
 <!-- omit in toc -->
+
 #### How Do I Submit a Good Bug Report?
 
 > You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to <techishiring@gmail.com>.
+
 <!-- You may add a PGP key to allow the messages to be sent encrypted as well. -->
 
 We use GitHub issues to track bugs and errors. If you run into an issue with the project:
 
 - Open an [Issue](https://github.com/techishiring/techishiring-website/issues/new). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.)
 - Explain the behavior you would expect and the actual behavior.
-- Please provide as much context as possible and describe the *reproduction steps* that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
+- Please provide as much context as possible and describe the _reproduction steps_ that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
 - Provide the information you collected in the previous section.
 
 Once it's filed:
@@ -107,6 +112,7 @@ Once it's filed:
 This section guides you through submitting an enhancement suggestion for the TechIsHiring Website, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
 
 <!-- omit in toc -->
+
 #### Before Submitting an Enhancement
 
 - Make sure that you are using the latest version.
@@ -114,6 +120,7 @@ This section guides you through submitting an enhancement suggestion for the Tec
 - Find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this feature. Keep in mind that we want features that will be useful to the majority of our users and not just a small subset. If you're just targeting a minority of users, consider writing an add-on/plugin library.
 
 <!-- omit in toc -->
+
 #### How Do I Submit a Good Enhancement Suggestion?
 
 Enhancement suggestions are tracked as [GitHub issues](https://github.com/techishiring/techishiring-website/issues).
@@ -127,6 +134,7 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/techis
 <!-- You might want to create an issue template for enhancement suggestions that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
 
 ### Your First Code Contribution
+
 <!-- TODO
 include Setup of env, IDE and typical getting started instructions?
 
@@ -139,6 +147,47 @@ A good branch name would be (where issue #30 is the ticket you're working on):
 ```sh
 git checkout -b 325-implement-new-component
 ```
+
+Add origin for upstream:
+
+   ```sh
+    git remote add upstream https://github.com/TechIsHiring/techishiring-website.git
+   ```
+   
+Stage your Commit:
+
+   ```sh
+    git add .
+   ```
+Commit your Changes:
+
+   ```sh
+    git commit -m 'Feature: added an amazing feature'
+   ```
+   
+Push to the Branch:
+
+   ```sh
+    git push origin 325-implement-new-component
+   ```
+   
+Open a Pull Request
+
+### alternatively, for existing contributors 
+
+ Fetch upstream:
+ 
+   ```sh
+    git fetch upstream
+   ```
+   
+ Merge upstream:
+ 
+   ```sh
+    git merge upstream/dev
+   ```
+
+**fix errors/ conflict (if any)** <br>
 
 The project is structured in Atomic Design. If you need to familiarize yourself with Atomic Design, please check out the resources below:
 

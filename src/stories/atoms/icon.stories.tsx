@@ -10,16 +10,9 @@ export default storyConfig;
 
 const IconTemplate: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
-export const NotLink = IconTemplate.bind({});
-export const Link = IconTemplate.bind({});
+export const DefaultIcon = IconTemplate.bind({});
 
-NotLink.args = {
+DefaultIcon.args = {
   Icon: AiOutlineTwitter,
   iconAlt: "Twitter"
-};
-
-Link.args = {
-  Icon: AiOutlineTwitter,
-  iconAlt: "Twitter",
-  url: "https://www.twitter.com"
 };

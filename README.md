@@ -4,13 +4,14 @@ TechIsHiring's website, focusing on showcasing the top tweets from the Twitter a
 
 ## Technologies Used
 
-* Next.js
-* Tailwind CSS
-* Chakra UI
-* TypeScript
-* Storybook
-* Axios
-* Posthog
+- Next.js
+- Tailwind CSS
+- Chakra UI
+- TypeScript
+- Zod
+- Storybook
+- SendGrid
+- Posthog
 
 ## Project Figma
 
@@ -24,12 +25,16 @@ This is a link to the Engineering Design Document for v1.0.0 release: [Engerinee
 
 This project uses Atomic Design for it's Components. Here are several resources for Atomic Design if you are unfamiliar:
 
-* [Atomic Design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
-* [Atomic Design - How To Make Web and UI Design Easier](https://www.youtube.com/watch?v=W3A33dmp17E)
+- [Atomic Design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
+- [Atomic Design - How To Make Web and UI Design Easier](https://www.youtube.com/watch?v=W3A33dmp17E)
+
+## Dev Environment
+
+Check out what the we're currently work on at [https://dev.techishiring.com](https://dev.techishiring.com)
 
 ## Storybook
 
-The Stoybook for this project can be found at [https://stories.techishiring.com](https://stories.techishiring.com).
+The Stoybook for this project can be found at [https://stories.techishiring.com](https://stories.techishiring.com)
 
 ### Run it locally
 

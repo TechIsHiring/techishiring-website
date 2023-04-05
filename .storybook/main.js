@@ -1,17 +1,18 @@
 module.exports = {
-  "stories": [
+  stories: [
     "../src/stories/**/*.stories.mdx",
     "../src/stories/**/*.stories.@(js|jsx|ts|tsx)"
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-postcss",
     "storybook-addon-next"
   ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "@storybook/builder-webpack5"
-  }
-}
+  framework: "@storybook/react",
+  core: {
+    builder: "@storybook/builder-webpack5"
+  },
+  typescript: { reactDocgen: false }
+};

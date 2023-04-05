@@ -1,23 +1,35 @@
 // Base Project Types
 
 interface Link {
-  url: string;
-  activeLink?: boolean;
-  externalLink? : boolean;
+  externalLink?: boolean;
+  externalLinkAlt?: string;
 }
 
 interface NavLink extends Link {
+  url: string;
   text: string;
-};
+  activeLink?: boolean;
+  button?: boolean;
+  footer?: boolean;
+}
 
 // API Return Types
 
-// Revue
+/* 
 
-readonly interface Issues {
-  id: number;
-  title: string;
-  description: string;
-  url: string;
-  sent_at: string;
+  Example:
+
+  readonly interface Countries {
+    name: string;
+    topLeveDomain: string[];
+    alpha2Code: string;
+    ...etc
+  }
+  
+*/
+ 
+readonly interface Email {
+  email: string;
+  name: string;
+  message: string;
 }

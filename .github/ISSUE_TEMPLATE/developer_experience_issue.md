@@ -1,10 +1,9 @@
 ---
 name: "🛠️ Developer Experience Issue"
 about: "I have a suggestion (and may want to implement it 🤔)!"
-title: ''
-labels: 'i: enhancement, i: needs triage'
-assignees: ''
-
+title: "[Developer Experience]: "
+labels: ["developer experience", "needs triage"]
+assignees: ""
 ---
 
 ## Developer Experience Issue

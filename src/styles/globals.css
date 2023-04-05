@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "HirukoPro-Black";
+  src: url("../../public/fonts/HirukoPro-Black.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.logo {
+  font-family: "HirukoPro-Black";
+  color: #2188e7;
+}
+
+.footer-logo {
+  font-family: "HirukoPro-Black";
+  color: #fff;
+}

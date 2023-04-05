@@ -2,7 +2,7 @@ import Head from "next/head";
 import Footer from "components/organisms/footer/footer";
 import Header from "components/organisms/header/header";
 
-const DefaultLayout = ({children}: {children: React.ReactNode}) => {
+const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Head>
@@ -13,7 +13,7 @@ const DefaultLayout = ({children}: {children: React.ReactNode}) => {
       </Head>
       <div className="flex min-h-screen flex-col items-center justify-center">
         <Header />
-        <main className="flex w-full min-h-[calc(100vh-190px)] flex-1 flex-col px-5 py-10">
+        <main className="flex w-full flex-1 flex-col">
           {children}
         </main>
         <Footer />

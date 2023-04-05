@@ -1,26 +1,14 @@
 import { IconType } from "react-icons";
-import Link from "components/atoms/link/link";
 
 interface IconProps {
   Icon: IconType;
   iconAlt: string;
   size?: number;
-  url?: string;
+  color?: string;
 }
 
-const Icon = ({ Icon, iconAlt, url, size = 24 }: IconProps) => {
-  return (
-    <>
-      { url &&
-        <Link url={url} >
-          <a target="_blank" rel="noreferrer">
-            <Icon size={size} title={iconAlt} />
-          </a>
-        </Link>
-      }
-      { !url && <Icon size={size} title={iconAlt} /> }
-    </>
-  );
+const Icon = ({ Icon, iconAlt, size = 24, color = "#000" }: IconProps) => {
+  return <Icon size={size} title={iconAlt} color={color} />;
 };
 
 export default Icon;

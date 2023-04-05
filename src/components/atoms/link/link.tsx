@@ -1,16 +1,22 @@
 import NextLink from "next/link";
 
-interface LinkProps extends Link {
-  children: JSX.Element;
-};
+interface NextLinkProps
+  extends React.ComponentProps<typeof NextLink> {
+  //Add additional prop definitions here
+}
 
-const Link = ({ url, children, activeLink }: LinkProps) => {
+interface LinkProps extends Link, NextLinkProps {
+  children: JSX.Element;
+}
+
+const Link = (props: LinkProps) => {
   return (
     <NextLink
+      {...props}
       passHref
-      className={`${activeLink ? console.log(activeLink) : ""} h-fit`}
-      href={url}>
-      {children}
+      className={`h-fit ${props.className}`}
+    >
+      {props.children}
     </NextLink>
   );
 };
