@@ -11,14 +11,13 @@ const CONFIG: RequestInit = {
 };
 
 export const fetchExampleRequest = async (): Promise<Countries> => {
-  const requestBody = JSON.stringify(email);
   const response = await api.get("https://restcountries.com/v2/all");
   const data = response.json();
   return data;
 };
 
-export const fetchPostExampleRequest = async (): Promise<Countries> => {
-  const requestBody = JSON.stringify(email);
+export const fetchPostExampleRequest = async (exampleRequest: *Request types*): Promise<*Requested Data If any*> => {
+  const requestBody = JSON.stringify(exampleRequest);
   const response = await api.post("https://restcountries.com/v2/all", requestBody, CONFIG);
   const data = response.json();
   return data;

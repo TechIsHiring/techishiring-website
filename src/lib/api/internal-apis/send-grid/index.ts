@@ -6,7 +6,7 @@ const CONFIG: RequestInit = {
   }
 };
 
-export const sendEmail = async (email: Email): Promise<any> => {
+export const sendEmail = async (email: Email) => {
   const requestBody = JSON.stringify(email);
   const response = await api.post("/api/process-email", requestBody, CONFIG);
   const data = response.json();
