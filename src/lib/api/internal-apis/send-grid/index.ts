@@ -1,5 +1,4 @@
 import api from "../../config/api";
-import { BASEURL } from "../constants";
 
 const CONFIG: RequestInit = {
   headers: {
@@ -9,7 +8,7 @@ const CONFIG: RequestInit = {
 
 export const sendEmail = async (email: Email): Promise<any> => {
   const requestBody = JSON.stringify(email);
-  const response = await api.post(`${BASEURL}/api/process-email`, requestBody, CONFIG);
+  const response = await api.post("/api/process-email", requestBody, CONFIG);
   const data = response.json();
   return data;
 };
