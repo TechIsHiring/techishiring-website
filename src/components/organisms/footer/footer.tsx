@@ -24,7 +24,8 @@ interface FooterProps {
 const MobileFooter = ({ mobileNav }: FooterProps) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="flex flex-col space-y-2">
+
+      {/* <div className="flex flex-col space-y-2">
         <DefaultText className="text-center font-inter text-lg font-semibold text-white">
           Subscribe to our Newsletter
         </DefaultText>
@@ -38,7 +39,8 @@ const MobileFooter = ({ mobileNav }: FooterProps) => {
             Subscribe Now
           </Button>
         </div>
-      </div>
+      </div> */}
+
       <div className="flex flex-col items-center justify-between space-y-6 py-7">
         {mobileNav.map(navElement => navElement)}
       </div>
@@ -120,8 +122,9 @@ const DesktopFooter = ({ mobileNav }: FooterProps) => {
       <div className="mt-4 w-full">
         <Divider />
       </div>
-      <div className="mt-10 flex w-full justify-between">
-        <div className="flex flex-col space-y-2 md:w-[50%] lg:w-[40%]">
+      <div className="mt-10 flex w-full justify-end">
+
+        {/* <div className="flex flex-col space-y-2 md:w-[50%] lg:w-[40%]">
           <DefaultText className="font-inter font-semibold text-white">
             Subscribe to our Newsletter
           </DefaultText>
@@ -135,7 +138,8 @@ const DesktopFooter = ({ mobileNav }: FooterProps) => {
               Subscribe Now
             </Button>
           </div>
-        </div>
+        </div> */}
+        
         <div className="flex flex-col space-y-1">
           <div className="flex items-center justify-end space-x-8 pb-2">
             <a target="_blank" rel="noreferrer" href="https://www.twitter.com/techishiring">

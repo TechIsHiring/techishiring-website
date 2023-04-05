@@ -25,5 +25,11 @@ interface NavLink extends Link {
     alpha2Code: string;
     ...etc
   }
-
+  
 */
+ 
+readonly interface Email {
+  email: string;
+  name: string;
+  message: string;
+}

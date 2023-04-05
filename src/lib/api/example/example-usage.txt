@@ -6,7 +6,7 @@ import useApi from "../hooks/useApi";
 import { fetchExampleRequest } from "./example-api";
 
 const exampleComponent = () => {
-  const { data: countriesData, apiCall: fetchCountries, statuses } = useApi(fetchExampleRequest);
+  const { data: countriesData, executeApiCall: fetchCountries, statuses } = useApi(fetchExampleRequest);
   
   return (
     <div onClick={fetchCountries}>
