@@ -49,7 +49,7 @@ const ContactForm = () => {
     const noName = !zodCheck(zodStringCheck().nonempty(), name);
     const noMessage = !zodCheck(zodStringCheck().nonempty(), message);
     
-    if( noName ) {
+    if ( noName ) {
       badInput = true;
       
       setError(prevState => {
@@ -61,7 +61,7 @@ const ContactForm = () => {
       });
     };
 
-    if( wrongEmail ) {
+    if ( wrongEmail ) {
       badInput = true;
       
       setError(prevState => { 
@@ -73,7 +73,7 @@ const ContactForm = () => {
       });
     };
 
-    if( noMessage ) {
+    if ( noMessage ) {
       badInput = true;
       
       setError(prevState => {
