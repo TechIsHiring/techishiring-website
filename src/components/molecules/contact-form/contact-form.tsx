@@ -104,7 +104,7 @@ const ContactForm = () => {
   };
 
   return ( 
-    <Box className="flex items-center justify-center min-h-[580px]">
+    <Box className="flex flex-col justify-center min-h-[580px]">
       {statuses.isIdle &&
         <>
           <ContactHeading />
