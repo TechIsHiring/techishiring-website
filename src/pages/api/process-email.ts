@@ -10,6 +10,11 @@ export default async function handleSubscribe(
   res: NextApiResponse<any>
 ) {
   const { name, email, message } = req.body;
+
+  const requestEmpty = !name || !email || !message;
+  const badRequest = req.method !== "POST" || requestEmpty;
+  if( badRequest ) return res.status(400).json({ data: "Please send a properly formatted request" });
+
   sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY as string);
   
   const msg = {
