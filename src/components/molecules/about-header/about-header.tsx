@@ -1,14 +1,8 @@
 import React from 'react'
 import HeaderText from "components/atoms/typography/heading-text";
-import { aboutImage, aboutMobileImage } from "images/Index";
-import { useBreakpointValue } from "@chakra-ui/react";
+import { aboutImage } from "images/Index";
 
 export default function AboutHeader() {
-
-    // const backgroundImage = useBreakpointValue({
-    //     base: `url(${aboutMobileImage.src})`,
-    //     md: `url(${aboutImage.src})`,
-    // });
 
   return (
     <div
