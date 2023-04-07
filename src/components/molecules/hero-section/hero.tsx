@@ -41,7 +41,7 @@ const Hero = () => {
             </div> */}
 
           </div>
-          <div className=" relative mt-6 h-[20rem] w-full md:h-[30rem] lg:mt-0 lg:h-[35rem] ">
+          <div className="relative mt-6 min-h-[20rem] w-full md:h-[30rem] lg:mt-0 lg:h-[35rem] ">
             <Image src={HeroImage} alt="Hero Image" />
           </div>
         </div>

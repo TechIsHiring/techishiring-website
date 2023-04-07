@@ -4,6 +4,7 @@ import TextInput from "components/atoms/text-input/text-input";
 import TextBox from "components/atoms/textbox/textbox";
 import DefaultButton from "components/atoms/button/button";
 import DefaultText from "components/atoms/typography/default-text";
+import Spinner from "components/atoms/spinner/spinner";
 import ContactHeading from "components/molecules/contact-heading/contact-heading";
 import { useState } from "react";
 import React from "react";
@@ -171,6 +172,12 @@ const ContactForm = () => {
             </div>
           </form>
         </>
+      }
+
+      {statuses.isPending && 
+        <span className="flex justify-center items-center">
+          <Spinner />
+        </span>
       }
       
       {statuses.isSuccess && 
