@@ -2,7 +2,7 @@ import HeaderText from "components/atoms/typography/heading-text";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Card from "components/atoms/card/card";
 import { useState } from 'react';
-import { Spinner } from "@chakra-ui/react";
+import Spinner from "components/atoms/spinner/spinner";
 
 const TwitterFeed = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,13 +21,7 @@ const TwitterFeed = () => {
         </header>
         {isLoading && 
           <div className="flex my-3 inset-0 justify-center items-center">
-            <Spinner
-              thickness='4px'
-              speed='0.65s'
-              emptyColor='gray.200'
-              color='blue.500'
-              size='xl'
-            />
+            <Spinner />
           </div>
         }
         <TwitterTimelineEmbed 
