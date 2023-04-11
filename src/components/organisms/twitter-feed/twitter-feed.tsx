@@ -15,7 +15,7 @@ const TwitterFeed = () => {
     <Card section className="min-w-full md:px-[10%]">
       <>
         <header>
-          <HeaderText className="pb-5 text-left" level="h2">
+          <HeaderText level="h2" className="text-left !font-inter !font-extrabold !leading-[2.8rem] py-8">
             Latest tweets from #TechIsHiring:
           </HeaderText>
         </header>
