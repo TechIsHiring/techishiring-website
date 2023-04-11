@@ -3,12 +3,14 @@ import HighlightsDetails from "components/molecules/highlights-details/highlight
 
 const HighlightsContent = () => {
   return (
-    <article className="flex flex-col items-center bg-[#D6E9FB] px-4 py-8">
-      <HeaderText level="h2" className="py-12">
-        TechIsHiring Highlights
-      </HeaderText>
+    <section className="flex flex-col items-center bg-[#D6E9FB] px-4 py-8">
+      <header>
+        <HeaderText level="h2" className="py-8">
+          TechIsHiring Highlights
+        </HeaderText>
+      </header>
       <HighlightsDetails />
-    </article>
+    </section>
   );
 };
 
