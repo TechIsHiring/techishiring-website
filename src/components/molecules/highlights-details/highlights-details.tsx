@@ -3,9 +3,9 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 
 const HighlightsDetails = () => {
   return (
-    <section className="flex flex-col lg:flex-row justify-center items-center gap-10">
+    <section className="flex flex-col lg:flex-row justify-center gap-10">
       <TwitterTweetEmbed
-        tweetId="1641471955600658432"
+        tweetId="1588617719016198144"
         placeholder={<Spinner />}
       />
       <TwitterTweetEmbed
@@ -13,7 +13,7 @@ const HighlightsDetails = () => {
         placeholder={<Spinner />}
       />
       <TwitterTweetEmbed
-        tweetId="1641471955600658432"
+        tweetId="1490321460098969601"
         placeholder={<Spinner />}
       />
     </section>
