@@ -1,7 +1,7 @@
 import TextBox from "components/atoms/textbox/textbox";
 import React from "react";
 const storyConfig = {
-  title: "Design System/Atoms/textbox"
+  title: "Design System/Atoms/Text box"
 };
 
 export default storyConfig;
