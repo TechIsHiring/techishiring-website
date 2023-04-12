@@ -18,6 +18,10 @@ const HireChad: WithPageLayout<HireChadProps> = () => {
           property="og:description"
           content={"TechIsHiring - Hire Chad"}
         />
+          <meta name="twitter:card" content="summary" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta property="og:image" content="/chad-profile-social-card.jpg" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
       </Head>
 
       <HireChadContent />
