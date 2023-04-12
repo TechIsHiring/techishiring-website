@@ -86,10 +86,10 @@ const MobileFooter = ({ mobileNav }: FooterProps) => {
               size={20}
             />
           </a>
-          <a target="_blank" rel="noreferrer" href="https://techishiring.substack.com/">
+          <a target="_blank" rel="noreferrer" href="https://newsletter.techishiring.com/">
             <Icon
               Icon={SiSubstack}
-              iconAlt="Substack for Tech Is Hiring"
+              iconAlt="Tech Is Hiring Newsletter on Substack"
               color="white"
               size={20}
             />
@@ -174,10 +174,10 @@ const DesktopFooter = ({ mobileNav }: FooterProps) => {
                 size={20}
               />
             </a>
-            <a target="_blank" rel="noreferrer" href="https://techishiring.substack.com/">
+            <a target="_blank" rel="noreferrer" href="https://newsletter.techishiring.com/">
               <Icon
                 Icon={SiSubstack}
-                iconAlt="Substack for Tech Is Hiring"
+                iconAlt="Tech Is Hiring Newsletter on Substack"
                 color="white"
                 size={20}
               />
