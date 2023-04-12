@@ -18,3 +18,7 @@
   font-family: "HirukoPro-Black";
   color: #fff;
 }
+
+.twitter-tweet * {
+  min-width: 350px !important;
+}

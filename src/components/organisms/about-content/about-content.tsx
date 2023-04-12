@@ -4,7 +4,6 @@ import AboutDetails from "components/molecules/about-details/about-details"
 
 const AboutContent = () => {
 
-
   return (
     <div className="w-full">
 
