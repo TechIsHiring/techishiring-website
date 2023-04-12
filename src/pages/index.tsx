@@ -4,6 +4,7 @@ import TwitterFeed from "components/organisms/twitter-feed/twitter-feed";
 import Head from "next/head";
 import Hero from "components/molecules/hero-section/hero";
 import WhyChooseSection from "components/molecules/why-choose/why-choose-section";
+import HighlightsContent from "components/organisms/highlights-content/highlights-content";
 
 interface HomeProps {}
 
@@ -19,6 +20,7 @@ const Home: WithPageLayout<HomeProps> = () => {
       </Head>
       <Hero />
       <WhyChooseSection />
+      <HighlightsContent />
       <TwitterFeed />
     </>
   );

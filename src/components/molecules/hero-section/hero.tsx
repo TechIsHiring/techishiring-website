@@ -8,7 +8,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 const Hero = () => {
   return (
     <div className="h-full w-full bg-[#eaeaea] ">
-      <div className={`min-h-[700px] md:min-h-[806px] bg-[url('/assets/images/hero-bg-image.jpg')]`}>
+      <div className={`min-h-[650px] bg-[url('/assets/images/hero-bg-image.jpg')]`}>
         <div className="mx-auto flex h-full max-w-[1210px] flex-col items-center justify-between px-10 py-8 lg:flex-row">
           <div className="w-full max-w-[650px]">
             <p className="text-4xl font-[750] md:text-6xl md:leading-[70px]">
