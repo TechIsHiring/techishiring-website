@@ -5,10 +5,10 @@ const useMainNav = () => {
       text: "Home"
     },
     {
-      url: "https://techishiring.substack.com/",
+      url: "https://newsletter.techishiring.com/",
       text: "Newsletter",
       externalLink: true,
-      externalLinkAlt: "external link for TechIsHiring newsletter"
+      externalLinkAlt: "external link for TechIsHiring Newsletter"
     },
     {
       url: "/about",
