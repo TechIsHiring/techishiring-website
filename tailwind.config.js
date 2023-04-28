@@ -19,9 +19,9 @@ module.exports = {
         "2xl": "1440px",
         // => @media (min-width: 1440px) { ... }
         "3xl": "1920px",
-        // => @media (min-width: 1440px) { ... }
+        // => @media (min-width: 1920px) { ... }
         "pass-max-screen": "1921px"
-        // => @media (min-width: 1440px) { ... }
+        // => @media (min-width: 1921px) { ... }
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"]
