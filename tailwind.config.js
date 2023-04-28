@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        "max-screen-size": "1440px"
+        "max-screen-size": "1920px"
       },
       gridTemplateColumns: {
         autodesktop: "repeat(auto-fit, minmax(410px, 1fr))",
@@ -18,7 +18,9 @@ module.exports = {
         // => @media (min-width: 425px) { ... }
         "2xl": "1440px",
         // => @media (min-width: 1440px) { ... }
-        "pass-max-screen": "1441px"
+        "3xl": "1920px",
+        // => @media (min-width: 1440px) { ... }
+        "pass-max-screen": "1921px"
         // => @media (min-width: 1440px) { ... }
       },
       fontFamily: {

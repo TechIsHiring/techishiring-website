@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <header className="flex justify-center sticky top-0 z-10 w-full border-b bg-white py-2">
-      <div className="flex items-center w-full 2xl:w-max-screen-size justify-between px-4 h-24">
+      <div className="flex items-center w-full 3xl:w-max-screen-size justify-between px-4 h-24">
         <Logo />
         <MainNav navList={navList} />
       </div>
