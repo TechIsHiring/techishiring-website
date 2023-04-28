@@ -13,7 +13,7 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
       </Head>
       <div className="flex min-h-screen flex-col items-center justify-center">
         <Header />
-        <main className="flex w-full flex-1 flex-col">
+        <main className="flex w-full 2xl:w-max-screen-size pass-max-screen:border-x-2 flex-1 flex-col">
           {children}
         </main>
         <Footer />

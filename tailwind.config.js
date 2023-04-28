@@ -6,7 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      spacing: {
+        "max-screen-size": "1440px"
+      },
       gridTemplateColumns: {
         autodesktop: "repeat(auto-fit, minmax(410px, 1fr))",
         automobile: "repeat(auto-fit, minmax(300px, 1fr))"
@@ -14,7 +16,9 @@ module.exports = {
       screens: {
         xs: "425px",
         // => @media (min-width: 425px) { ... }
-        "2xl": "1440px"
+        "2xl": "1440px",
+        // => @media (min-width: 1440px) { ... }
+        "pass-max-screen": "1441px"
         // => @media (min-width: 1440px) { ... }
       },
       fontFamily: {
@@ -27,7 +31,6 @@ module.exports = {
         dark: "#000000",
         altDark: "#222222",
         altWhite: "#F0F0F0"
-
       }
     }
   },
