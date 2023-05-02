@@ -217,8 +217,8 @@ const Footer = () => {
   });
 
   return (
-    <footer className="w-full bg-[#134D82] px-4 pt-6 pb-8 md:px-5 md:pb-16 lg:px-14">
-      <div className="hidden md:block">
+    <footer className="flex justify-center w-full bg-[#134D82]">
+      <div className="hidden md:block 3xl:w-max-screen-size px-4 pt-6 pb-8 md:px-5 md:pb-16 lg:px-14">
         <DesktopFooter mobileNav={navItems} />
       </div>
       <div className="md:hidden">
