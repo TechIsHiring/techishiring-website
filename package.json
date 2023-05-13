@@ -9,7 +9,7 @@
     "lint": "next lint",
     "format": "next lint -- --fix --dir .",
     "test": "vitest",
-    "cypress:open:e2e": "npx cypress open",
+    "cypress:open:e2e": "npx cypress open --e2e",
     "cypress:open:component": "npx cypress open --component",
     "cypress:run:e2e": "npx cypress run",
     "cypress:run:component": "npx cypress run --component",
