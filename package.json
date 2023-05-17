@@ -14,7 +14,8 @@
     "cypress:run:e2e": "npx cypress run",
     "cypress:run:component": "npx cypress run --component",
     "reset-deps": "rm -rf node_modules && npm ci",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "check-ts": "tsc --noEmit"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.6",
