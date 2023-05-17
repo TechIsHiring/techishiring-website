@@ -43,3 +43,7 @@ next-env.d.ts
 # VSCODE
 *.code-workspace
 .vscode
+
+# cypress
+cypress/videos
+cypress/screenshots

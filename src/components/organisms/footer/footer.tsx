@@ -217,11 +217,11 @@ const Footer = () => {
   });
 
   return (
-    <footer className="flex justify-center w-full bg-[#134D82]">y
-      <div className="hidden w-full md:block 3xl:w-max-screen-size px-4 pt-6 pb-8 md:px-5 md:pb-16 lg:px-14">
+    <footer className="flex justify-center w-full bg-[#134D82]">
+      <div data-cy="desktop-footer" className="hidden w-full md:block 3xl:w-max-screen-size px-4 pt-6 pb-8 md:px-5 md:pb-16 lg:px-14">
         <DesktopFooter mobileNav={navItems} />
       </div>
-      <div className="md:hidden">
+      <div data-cy="mobile-footer" className="md:hidden">
         <MobileFooter mobileNav={navItems}/>
       </div>
     </footer>
