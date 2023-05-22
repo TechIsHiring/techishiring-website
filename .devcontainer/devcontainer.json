@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "TechisHiring Website",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-20",
+	 "hostRequirements": {
+		 "cpus": 4
+	 },
+	 // install dependencies and start storybook
+	 "updateContentCommand": "npm install",
+	 "postAttachCommand": "npm run storybook",
+	 "customizations": {
+		 "codespaces": {
+			 "openFiles": [
+				 "src/stories/pages/home.stories.tsx"
+			 ]
+		 },
+		 // install some vscode extensions
+		 "vscode": {
+			 "extensions": [
+				 "dbaeumer.vscode-eslint",
+				 "github.vscode-pull-request-github",
+				 "eamodio.gitlens",
+				 "christian-kohler.npm-intellisense"
+			 ]
+		 }
+	 },
+	 // connect to remote server
+	 "forwardPorts": [6006],
+	 "portsAttributes": {
+		"6006": {
+		   "label": "Storybook",
+		   "onAutoForward": "openPreview"
+		 }
+	   }
+  }
