@@ -1,10 +1,9 @@
 
-import ContactContent from "../../src/components/molecules/contact-form/contact-form"
+import ContactForm from "../../src/components/molecules/contact-form/contact-form"
 
 describe('Checks the Contact Us component for accepting three cases of inputs', () => {
   beforeEach(()=> {
-    cy.mount(<ContactContent />)
-    
+    cy.mount(<ContactForm />)
     // input text field for name
     cy.get('[data-cy="name-input"]').as('nameInputTextField')
             
