@@ -48,8 +48,6 @@ A simple browser window will automatically open up for you so you can view the s
 
 4. You are now ready to start developing! 
 
-```shell
-
 ## Storybook
 
 The Stoybook for this project can be found at [https://stories.techishiring.com](https://stories.techishiring.com)
