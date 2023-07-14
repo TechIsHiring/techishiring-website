@@ -1,7 +1,7 @@
 
 describe("Contact Us Image Rendering", () => {
     beforeEach(() => {
-        cy.visit("http://localhost:3000/contact",  { timeout: 30000 });
+        cy.visit("/contact",  { timeout: 30000 });
       });
 
     it("Image rendering on desktop", () =>{
