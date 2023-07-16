@@ -5,7 +5,6 @@ on:
     branches:
       - main
       - dev
-      - marktnoonan/cypress-updates
   pull_request:
     branches:
       - main
@@ -65,7 +64,7 @@ jobs:
       fail-fast: false
       matrix:
         # run copies of the current job in parallel
-        containers: [1, 2]
+        containers: [1, 2, 3]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -95,7 +94,7 @@ jobs:
       fail-fast: false
       matrix:
         # run copies of the current job in parallel
-        containers: [1, 2]
+        containers: [1, 2, 3]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
