@@ -54,13 +54,6 @@ jobs:
           # Disable running of tests within install job
           runTests: false
 
-      - name: Save build folder
-        uses: actions/upload-artifact@v3
-        with:
-          name: build
-          if-no-files-found: error
-          path: dist
-
   cypress-run-e2e:
 
     name: Run End-to-End Tests
@@ -76,11 +69,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Download the build folder
-        uses: actions/download-artifact@v3
-        with:
-          name: build
 
       - name: Cypress run
         uses: cypress-io/github-action@v5.0.9
@@ -111,11 +99,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Download the build folder
-        uses: actions/download-artifact@v3
-        with:
-          name: build
 
       - name: Cypress run
         uses: cypress-io/github-action@v5.0.9
