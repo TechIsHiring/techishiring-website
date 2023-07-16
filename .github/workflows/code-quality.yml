@@ -41,9 +41,9 @@ jobs:
       - run: npm run format
 
 
-  cypress-run:
+  cypress-run-e2e:
 
-    name: Run Cypress Tests
+    name: Run End-to-End Tests
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
@@ -62,3 +62,25 @@ jobs:
           # Specify Browser since container image is compile with Firefox
           browser: chrome
           start: npm run dev
+                      
+  cypress-run-component:
+
+    name: Run Component Tests
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5.0.9
+        with:
+          # Specify Browser since container image is compile with Firefox
+          browser: chrome
+          component: true
