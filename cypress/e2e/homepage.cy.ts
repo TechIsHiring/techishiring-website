@@ -2,7 +2,7 @@ import validateFooter from "../util/validateFooter";
 
 describe("Homepage", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000",  { timeout: 30000 });
+    cy.visit("/",  { timeout: 30000 });
   });
 
   it("should display the homepage", () => {
