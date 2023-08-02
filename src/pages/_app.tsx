@@ -17,6 +17,10 @@ function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   const router = useRouter();
 
   useEffect(() => {
+    import('preline')
+  }, [])
+  
+  useEffect(() => {
     initiateAnalytics();
 
     const handleRouteChange = () => posthog.capture("$pageview");
