@@ -1,8 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import sgMail from "@sendgrid/mail";
+import { z } from "zod";
+
+// Define The Zod schema for the request body
+const Email = z.object({
+  name: z.string(),
+  email: z.string().email(),
+  message: z.string(),
+});
 
 interface ExtendedNextApiRequest extends NextApiRequest {
-  body: Email
+  body: z.infer<typeof Email>;
 }
 
 export default async function handleSubscribe(
