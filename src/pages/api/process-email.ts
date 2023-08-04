@@ -23,6 +23,14 @@ export default async function handleSubscribe(
   const badRequest = req.method !== "POST" || requestEmpty;
   if( badRequest ) return res.status(400).json({ data: "Please send a properly formatted request" });
 
+  // Validate the request body against the Zod schema
+  try {
+    Email.parse(req.body);
+  } catch (error) {
+    console.error("Request body validation failed:", error);
+    return res.status(400).json({ data: "Invalid request body" });
+  }
+
   sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY as string);
   
   const msg = {
