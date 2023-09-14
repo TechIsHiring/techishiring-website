@@ -1,12 +1,12 @@
 import Link from "components/atoms/link/link";
-import { Text } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
 const Logo = () => {
   return (
     <Link href="/">
-      <Text fontSize="2xl" className="logo">
+      <Heading as="h1" fontSize="1.5em" fontFamily="HirukoPro-Black" className="logo">
         TechIsHiring
-      </Text>
+      </Heading>
     </Link>
   );
 };

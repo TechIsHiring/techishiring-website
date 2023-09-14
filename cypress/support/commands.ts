@@ -35,3 +35,32 @@
 //     }
 //   }
 // }
+export {};
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+        validateLink(name: string, destination : string, target?: 'new tab'): Chainable<void>
+    }
+  }
+}
+
+
+  /**
+   * 
+   * @param name - the name of the link
+   * @param destination - the URL the link navigates to 
+   * @param target - target attribute - e.g. "new tab" or not
+   */
+  const validateLink = (name: string, destination : string, target?: 'new tab') => {
+    const shouldOpenInNewTab = target === 'new tab'
+    const targetAssertion = shouldOpenInNewTab ? 'have.attr' : 'not.have.attr'
+   
+    // find a link with the expected name
+    cy.contains(`a`, name)
+    .should('be.visible') // make sure it is visible
+    .and('have.attr', 'href', destination) // and has the right href
+    .and(targetAssertion, 'target', '_blank') // and opens in a new tab, or not
+  }
+
+  Cypress.Commands.add('validateLink', validateLink)

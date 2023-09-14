@@ -9,9 +9,13 @@
     "lint": "next lint",
     "format": "next lint -- --fix --dir .",
     "test": "vitest",
-    "test:cypress": "npx cypress open",
+    "cypress:open:e2e": "npx cypress open --e2e",
+    "cypress:open:component": "npx cypress open --component",
+    "cypress:run:e2e": "npx cypress run",
+    "cypress:run:component": "npx cypress run --component",
     "reset-deps": "rm -rf node_modules && npm ci",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "check-ts": "tsc --noEmit"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.6",
@@ -48,7 +52,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
-    "cypress": "^12.5.1",
+    "cypress": "^12.17.1",
     "eslint": "8.26.0",
     "eslint-config-next": "^13.2.4",
     "eslint-plugin-storybook": "^0.6.11",

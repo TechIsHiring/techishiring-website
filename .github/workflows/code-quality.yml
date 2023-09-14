@@ -40,21 +40,34 @@ jobs:
       - run: npm ci
       - run: npm run format
 
-
-  cypress-run:
-
-    name: Run Cypress Tests
+  cypress-install:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome87-ff82
+    container: cypress/browsers:node16.16.0-chrome107-ff107-edge
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - name: Cypress install
+        uses: cypress-io/github-action@v5.8.3
         with:
-          node-version: 16
-      - run: npm ci
+          # Disable running of tests within install job
+          runTests: false
+
+  cypress-run-e2e:
+
+    name: Run End-to-End Tests
+    needs: cypress-install
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node16.16.0-chrome107-ff107-edge
+    strategy:
+      # don't fail the entire matrix on failure
+      fail-fast: false
+      matrix:
+        # run copies of the current job in parallel
+        containers: [1, 2, 3]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Cypress run
         uses: cypress-io/github-action@v5.0.9
@@ -62,3 +75,39 @@ jobs:
           # Specify Browser since container image is compile with Firefox
           browser: chrome
           start: npm run dev
+          wait-on: 'http://localhost:3000'
+          record: true
+          parallel: true 
+          group: e2e
+        env: 
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                      
+  cypress-run-component:
+
+    name: Run Component Tests
+    needs: cypress-install
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node16.16.0-chrome107-ff107-edge
+    strategy:
+      # don't fail the entire matrix on failure
+      fail-fast: false
+      matrix:
+        # run copies of the current job in parallel
+        containers: [1, 2, 3]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5.0.9
+        with:
+          # Specify Browser since container image is compile with Firefox
+          browser: chrome
+          component: true
+          record: true
+          parallel: true
+          group: component
+        env: 
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
