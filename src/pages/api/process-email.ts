@@ -1,8 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import sgMail from "@sendgrid/mail";
+import { z } from "zod";
+
+// Define The Zod schema for the request body
+const Email = z.object({
+  name: z.string(),
+  email: z.string().email(),
+  message: z.string(),
+});
 
 interface ExtendedNextApiRequest extends NextApiRequest {
-  body: Email
+  body: z.infer<typeof Email>;
 }
 
 export default async function handleSubscribe(
@@ -14,6 +22,14 @@ export default async function handleSubscribe(
   const requestEmpty = !name || !email || !message;
   const badRequest = req.method !== "POST" || requestEmpty;
   if( badRequest ) return res.status(400).json({ data: "Please send a properly formatted request" });
+
+  // Validate the request body against the Zod schema
+  try {
+    Email.parse(req.body);
+  } catch (error) {
+    console.error("Request body validation failed:", error);
+    return res.status(400).json({ data: "Invalid request body" });
+  }
 
   sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY as string);
   
