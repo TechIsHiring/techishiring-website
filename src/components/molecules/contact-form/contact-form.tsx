@@ -116,13 +116,14 @@ const ContactForm = () => {
               </Label>
               <TextInput
                 maxLength={50}
+                data-cy="name-input"
                 type={"text"}
                 placeholder={"Your name"}
                 value={name}
                 isInvalid={error.name}
                 onChange={(e) => setName(e.target.value)}
               />
-              {error.name && <span className="text-rose-500">Please add a name</span>}
+              {error.name && <span data-cy="name-error-msg" className=" text-rose-500">Please add a name</span>}
             </VStack>
           
             <VStack mt={2} justifyContent={"flex-start"} alignItems={"flex-start"}>
@@ -131,13 +132,14 @@ const ContactForm = () => {
               </Label>
               <TextInput
                 maxLength={60}
+                data-cy="email-input"
                 type={"email"}
                 placeholder={"you@company.com"}
                 value={email}
                 isInvalid={error.email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {error.email && <span className="text-rose-500">Please add a proper email address</span>}
+              {error.email && <span data-cy="email-error-msg" className="text-rose-500">Please add a proper email address</span>}
             </VStack>
 
             <VStack mt={2} justifyContent={"flex-start"} alignItems={"flex-start"}>
@@ -147,18 +149,20 @@ const ContactForm = () => {
               <TextBox
                 maxLength={400}
                 h={20}
+                data-cy="note-input"
                 placeholder={"Tell us something..."}
                 value={message}
                 isInvalid={error.message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-              {error.message && <span className="text-rose-500">Please add a message</span>}
+              {error.message && <span data-cy="note-error-msg" className="text-rose-500">Please add a message</span>}
             </VStack>
 
             <div className="mt-8">
               <DefaultButton
                 w={"100%"}
                 py={3}
+                data-cy="send-msg-btn"
                 color={"white"}
                 borderRadius={"12px"}
                 backgroundColor={"blue.500"}
@@ -182,10 +186,10 @@ const ContactForm = () => {
       
       {statuses.isSuccess && 
         <span className="flex flex-col gap-4 text-center">
-          <HeaderText className="text-primary !text-lg" level="h2">
+          <HeaderText data-cy="email-sent-title" className="text-primary !text-lg" level="h2">
             Thank you for your feedback! 
           </HeaderText>
-          <DefaultText>
+          <DefaultText data-cy="email-sent-msg">
             We will get back to you as soon as possible!
           </DefaultText>
         </span>
