@@ -1,40 +1,36 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}"
-  ],
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
   theme: {
-    extend: {
-      spacing: {
-        "max-screen-size": "1920px"
-      },
-      gridTemplateColumns: {
-        autodesktop: "repeat(auto-fit, minmax(410px, 1fr))",
-        automobile: "repeat(auto-fit, minmax(300px, 1fr))"
-      },
+    container: {
+      center: true,
+      padding: "2rem",
       screens: {
-        xs: "425px",
-        // => @media (min-width: 425px) { ... }
-        "2xl": "1440px",
-        // => @media (min-width: 1440px) { ... }
-        "3xl": "1920px",
-        // => @media (min-width: 1920px) { ... }
-        "pass-max-screen": "1921px"
-        // => @media (min-width: 1921px) { ... }
+        "2xl": "1400px",
       },
-      fontFamily: {
-        inter: ["Inter", "sans-serif"]
+    },
+    extend: {
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
       },
-      colors: {
-        primary: "#165C9C",
-        secondary: "#101828",
-        gray: "#667085",
-        dark: "#000000",
-        altDark: "#222222",
-        altWhite: "#F0F0F0"
-      }
-    }
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
   },
-  plugins: []
-};
+  plugins: [require("tailwindcss-animate")],
+}
