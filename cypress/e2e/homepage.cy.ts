@@ -1,3 +1,4 @@
+import { validateHeaderLinks, validateHeaderLogo, validateModalMenuLinks } from "../util/validateHeader";
 import validateFooter from "../util/validateFooter";
 
 describe("Homepage", () => {
@@ -7,10 +8,23 @@ describe("Homepage", () => {
 
   it("should display the homepage", () => {
     cy.title().should("include", "TechIsHiring");
-    cy.get("header").should("be.visible");
-    cy.get('.sticky > :nth-child(1) > a > .chakra-heading').contains('TechIsHiring');
-    cy.get('header > div > nav > ul').should('be.visible');
+    
+    validateHeaderLogo();
+    validateHeaderLinks();
 
-    validateFooter('desktop')
+    validateFooter('desktop');
   });
+
+  it("should display the homepage on mobile", () => {
+    cy.viewport('iphone-5');
+
+    cy.title().should("include", "TechIsHiring");
+    validateHeaderLogo();
+    cy.get('[data-cy=header]').within(() => {
+      cy.get('nav').click();
+    });
+    validateModalMenuLinks();
+
+    validateFooter('mobile');
+  })
 });

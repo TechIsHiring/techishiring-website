@@ -6,7 +6,7 @@ const Header = () => {
   const navList = useMainNav();
 
   return (
-    <header className="flex justify-center sticky top-0 z-10 w-full border-b bg-white py-2">
+    <header data-cy="header" className="flex justify-center sticky top-0 z-10 w-full border-b bg-white py-2">
       <div className="flex items-center w-full 3xl:w-max-screen-size justify-between px-4 h-24">
         <Logo />
         <MainNav navList={navList} />
