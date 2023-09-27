@@ -4,7 +4,6 @@ import validateFooter from "../util/validateFooter";
 describe("Homepage", () => {
   beforeEach(() => {
     cy.visit("/",  { timeout: 30000 });
-    cy.wait(100);
   });
 
   it("should display the homepage", () => {
