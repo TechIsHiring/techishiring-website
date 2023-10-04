@@ -16,7 +16,7 @@ export default function AboutBanner() {
         <div className="bg-[#0B2F4F] flex flex-1 lg:flex-auto flex-col lg:flex-row w-full p-8 gap-9 rounded-l-lg " >
           <div>
             <HeaderText data-cy={"about-banner-header"} level={"h4"} color={"white"} fontSize={"20px"}>Have a question?</HeaderText>
-            <DefaultText data-cy={"about-banner-body"} className={"text-altWhite text-[16px]"}>If you have any questions, please contact us</DefaultText>
+            <DefaultText className={"text-altWhite text-[16px]"}>If you have any questions, please contact us</DefaultText>
           </div>
           <div>
             <DefaultButton

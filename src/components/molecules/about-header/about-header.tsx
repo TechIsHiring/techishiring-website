@@ -16,8 +16,8 @@ export default function AboutHeader() {
             </HeaderText>
 
             <div className="text-white flex justify-start items-start lg:px-5 w-full lg:w-[40%] text-left lg:text-center">
-              <p data-cy={"about-header-body"} className="">
-                So many jobs available, all you have to do is keep up with  our posts. Check below for recent job openings. 
+              <p className="">
+                So many jobs available, all you have to do is keep up with our posts. Check below for recent job openings. 
               </p>
             </div>
 
