@@ -8,7 +8,7 @@ const ContactHeading = () => {
   return ( 
     <Box as={"div"}>
       <VStack justifyContent={"flex-start"} alignItems={"flex-start"}>
-        <HeaderText level={"h2"} className={"text-secondary py-2"}>
+        <HeaderText level={"h2"} className={"text-secondary py-2 font-bold text-4xl leading-5"}>
                 Contact Us
         </HeaderText>
         <DefaultText className={"text-gray"}>
