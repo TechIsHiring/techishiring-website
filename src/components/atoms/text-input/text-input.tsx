@@ -1,19 +1,13 @@
-import { Input as ChakraInputComponent } from "@chakra-ui/react";
 import React from "react";
 
-interface InputProps extends React.ComponentProps<typeof ChakraInputComponent> {
+interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   //Add additional prop definitions here
 }
 
-const TextInput = (props: InputProps) => {
+const TextInput = ({className, ...props}: InputProps) => {
   return (
-    <ChakraInputComponent
-      {...props}
-      className={`${props.className ? props.className : ""}`}
-      borderColor="blackAlpha.500"
-      focusBorderColor="blue.400"
-      _hover={{}}
-    />
+    <input {...props} className={(className ? `${className}` : ``) +
+    ` w-full outline outline-2 outline-transparent outline-offset-2 relative appearance-none text-base px-4 h-10 rounded-md border border-black/[.36] bg-inherit transition duration-200 focus:border-[#4299e1] focus:z-[1] focus:shadow-[0_0_0_1px_#4299e1]`}  />    
   );
 };
 
