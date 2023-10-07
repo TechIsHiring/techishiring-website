@@ -14,10 +14,7 @@ const NavLink = ({ url, text, activeLink, button, externalLink, footer = false }
     >
       {footer === false && button === true ?
         <DefaultButton
-          className=""
-          variant="solid"
-          size="md"
-          colorScheme="facebook"
+          className="text-white rounded-md bg-[#385898] hover:bg-[#314E89] active:bg-[#29487D] focus-visible:shadow-[0_0_0_3px_rgb(66,153,225,0.6)]"
         >
           <DefaultText className="text-white" fontSize="lg" as="span">
             {text}
