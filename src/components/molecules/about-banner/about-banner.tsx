@@ -22,18 +22,9 @@ export default function AboutBanner() {
             <DefaultButton
               as={"a"}
               href={"/contact"}
-              w={"100%"}
-              py={3}
-              color={"white"}
-              borderRadius={"8px"}
-              background={"transparent"}
-              border={"2px"}
-              borderColor={"white"}
-              _hover={{
-                background: "transparent"
-              }}
+              className={"w-full text-white rounded-lg bg-transparent border-2 border-white active:bg-[#CBD5E0] hover:bg-transparent focus-visible:shadow-[0_0_0_3px_rgb(66,153,225,0.6)]"}
             >
-            Contact Us
+              Contact Us
             </DefaultButton>
 
           </div>
