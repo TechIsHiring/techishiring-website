@@ -159,15 +159,8 @@ const ContactForm = () => {
 
             <div className="mt-8">
               <DefaultButton
-                w={"100%"}
-                py={3}
-                color={"white"}
-                borderRadius={"12px"}
-                backgroundColor={"blue.500"}
-                _hover={{
-                  background: "darkgray"
-                }}
                 onClick={handleClick}
+                className={"w-full text-white rounded-xl bg-[#3182ce] hover:bg-[#a9a9a9] active:bg-[#CBD5E0] focus-visible:shadow-[0_0_0_3px_rgb(66,153,225,0.6)]"}
               >
                 Send message
               </DefaultButton>
