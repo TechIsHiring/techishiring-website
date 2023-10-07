@@ -17,7 +17,7 @@ const HireChadDetails = () => {
         <HeaderText level={"h2"} className={"text-secondary py-2"}>
           Hire Chad R. Stewart
         </HeaderText>
-        <DefaultText as={"p"} w={{base:"80%", lg:"70%"}}>
+        <DefaultText as={"p"} className={"w-4/5 lg:w-[70%]"}>
           Chad R. Stewart is a Full Stack Software Engineer with a Front-End Engineering
           focused skill set. He has worked on several software projects and lead teams
           in the FinTech and Developer Tools space. He has also spoken on several podcasts

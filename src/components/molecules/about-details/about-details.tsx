@@ -11,12 +11,12 @@ import {
 export default function AboutDetails() {
   return (
     <article className={"flex justify-center text-center lg:text-left text-lg lg:text-xl leading-[41px] py-0 lg:py-20 items-center flex-col gap-8 font-700 text-altDark "}>
-        <DefaultText as={"p"} w={{base:"80%", lg:"70%"}}>
+        <DefaultText as={"p"} className={"w-4/5 lg:w-[70%]"}>
           <b>TechIsHiring</b> tries to assist tech professionals in finding employment 
           by encouraging meaningful interactions between people looking for employment 
           and those who can assist, rather than focusing primarily on advertising job openings.
         </DefaultText>
-        <DefaultText as={"p"} w={{base:"80%", lg:"70%"}}>
+        <DefaultText as={"p"} className={"w-4/5 lg:w-[70%]"}>
           During the pandemic,
           <Link href="https://www.linkedin.com/in/ChadRStewart/" className="text-primary">
             <b> Chad R. Stewart</b>
@@ -30,7 +30,7 @@ export default function AboutDetails() {
             <b className="text-primary font-800 cursor-pointer"> #TechIsHiring</b>
           </Link> and the TechIsHiring account were created.
         </DefaultText>
-        <DefaultText as={"p"} w={{base:"80%", lg:"70%"}}>
+        <DefaultText as={"p"} className={"w-4/5 lg:w-[70%]"}>
           Looking to work with the Founder directly?
           <Link href="/hire-chad">
             <b className="text-primary cursor-pointer"> Hire Chad R. Stewart</b>
