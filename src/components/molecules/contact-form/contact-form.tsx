@@ -177,7 +177,7 @@ const ContactForm = () => {
       
       {statuses.isSuccess && 
         <span className="flex flex-col gap-4 text-center">
-          <HeaderText className="text-primary !text-lg" level="h2">
+          <HeaderText className="text-primary text-lg" level="h2">
             Thank you for your feedback! 
           </HeaderText>
           <DefaultText>
@@ -188,7 +188,7 @@ const ContactForm = () => {
 
       {statuses.isError &&
         <span className="flex flex-col gap-4 text-center">
-          <HeaderText color="red" level="h2" className="!text-lg">
+          <HeaderText level="h2" className="text-lg text-red">
             Sorry, we were not able to send your email! 
           </HeaderText>
           <DefaultText>
