@@ -15,25 +15,16 @@ export default function AboutBanner() {
       <div className="relative bottom-32 lg:bottom-14 px-10 lg:px-40 flex lg:justify-center mx-auto sm:w-[80%] lg:w-full">
         <div className="bg-[#0B2F4F] flex flex-1 lg:flex-auto flex-col lg:flex-row w-full p-8 gap-9 rounded-l-lg " >
           <div>
-            <HeaderText level={"h4"} color={"white"} fontSize={"20px"}>Have a question?</HeaderText>
+            <HeaderText level={"h4"} className="text-white text-[20px]">Have a question?</HeaderText>
             <DefaultText className={"text-altWhite text-[16px]"}>If you have any questions, please contact us</DefaultText>
           </div>
           <div>
             <DefaultButton
               as={"a"}
               href={"/contact"}
-              w={"100%"}
-              py={3}
-              color={"white"}
-              borderRadius={"8px"}
-              background={"transparent"}
-              border={"2px"}
-              borderColor={"white"}
-              _hover={{
-                background: "transparent"
-              }}
+              className={"w-full text-white rounded-lg bg-transparent border-2 border-white active:bg-[#CBD5E0] hover:bg-transparent focus-visible:shadow-[0_0_0_3px_rgb(66,153,225,0.6)]"}
             >
-            Contact Us
+              Contact Us
             </DefaultButton>
 
           </div>

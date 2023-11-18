@@ -89,7 +89,8 @@ const ContactForm = () => {
     return badInput;
   };
 
-  const handleClick = async () => {
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
     const badInput = verifyInput();
     if( badInput ) return;
 
@@ -105,12 +106,12 @@ const ContactForm = () => {
   };
 
   return ( 
-    <Box className="flex flex-col justify-center min-h-[580px]">
+    <div className="flex flex-col justify-center min-h-[580px]">
       {statuses.isIdle &&
         <>
           <ContactHeading />
           <form action="" >
-            <VStack mt={2} justifyContent={"flex-start"} alignItems={"flex-start"}>
+            <div className={"flex justify-start items-start flex-col mt-2"}>
               <Label>
                 Name
               </Label>
@@ -121,11 +122,12 @@ const ContactForm = () => {
                 value={name}
                 isInvalid={error.name}
                 onChange={(e) => setName(e.target.value)}
+                className={"w-full"}
               />
               {error.name && <span className="text-rose-500">Please add a name</span>}
-            </VStack>
+            </div>
           
-            <VStack mt={2} justifyContent={"flex-start"} alignItems={"flex-start"}>
+            <div className={"flex justify-start items-start flex-col mt-2"}>
               <Label>
                 Email
               </Label>
@@ -136,36 +138,30 @@ const ContactForm = () => {
                 value={email}
                 isInvalid={error.email}
                 onChange={(e) => setEmail(e.target.value)}
+                className={"w-full"}
               />
               {error.email && <span className="text-rose-500">Please add a proper email address</span>}
-            </VStack>
+            </div>
 
-            <VStack mt={2} justifyContent={"flex-start"} alignItems={"flex-start"}>
+            <div className={"flex justify-start items-start flex-col mt-2"}>
               <Label>
                 Leave us a note!
               </Label>
               <TextBox
                 maxLength={400}
-                h={20}
                 placeholder={"Tell us something..."}
                 value={message}
                 isInvalid={error.message}
                 onChange={(e) => setMessage(e.target.value)}
+                className={"h-20 w-full"}
               />
               {error.message && <span className="text-rose-500">Please add a message</span>}
-            </VStack>
+            </div>
 
             <div className="mt-8">
               <DefaultButton
-                w={"100%"}
-                py={3}
-                color={"white"}
-                borderRadius={"12px"}
-                backgroundColor={"blue.500"}
-                _hover={{
-                  background: "darkgray"
-                }}
                 onClick={handleClick}
+                className={"w-full text-white rounded-xl bg-[#3182ce] hover:bg-[#a9a9a9] active:bg-[#CBD5E0] focus-visible:shadow-[0_0_0_3px_rgb(66,153,225,0.6)]"}
               >
                 Send message
               </DefaultButton>
@@ -182,7 +178,7 @@ const ContactForm = () => {
       
       {statuses.isSuccess && 
         <span className="flex flex-col gap-4 text-center">
-          <HeaderText className="text-primary !text-lg" level="h2">
+          <HeaderText className="text-primary text-lg" level="h2">
             Thank you for your feedback! 
           </HeaderText>
           <DefaultText>
@@ -193,7 +189,7 @@ const ContactForm = () => {
 
       {statuses.isError &&
         <span className="flex flex-col gap-4 text-center">
-          <HeaderText color="red" level="h2" className="!text-lg">
+          <HeaderText level="h2" className="text-lg text-red">
             Sorry, we were not able to send your email! 
           </HeaderText>
           <DefaultText>
@@ -201,7 +197,7 @@ const ContactForm = () => {
           </DefaultText>
         </span>
       }
-    </Box>
+    </div>
   );
 };
  

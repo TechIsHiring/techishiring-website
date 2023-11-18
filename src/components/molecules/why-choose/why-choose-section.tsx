@@ -11,7 +11,7 @@ const WhyChooseSection = () => {
     <section className="mx-auto w-full max-w-screen-2xl bg-white">
       <figure className="m-10 pb-10">
         <header className="mb-10 lg:w-[30%] ">
-          <HeaderText level="h2" size="xl" className="text-left !font-inter !font-extrabold !leading-[2.8rem]">
+          <HeaderText level="h2" className="text-left font-inter font-extrabold text-3xl md:text-4xl !leading-[2.8rem]">
             Why Choose TechIsHiring ?
           </HeaderText>
         </header>
