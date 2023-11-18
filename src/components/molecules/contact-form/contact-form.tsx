@@ -89,7 +89,8 @@ const ContactForm = () => {
     return badInput;
   };
 
-  const handleClick = async () => {
+  const handleClick = async (e: Event) => {
+    e.preventDefault();
     const badInput = verifyInput();
     if( badInput ) return;
 
