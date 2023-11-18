@@ -12,7 +12,7 @@ interface DefaultTextProps extends ElementProps {
   as?: AsType;
 }
 
-const DefaultText = ({as = "p", className, children, ...props}: DefaultTextProps) => {
+const DefaultText = ({as = "p", className = "", children, ...props}: DefaultTextProps) => {
   if(as === "span"){
     return <span {...props} className={className}>{children}</span>;
   }

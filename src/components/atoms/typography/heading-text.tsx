@@ -6,7 +6,7 @@ interface HeaderTextProps extends React.DetailedHTMLProps<React.HTMLAttributes<H
   level: Level;
 }
 
-const HeaderText = ({level: HeadingLevel, className, children, ...props}: HeaderTextProps) => {
+const HeaderText = ({level: HeadingLevel, className = "", children, ...props}: HeaderTextProps) => {
   return (
     <HeadingLevel {...props} className={className}>
       {children}

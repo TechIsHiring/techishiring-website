@@ -13,12 +13,12 @@ interface ButtonProps extends ElementProps {
   href?: string;
 }
 
-const DefaultButton = ({as = "button", children, className, ...props}: ButtonProps) => {
+const DefaultButton = ({as = "button", children, className = "", ...props}: ButtonProps) => {
   if( as === "a"){
     const {...anchorProps} = props as React.AnchorHTMLAttributes<HTMLAnchorElement>;
     return (
-      <a {...anchorProps} className={(className ? `${className}` : ``) +
-      ` inline-flex appearance-none items-center justify-center relative whitespace-nowrap align-middle outline outline-2 outline-transparent outline-offset-2 leading-tight font-semibold transition duration-200 h-10 min-w-[2.5rem] text-base px-4 py-3`}>
+      <a {...anchorProps} className={`${className} ` +
+      `inline-flex appearance-none items-center justify-center relative whitespace-nowrap align-middle outline outline-2 outline-transparent outline-offset-2 leading-tight font-semibold transition duration-200 h-10 min-w-[2.5rem] text-base px-4 py-3`}>
         {children}
       </a>
     )
@@ -26,8 +26,8 @@ const DefaultButton = ({as = "button", children, className, ...props}: ButtonPro
   else{
     const {...buttonProps} = props as React.ButtonHTMLAttributes<HTMLButtonElement>;
     return (
-      <button {...buttonProps} className={(className ? `${className}` : ``) +
-      ` inline-flex appearance-none items-center justify-center relative whitespace-nowrap align-middle outline outline-2 outline-transparent outline-offset-2 leading-tight font-semibold transition duration-200 h-10 min-w-[2.5rem] text-base px-4 py-3`}>
+      <button {...buttonProps} className={`${className} ` +
+      `inline-flex appearance-none items-center justify-center relative whitespace-nowrap align-middle outline outline-2 outline-transparent outline-offset-2 leading-tight font-semibold transition duration-200 h-10 min-w-[2.5rem] text-base px-4 py-3`}>
         {children}
       </button>
     )
