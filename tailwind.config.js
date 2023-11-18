@@ -16,6 +16,14 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        primary: "#165C9C",
+        secondary: "#101828",
+        gray: "#667085",
+        dark: "#000000",
+        altDark: "#222222",
+        altWhite: "#F0F0F0"
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
