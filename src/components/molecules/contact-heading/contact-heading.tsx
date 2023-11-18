@@ -6,7 +6,7 @@ import React from "react";
 const ContactHeading = () => {
   return ( 
       <div className={"flex justify-start items-start flex-col"}>
-        <HeaderText level={"h2"} className={"text-secondary py-2 font-bold text-4xl leading-5"}>
+        <HeaderText level={"h2"} className={"text-secondary py-2 font-bold text-3xl md:text-4xl leading-snug md:leading-tight"}>
                 Contact Us
         </HeaderText>
         <DefaultText className={"text-gray mt-2"}>
