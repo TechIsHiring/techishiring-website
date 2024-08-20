@@ -13,4 +13,13 @@ describe("Homepage", () => {
 
     validateFooter('desktop')
   });
+  it("Should display why choose tech is hiring component", () => {
+    cy.get('[dataTest="why-choose-techIsHiring"]').invoke('text').should('eq', 'Why Choose TechIsHiring ?')
+    cy.get('[dataTest="twitter"]').invoke('text').should('eq', 'Sources from Twitter')
+    cy.get('[dataTest="twitter-content"]').should('be.visible')
+     cy.get('[dataTest="date"]').invoke('text').should('eq', 'Up to date')
+    cy.get('[dataTest="date-content"]').should('be.visible')
+     cy.get('[dataTest="permissions"]').invoke('text').should('eq', 'Permissions')
+    cy.get('[dataTest="permissions-content"]').should('be.visible')
+  })
 });

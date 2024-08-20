@@ -11,7 +11,12 @@ const WhyChooseSection = () => {
     <section className="mx-auto w-full max-w-screen-2xl bg-white">
       <figure className="m-10 pb-10">
         <header className="mb-10 lg:w-[30%] ">
-          <HeaderText level="h2" size="xl" className="text-left !font-inter !font-extrabold !leading-[2.8rem]">
+          <HeaderText
+            level="h2"
+            size="xl"
+            dataTest="why-choose-techIsHiring"
+            className="text-left !font-inter !font-extrabold !leading-[2.8rem]"
+          >
             Why Choose TechIsHiring ?
           </HeaderText>
         </header>
@@ -26,12 +31,18 @@ const WhyChooseSection = () => {
               />
             </div>
             <div className="">
-              <DefaultText className="text-left font-inter text-lg font-extrabold">
+              <DefaultText
+                dataTest="twitter"
+                className="text-left font-inter text-lg font-extrabold"
+              >
                 Sources from Twitter
               </DefaultText>
             </div>
             <div className="">
-              <DefaultText className="text-left font-inter text-base font-normal">
+              <DefaultText
+                dataTest="twitter-content"
+                className="text-left font-inter text-base font-normal"
+              >
                 Curates job openings and links from twitter posts.Curates job
                 openings and links from twitter posts.
               </DefaultText>
@@ -47,12 +58,18 @@ const WhyChooseSection = () => {
               />
             </div>
             <div className="">
-              <DefaultText className="text-left font-inter text-lg font-extrabold">
+              <DefaultText
+                dataTest="date"
+                className="text-left font-inter text-lg font-extrabold"
+              >
                 Up to date
               </DefaultText>
             </div>
             <div className="">
-              <DefaultText className="text-left font-inter text-base font-normal">
+              <DefaultText
+                dataTest="date-content"
+                className="text-left font-inter text-base font-normal"
+              >
                 Shares the latest job postings and daily job vacancies.Shares
                 the latest job postings and daily job vacancies.
               </DefaultText>
@@ -68,12 +85,18 @@ const WhyChooseSection = () => {
               />
             </div>
             <div className="">
-              <DefaultText className="text-left font-inter text-lg font-extrabold">
+              <DefaultText
+                dataTest="permissions"
+                className="text-left font-inter text-lg font-extrabold"
+              >
                 Permissions
               </DefaultText>
             </div>
             <div className="">
-              <DefaultText className="text-left font-inter text-base font-normal">
+              <DefaultText
+                dataTest="permissions-content"
+                className="text-left font-inter text-base font-normal"
+              >
                 Obtains the author&apos;s consent before retweeting and sharing
                 content on TechIsHiring.
               </DefaultText>
