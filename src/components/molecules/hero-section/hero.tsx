@@ -8,41 +8,23 @@ import { AiOutlineSearch } from "react-icons/ai";
 const Hero = () => {
   return (
     <div className="h-full w-full bg-[#eaeaea] ">
-      <div className={`min-h-[650px] bg-[url('/assets/images/hero-bg-image.jpg')]`}>
+      <div
+        className={`min-h-[650px] bg-[url('/assets/images/hero-bg-image.jpg')]`}
+      >
         <div className="mx-auto flex h-full max-w-[1210px] flex-col items-center justify-between px-10 py-8 lg:flex-row">
           <div className="w-full max-w-[650px]">
-            <p className="text-4xl font-[750] md:text-6xl md:leading-[70px]">
+            <p
+              data-test="hero-title"
+              className="text-4xl font-[750] md:text-6xl md:leading-[70px]"
+            >
               Where great <span className="text-[#2188e7]">Jobs</span> and great{" "}
               <span className="text-[#A38DFD]">Engineers</span> come to find one
               another!
             </p>
-            <p className="py-6 text-base">
-              So many jobs available, all you have to do is keep up with our
-              posts. Check below for recent job openings.
-            </p>
-
-            {/* Commented out based on whether we commit to continuing to use the Twitter API
-            
-            <div className="flex items-center  justify-between rounded-lg bg-white p-2">
-              <div className="flex items-center text-[#2188E7]">
-                <Icon Icon={AiOutlineSearch} iconAlt="Search Icon" />
-
-                <input
-                  type="search"
-                  placeholder="Search job title"
-                  className="px-2 focus:outline-none"
-                />
-              </div>
-              <div>
-                <button className="rounded-xl bg-[#165C9C] p-3 font-bold text-white">
-                  Search
-                </button>
-              </div>
-            </div> */}
-
+            <p data-test="hero-flavored-text" className="py-6 text-base">So many jobs available, all you have to do is keep up with our posts. Check below for recent job openings.</p>
           </div>
           <div className="relative mt-6 min-h-[20rem] w-full md:h-[30rem] lg:mt-0 lg:h-[35rem] ">
-            <Image src={HeroImage} alt="Hero Image" />
+            <Image data-test="hero-image" src={HeroImage} alt="Hero Image" />
           </div>
         </div>
       </div>

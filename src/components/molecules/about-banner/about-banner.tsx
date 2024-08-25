@@ -12,46 +12,72 @@ import {
 
 export default function AboutBanner() {
   return (
-      <div className="relative bottom-32 lg:bottom-14 px-10 lg:px-40 flex lg:justify-center mx-auto sm:w-[80%] lg:w-full">
-        <div className="bg-[#0B2F4F] flex flex-1 lg:flex-auto flex-col lg:flex-row w-full p-8 gap-9 rounded-l-lg " >
-          <div>
-            <HeaderText level={"h4"} color={"white"} fontSize={"20px"}>Have a question?</HeaderText>
-            <DefaultText className={"text-altWhite text-[16px]"}>If you have any questions, please contact us</DefaultText>
-          </div>
-          <div>
-            <DefaultButton
-              as={"a"}
-              href={"/contact"}
-              w={"100%"}
-              py={3}
-              color={"white"}
-              borderRadius={"8px"}
-              background={"transparent"}
-              border={"2px"}
-              borderColor={"white"}
-              _hover={{
-                background: "transparent"
-              }}
-            >
-            Contact Us
-            </DefaultButton>
-
-          </div>
+    <div className="relative bottom-32 mx-auto flex px-10 sm:w-[80%] lg:bottom-14 lg:w-full lg:justify-center lg:px-40">
+      <div className="flex w-full flex-1 flex-col gap-9 rounded-l-lg bg-[#0B2F4F] p-8 lg:flex-auto lg:flex-row ">
+        <div>
+          <HeaderText
+            data-test="about-banner-header-text"
+            level={"h4"}
+            color={"white"}
+            fontSize={"20px"}
+          >
+            Have a question?
+          </HeaderText>
+          <DefaultText
+            data-test="about-banner-text"
+            className={"text-[16px] text-altWhite"}
+          >
+            If you have any questions, please contact us
+          </DefaultText>
         </div>
-        <div className="w-1/2 hidden lg:flex rounded-r-lg px-10 bg-white justify-center items-center shadow-md flex-col gap-3">
-          <DefaultText className={"text-dark text-[16px]"}>Follow us on Social Media:</DefaultText>
-          <div className="flex gap-12 w-full items-center justify-center">
-            <Link href="https://www.twitter.com/TechIsHiring/">
-              <Icon Icon={SiTwitter} iconAlt="Twitter for Tech Is Hiring" />
-            </Link>
-            <Link href="https://www.linkedin.com/company/TechIsHiring/">
-              <Icon Icon={SiLinkedin} iconAlt="LinkedIn for Tech Is Hiring" />
-            </Link>
-            <Link href="https://www.youtube.com/@TechIsHiring">
-              <Icon Icon={SiYoutube} iconAlt="YouTube for Tech Is Hiring"/>
-            </Link>
-          </div>
+        <div>
+          <DefaultButton
+            as={"a"}
+            href={"/contact"}
+            w={"100%"}
+            py={3}
+            color={"white"}
+            borderRadius={"8px"}
+            background={"transparent"}
+            border={"2px"}
+            borderColor={"white"}
+            _hover={{
+              background: "transparent"
+            }}
+            data-test="about-banner-button"
+          >
+            Contact Us
+          </DefaultButton>
         </div>
       </div>
-  )
+      <div className="hidden w-1/2 flex-col items-center justify-center gap-3 rounded-r-lg bg-white px-10 shadow-md lg:flex">
+        <DefaultText className={"text-[16px] text-dark"}>
+          Follow us on Social Media:
+        </DefaultText>
+        <div className="flex w-full items-center justify-center gap-12">
+          <Link href="https://www.twitter.com/TechIsHiring/">
+            <Icon
+              Icon={SiTwitter}
+              data-test="about-details-icon-twitter"
+              iconAlt="Twitter for Tech Is Hiring"
+            />
+          </Link>
+          <Link href="https://www.linkedin.com/company/TechIsHiring/">
+            <Icon
+              data-test="about-details-icon-linkedIn"
+              Icon={SiLinkedin}
+              iconAlt="LinkedIn for Tech Is Hiring"
+            />
+          </Link>
+          <Link href="https://www.youtube.com/@TechIsHiring">
+            <Icon
+              data-test="about-details-icon-youtube"
+              Icon={SiYoutube}
+              iconAlt="YouTube for Tech Is Hiring"
+            />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
